@@ -326,6 +326,7 @@
             this.btnClose.TabIndex = 66;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // lblMode
             // 
@@ -442,6 +443,7 @@
             this.linklblSelectImage.TabIndex = 69;
             this.linklblSelectImage.TabStop = true;
             this.linklblSelectImage.Text = "Set Image";
+            this.linklblSelectImage.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblSelectImage_LinkClicked);
             // 
             // linklblRemoveImage
             // 

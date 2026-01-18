@@ -71,7 +71,7 @@ namespace DVLDBusinessLayer
             this.NationalityCountryID = NationalityCountryID;
             this.NationalNo = NationalNo;
             this.Gendor = Gendor;
-            this.FirstName = ThirdName;
+            this.ThirdName = ThirdName;
             this.SecondName = SecondName;
 
             Mode = enMode.Update;
@@ -163,10 +163,10 @@ namespace DVLDBusinessLayer
 
         }
 
-        //public static bool DeleteContact(int ID)
-        //{
-        //    return clsContactDataAccess.DeleteContact(ID);
-        //}
+        public static bool DeletePerson(int ID)
+        {
+            return PeopleDataAccess.DeletePerson(ID);
+        }
 
         //public static bool isContactExist(int ID)
         //{

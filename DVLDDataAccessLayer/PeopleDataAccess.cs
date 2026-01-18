@@ -37,7 +37,11 @@ namespace DVLDDataAccessLayer
                     Phone = (string)reader["Phone"];
                     Address = (string)reader["Address"];
                     DateOfBirth = (DateTime)reader["DateOfBirth"];
-                    CountryID = (int)reader["CountryID"];
+                   // CountryID = (int)reader["CountryID"];
+                    ThirdName = (string)reader["ThirdName"];
+                    NationalityCountryID = (int)reader["NationalityCountryID"];
+                    NationalNo = (string)reader["NationalNo"];
+                    Gendor = (int)reader["Gendor"];
 
                     //ImagePath: allows null in database so we should handle null
                     if (reader["ImagePath"] != DBNull.Value)
@@ -49,8 +53,8 @@ namespace DVLDDataAccessLayer
                         ImagePath = "";
                     }
                     ThirdName = (string)reader["ThirdName"];
-                    NationalityCountryID = (int)reader[" NationalityCountryID"];
-                    NationalNo = (string)reader["NationalNo"];
+                    NationalityCountryID = (int)reader["NationalityCountryID"];
+                    NationalNo = (string)reader["NationalNo"]; 
                     Gendor = (int)reader["Gendor"];
                   
                     
@@ -110,9 +114,38 @@ namespace DVLDDataAccessLayer
         {
             int PersonID=-1; 
            SqlConnection connection = new SqlConnection(clsPeopleDataAccessSettings.ConnectionString);
-            string query = "INSERT INTO [dbo].[People]([NationalNo],[FirstName] ,[SecondName],[ThirdName],[LastName],[DateOfBirth]" +
-                " ,[Gendor],[Address],[Phone],[Email]  ,[NationalityCountryID],[ImagePath]) values (@NationalNo,@FirstName,@SecondName,@ThirdName" +
-                ",@LastName,@DateOfBirth,@Gendor,@Address,@Phone,@Email,@NationalityCountryID,@ImagePath;";
+            string query = @"
+INSERT INTO [dbo].[People]
+(
+    [NationalNo],
+    [FirstName],
+    [SecondName],
+    [ThirdName],
+    [LastName],
+    [DateOfBirth],
+    [Gendor],
+    [Address],
+    [Phone],
+    [Email],
+    [NationalityCountryID],
+    [ImagePath]
+)
+VALUES
+(
+    @NationalNo,
+    @FirstName,
+    @SecondName,
+    @ThirdName,
+    @LastName,
+    @DateOfBirth,
+    @Gendor,
+    @Address,
+    @Phone,
+    @Email,
+    @NationalityCountryID,
+    @ImagePath
+);";
+
             SqlCommand command = new SqlCommand(query, connection);
 
             command.Parameters.AddWithValue("@FirstName", FirstName);
@@ -126,7 +159,7 @@ namespace DVLDDataAccessLayer
             command.Parameters.AddWithValue("@Phone", Phone);
             command.Parameters.AddWithValue("@Address", Address);
             command.Parameters.AddWithValue("@DateOfBirth", DateOfBirth);
-            command.Parameters.AddWithValue("@CountryID", CountryID);
+           // command.Parameters.AddWithValue("@CountryID", CountryID);
 
             if (ImagePath != "" && ImagePath != null)
                 command.Parameters.AddWithValue("@ImagePath", ImagePath);
@@ -167,11 +200,21 @@ namespace DVLDDataAccessLayer
         {
             int rowsaffected = 0;
             SqlConnection connection = new SqlConnection(clsPeopleDataAccessSettings.ConnectionString);
-            string query = "UPDATE People SET[NationalNo] = @NationalNo,[FirstName] =" +
-                " @FirstName,[SecondName] = @SecondName,[ThirdName] = @ThirdName,[LastName] = @LastName," +
-                "[DateOfBirth] = @DateOfBirth,[Gendor] = @Gendor, [Address] = @Address, [Phone] = @Phone," +
-                " [Email] = @Email, [NationalityCountryID] = @NationalityCountryID,[ImagePath] = @ImagePath," +
-                " WHERE PersonID = @PersonID; ";
+            string query = @"
+UPDATE People SET
+    [NationalNo] = @NationalNo,
+    [FirstName] = @FirstName,
+    [SecondName] = @SecondName,
+    [ThirdName] = @ThirdName,
+    [LastName] = @LastName,
+    [DateOfBirth] = @DateOfBirth,
+    [Gendor] = @Gendor,
+    [Address] = @Address,
+    [Phone] = @Phone,
+    [Email] = @Email,
+    [NationalityCountryID] = @NationalityCountryID,
+    [ImagePath] = @ImagePath
+WHERE PersonID = @PersonID";
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@PersonID", PersonID);
             command.Parameters.AddWithValue("@FirstName", FirstName);
@@ -214,6 +257,38 @@ namespace DVLDDataAccessLayer
 
 
             return (rowsaffected!=0);
+        }
+        public static bool DeletePerson(int PersonID)
+        {
+            int rowsaffected = 0;
+            SqlConnection connection = new SqlConnection(clsPeopleDataAccessSettings.ConnectionString);
+            string query = @" Delete From People
+               WHERE PersonID = @PersonID";
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@PersonID", PersonID);
+            try
+            {
+                connection.Open();
+
+                rowsaffected = command.ExecuteNonQuery();
+
+
+            }
+
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+
+            }
+
+            finally
+            {
+                connection.Close();
+            }
+
+
+            return (rowsaffected != 0);
+
         }
 
     }

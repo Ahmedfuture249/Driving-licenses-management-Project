@@ -40,5 +40,18 @@ namespace DVLD
             frm.ShowDialog();
             _RefreshPeopleList();
         }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            clsPeople.DeletePerson((int)dgvGetAllPeople.CurrentRow.Cells[0].Value);
+            _RefreshPeopleList();
+        }
+
+        private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPersonDetails frm= new frmPersonDetails((int)dgvGetAllPeople.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+         
+        }
     }
 }

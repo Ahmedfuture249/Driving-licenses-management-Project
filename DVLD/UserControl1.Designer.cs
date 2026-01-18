@@ -71,7 +71,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(284, 116);
+            this.label7.Location = new System.Drawing.Point(325, 116);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(84, 20);
             this.label7.TabIndex = 32;
@@ -80,18 +80,19 @@
             // linklblEditPerson
             // 
             this.linklblEditPerson.AutoSize = true;
-            this.linklblEditPerson.Location = new System.Drawing.Point(519, 89);
+            this.linklblEditPerson.Location = new System.Drawing.Point(549, 89);
             this.linklblEditPerson.Name = "linklblEditPerson";
             this.linklblEditPerson.Size = new System.Drawing.Size(121, 16);
             this.linklblEditPerson.TabIndex = 58;
             this.linklblEditPerson.TabStop = true;
             this.linklblEditPerson.Text = "Edit Person Details";
+            this.linklblEditPerson.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblEditPerson_LinkClicked);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(285, 173);
+            this.label8.Location = new System.Drawing.Point(326, 173);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(52, 20);
             this.label8.TabIndex = 31;
@@ -100,7 +101,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DVLD.Properties.Resources.Female_512;
-            this.pictureBox1.Location = new System.Drawing.Point(524, 119);
+            this.pictureBox1.Location = new System.Drawing.Point(554, 119);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(102, 120);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -111,7 +112,7 @@
             // 
             this.lblAddress.AutoSize = true;
             this.lblAddress.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddress.Location = new System.Drawing.Point(207, 266);
+            this.lblAddress.Location = new System.Drawing.Point(192, 266);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(41, 20);
             this.lblAddress.TabIndex = 57;
@@ -121,7 +122,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(285, 240);
+            this.label9.Location = new System.Drawing.Point(326, 240);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(62, 20);
             this.label9.TabIndex = 39;
@@ -131,7 +132,7 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(207, 217);
+            this.lblEmail.Location = new System.Drawing.Point(192, 217);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(41, 20);
             this.lblEmail.TabIndex = 56;
@@ -140,7 +141,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::DVLD.Properties.Resources.Country_32;
-            this.pictureBox4.Location = new System.Drawing.Point(371, 232);
+            this.pictureBox4.Location = new System.Drawing.Point(412, 232);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(41, 36);
             this.pictureBox4.TabIndex = 42;
@@ -150,7 +151,7 @@
             // 
             this.lblGendor.AutoSize = true;
             this.lblGendor.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGendor.Location = new System.Drawing.Point(207, 168);
+            this.lblGendor.Location = new System.Drawing.Point(192, 168);
             this.lblGendor.Name = "lblGendor";
             this.lblGendor.Size = new System.Drawing.Size(41, 20);
             this.lblGendor.TabIndex = 55;
@@ -159,7 +160,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::DVLD.Properties.Resources.Phone_32;
-            this.pictureBox6.Location = new System.Drawing.Point(370, 165);
+            this.pictureBox6.Location = new System.Drawing.Point(411, 165);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(41, 36);
             this.pictureBox6.TabIndex = 44;
@@ -169,7 +170,7 @@
             // 
             this.lblNationalNo.AutoSize = true;
             this.lblNationalNo.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNationalNo.Location = new System.Drawing.Point(207, 116);
+            this.lblNationalNo.Location = new System.Drawing.Point(192, 116);
             this.lblNationalNo.Name = "lblNationalNo";
             this.lblNationalNo.Size = new System.Drawing.Size(41, 20);
             this.lblNationalNo.TabIndex = 51;
@@ -179,7 +180,7 @@
             // 
             this.lblCountry.AutoSize = true;
             this.lblCountry.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCountry.Location = new System.Drawing.Point(451, 240);
+            this.lblCountry.Location = new System.Drawing.Point(491, 240);
             this.lblCountry.Name = "lblCountry";
             this.lblCountry.Size = new System.Drawing.Size(41, 20);
             this.lblCountry.TabIndex = 54;
@@ -191,7 +192,7 @@
             this.lblName.BackColor = System.Drawing.SystemColors.Control;
             this.lblName.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.Color.Red;
-            this.lblName.Location = new System.Drawing.Point(207, 70);
+            this.lblName.Location = new System.Drawing.Point(192, 70);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(41, 20);
             this.lblName.TabIndex = 50;
@@ -200,7 +201,7 @@
             // pictureBox9
             // 
             this.pictureBox9.Image = global::DVLD.Properties.Resources.Calendar_32;
-            this.pictureBox9.Location = new System.Drawing.Point(374, 110);
+            this.pictureBox9.Location = new System.Drawing.Point(415, 110);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(37, 33);
             this.pictureBox9.TabIndex = 47;
@@ -220,7 +221,7 @@
             // 
             this.lblPhone.AutoSize = true;
             this.lblPhone.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhone.Location = new System.Drawing.Point(450, 173);
+            this.lblPhone.Location = new System.Drawing.Point(490, 173);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(41, 20);
             this.lblPhone.TabIndex = 53;
@@ -230,7 +231,7 @@
             // 
             this.lblDateOfBirth.AutoSize = true;
             this.lblDateOfBirth.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateOfBirth.Location = new System.Drawing.Point(450, 116);
+            this.lblDateOfBirth.Location = new System.Drawing.Point(490, 116);
             this.lblDateOfBirth.Name = "lblDateOfBirth";
             this.lblDateOfBirth.Size = new System.Drawing.Size(41, 20);
             this.lblDateOfBirth.TabIndex = 52;
@@ -374,7 +375,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Name = "UserControl1";
-            this.Size = new System.Drawing.Size(655, 310);
+            this.Size = new System.Drawing.Size(688, 310);
             this.Load += new System.EventHandler(this.UserControl1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

@@ -41,7 +41,7 @@ namespace DVLDBusinessLayer
           
 
 
-            int CountryID = -1;
+            
 
             if (clsCountriesData.GetCountryInfoByID(ID, ref CountryName))
 

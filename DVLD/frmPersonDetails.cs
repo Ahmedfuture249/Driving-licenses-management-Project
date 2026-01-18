@@ -20,8 +20,8 @@ namespace DVLD
         {
             InitializeComponent();
             _PersonID = ID;
-            _Person = clsPeople.Find(_PersonID);
-            
+
+            userControl11.LoadPersonInfo(_PersonID);
         }
         public void _LoadData()
         {

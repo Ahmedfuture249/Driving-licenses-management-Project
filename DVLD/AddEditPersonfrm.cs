@@ -40,6 +40,36 @@ namespace DVLD
             }
 
         }
+        private void _ResetDefaultValues()
+        {
+            _FillCountriesInComoboBox();
+            if (Mode == enMode.Update)
+                lblMode.Text = "ADD NEW PERSON";
+            else
+                lblMode.Text = "UPDATE MODE";
+
+            
+            if (rbMale.Checked)
+                pictureBox1.Image= Properties.Resources.Male_512;
+            else
+                pictureBox1.Image= Properties.Resources.Male_512;
+
+            _Person = new clsPeople();
+            lblPerosnID.Text = "";
+            txtFirstName.Text =  "";
+            txtSecondName.Text = "";
+            txtThirdName.Text =  "";
+            txtLastName.Text =   "";
+            txtNationalNo.Text  = "";
+            txtEmail.Text =      "";
+            txtPhone.Text = "";
+            txtAddress.Text = "";
+            //dateTimePicker1.MinDate=DateTime.Now.AddYears(100);
+            //dateTimePicker1.MaxDate = DateTime.Now.AddYears(18);
+            dateTimePicker1.Value = dateTimePicker1.MaxDate;
+            rbMale.Checked = true;
+
+        }
         public  void _LoadData()
         {
             _FillCountriesInComoboBox();
@@ -56,6 +86,7 @@ namespace DVLD
             {
                 MessageBox.Show("Person is null ,the form will be closd ");
                 this.Close();
+                return;
             }
            
            lblPerosnID.Text =     _PersonID.ToString();
@@ -68,12 +99,13 @@ namespace DVLD
             if(_Person.Gendor==0)
             {
                 rbMale.Checked=true;
-                pictureBox1.Image = Image.FromFile(@"C:\Users\Lenovo\Desktop\Icons\Male 512.png");
+               
             }
             if (_Person.Gendor ==1 )
             {
                 rbFemale.Checked = true;
             }
+            
             txtPhone.Text =   _Person.Phone;
             txtAddress.Text = _Person.Address;
             dateTimePicker1.Value = _Person.DateOfBirth;
@@ -81,10 +113,10 @@ namespace DVLD
             
             if (_Person.ImagePath != "")
             {
-                pictureBox1.Load(_Person.ImagePath);
+                pictureBox1.ImageLocation=_Person.ImagePath;
             }
            linklblRemoveImage.Visible = (_Person.ImagePath != "");
-          // CbCountries.SelectedIndex= CbCountries.FindString(clsCountries.Find(_Person.CountryID).CountryName);
+          CbCountries.SelectedIndex= CbCountries.FindString(clsCountries.Find(_Person.NationalityCountryID).CountryName);
 
         }
 
@@ -95,12 +127,15 @@ namespace DVLD
 
         private void AddEditPersonfrm_Load(object sender, EventArgs e)
         {
+            _ResetDefaultValues();
+            if(Mode==enMode.Update)
             _LoadData();
+
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-
+            int NationalityCountryID = clsCountries.Find(CbCountries.Text).ID;
             _Person.FirstName = txtFirstName.Text;
             _Person.SecondName = txtSecondName.Text;
             _Person.ThirdName = txtThirdName.Text;
@@ -111,14 +146,15 @@ namespace DVLD
             _Person.Address = txtAddress.Text;
             _Person.DateOfBirth = dateTimePicker1.Value;
             _Person.PersonID = _PersonID;
-            _Person.NationalityCountryID = CbCountries.SelectedIndex;
-            if (pictureBox1.Image == null)
+            _Person.NationalityCountryID = NationalityCountryID;
+            //pictureBox1.ImageLocation = "kdjkldfj";
+            if (pictureBox1.Image != null)
             {
-                _Person.ImagePath = "";
+                _Person.ImagePath = pictureBox1.ImageLocation;
             }
             else
             {
-                _Person.ImagePath = _SelectedImagePath;
+                _Person.ImagePath = "";
             }
             if (rbFemale.Checked==true)
             {

@@ -52,6 +52,12 @@
     <Compile Include="AddEditPersonfrm.Designer.cs">
       <DependentUpon>AddEditPersonfrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FindPersonfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindPersonfrm.Designer.cs">
+      <DependentUpon>FindPersonfrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,8 +84,17 @@
     <Compile Include="UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControl2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl2.Designer.cs">
+      <DependentUpon>UserControl2.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddEditPersonfrm.resx">
       <DependentUpon>AddEditPersonfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindPersonfrm.resx">
+      <DependentUpon>FindPersonfrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -102,6 +117,9 @@
     </Compile>
     <EmbeddedResource Include="UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl2.resx">
+      <DependentUpon>UserControl2.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -199,6 +217,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\call 321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchPerson.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddPerson 32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

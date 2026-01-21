@@ -16,10 +16,15 @@ namespace DVLD
     {
         clsPeople _person;
         int _PersonID=-1;
+        string _NationalNO = "";
 
         public int personID
         {
            get{ return _PersonID; }
+        }
+        public string NationalNo
+        {
+            get { return _NationalNO; }
         }
         public clsPeople SelectedPersonInfo
         {
@@ -32,6 +37,17 @@ namespace DVLD
             if(_person==null)
             {
                 MessageBox.Show("ther is no person with ID " + ID);
+                return;
+            }
+            _FillPersonInfo();
+        }
+        public void LoadPersonInfo(string  NationalNo)
+        {
+            _NationalNO = NationalNo;
+            _person = clsPeople.Find(_NationalNO);
+            if (_person == null)
+            {
+                MessageBox.Show("ther is no person with ID " + _NationalNO);
                 return;
             }
             _FillPersonInfo();
@@ -50,7 +66,7 @@ namespace DVLD
                 pictureBox1.Image = Properties.Resources.Female_512;
             string ImagePath = _person.ImagePath;
 
-            if (ImagePath != "" || ImagePath != null)
+            if (ImagePath != "" )
                 if (File.Exists(ImagePath))
                     pictureBox1.ImageLocation = ImagePath;
                 else
@@ -68,7 +84,7 @@ namespace DVLD
             lblPhone.Text = _person.Phone;
             lblPersonID.Text = _PersonID.ToString();
             lblDateOfBirth.Text = _person.DateOfBirth.ToShortDateString();
-          
+           
             lblGendor.Text = _person.Gendor == 0 ? "Male" : "Female";
             lblCountry.Text = clsCountries.Find(_person.NationalityCountryID).CountryName;
             _LoadPersonImage();
@@ -82,7 +98,7 @@ namespace DVLD
 
         private void UserControl1_Load(object sender, EventArgs e)
         {
-            _FillPersonInfo();
+           // _FillPersonInfo();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

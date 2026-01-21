@@ -38,12 +38,12 @@ namespace DVLDDataAccessLayer
                     Address = (string)reader["Address"];
                     DateOfBirth = (DateTime)reader["DateOfBirth"];
                    // CountryID = (int)reader["CountryID"];
-                    ThirdName = (string)reader["ThirdName"];
+                    //ThirdName = (string)reader["ThirdName"];
                     NationalityCountryID = (int)reader["NationalityCountryID"];
                     NationalNo = (string)reader["NationalNo"];
                     Gendor = (int)reader["Gendor"];
-
-                    //ImagePath: allows null in database so we should handle null
+                    ImagePath = (string)reader["ImagePath"];
+                    // ImagePath: allows null in database so we should handle null
                     if (reader["ImagePath"] != DBNull.Value)
                     {
                         ImagePath = (string)reader["ImagePath"];
@@ -52,7 +52,18 @@ namespace DVLDDataAccessLayer
                     {
                         ImagePath = "";
                     }
-                    ThirdName = (string)reader["ThirdName"];
+
+
+                    ImagePath = "adkjd";
+                    if (reader["ThirdName"] != DBNull.Value)
+                    {
+                        ThirdName = (string)reader["ThirdName"];
+                    }
+                    else
+                    {
+                        ThirdName = "";
+                    }
+                    
                     NationalityCountryID = (int)reader["NationalityCountryID"];
                     NationalNo = (string)reader["NationalNo"]; 
                     Gendor = (int)reader["Gendor"];
@@ -76,12 +87,83 @@ namespace DVLDDataAccessLayer
             return isFound;
 
         }
+        public static bool GetPersonNationalNo(ref int PersonID, ref string FirstName, ref string SecondName, ref string ThirdName,
+      ref int NationalityCountryID, string NationalNo, ref string Email, ref string Address, ref int Gendor
+          , ref int CountryID, ref string ImagePath, ref DateTime DateOfBirth, ref string Phone, ref string LastName)
+        {
+            bool isFound = false;
+            SqlConnection connection = new SqlConnection(clsPeopleDataAccessSettings.ConnectionString);
+            string query = "select * from people where NationalNo =@NationalNo";
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@NationalNo", NationalNo);
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    //  PersonID = (int)reader["PersonID"];
 
+                    isFound = true;
+                    PersonID = (int)reader["PersonID"];
+                    FirstName = (string)reader["FirstName"];
+                    SecondName = (string)reader["SecondName"];
+                    LastName = (string)reader["LastName"];
+                    Email = (string)reader["Email"];
+                    Phone = (string)reader["Phone"];
+                    Address = (string)reader["Address"];
+                    DateOfBirth = (DateTime)reader["DateOfBirth"];
+                    // CountryID = (int)reader["CountryID"];
+                    //ThirdName = (string)reader["ThirdName"];
+                    NationalityCountryID = (int)reader["NationalityCountryID"];
+                    //NationalNo = (string)reader["NationalNo"];
+                    Gendor = (int)reader["Gendor"];
+
+                    //ImagePath: allows null in database so we should handle null
+                    if (reader["ImagePath"] != DBNull.Value)
+                    {
+                        ImagePath = (string)reader["ImagePath"];
+                    }
+                    else
+                    {
+                        ImagePath = "";
+                    }
+                    if (reader["ThirdName"] != DBNull.Value)
+                    {
+                        ThirdName = (string)reader["ThirdName"];
+                    }
+                    else
+                    {
+                        ThirdName = "";
+                    }
+
+                    
+                    
+
+
+                }
+                else
+                {
+                    isFound = false;
+                }
+                reader.Close();
+            }
+            catch (Exception E)
+            {
+                Console.WriteLine(E.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return isFound;
+
+        }
         public static DataTable GetAllPeople()
         {
             DataTable dt = new DataTable();
             SqlConnection connection = new SqlConnection(clsPeopleDataAccessSettings.ConnectionString);
-            string query = "select * from People";
+            string query = "\r\nSELECT [PersonID]\r\n      ,[NationalNo]\r\n      ,[FirstName]\r\n      ,[SecondName]\r\n      ,[ThirdName]\r\n      ,[LastName]\r\n      ,[DateOfBirth]\r\n      ,[Gendor],\r\n\t  case \r\n\t  when Gendor=0 Then 'MALE'\r\n\t  ELSE \r\n\t  'FEMALE' END AS GendorCaption\r\n      ,[Address]\r\n      ,[Phone]\r\n      ,[Email]\r\n      ,[NationalityCountryID]\r\n      ,[ImagePath]\r\n  FROM [dbo].[People]\r\n";
             SqlCommand command = new SqlCommand(query, connection);
 
             try
@@ -110,7 +192,7 @@ namespace DVLDDataAccessLayer
         public static int AddNewPerson(string FirstName, string SecondName, string ThirdName,
             int NationalityCountryID, string NationalNo, int Gendor,
         string Email, string Phone, string Address, DateTime DateOfBirth,
-            int CountryID, string ImagePath, string LastName)
+           string ImagePath, string LastName)
         {
             int PersonID=-1; 
            SqlConnection connection = new SqlConnection(clsPeopleDataAccessSettings.ConnectionString);
@@ -161,7 +243,7 @@ VALUES
             command.Parameters.AddWithValue("@DateOfBirth", DateOfBirth);
            // command.Parameters.AddWithValue("@CountryID", CountryID);
 
-            if (ImagePath != "" && ImagePath != null)
+            if (ImagePath != "" )
                 command.Parameters.AddWithValue("@ImagePath", ImagePath);
             else
                 command.Parameters.AddWithValue("@ImagePath", System.DBNull.Value);
@@ -196,7 +278,7 @@ VALUES
         public static bool UpdatePerson(int PersonID,string FirstName, string SecondName, string ThirdName,
             int NationalityCountryID, string NationalNo, int Gendor,
         string Email, string Phone, string Address, DateTime DateOfBirth,
-            int CountryID, string ImagePath, string LastName)
+            string ImagePath, string LastName)
         {
             int rowsaffected = 0;
             SqlConnection connection = new SqlConnection(clsPeopleDataAccessSettings.ConnectionString);
@@ -228,7 +310,7 @@ WHERE PersonID = @PersonID";
             command.Parameters.AddWithValue("@Phone", Phone);
             command.Parameters.AddWithValue("@Address", Address);
             command.Parameters.AddWithValue("@DateOfBirth", DateOfBirth);
-            command.Parameters.AddWithValue("@CountryID", CountryID);
+         //   command.Parameters.AddWithValue("@CountryID", CountryID);
 
             if (ImagePath != "" && ImagePath != null)
                 command.Parameters.AddWithValue("@ImagePath", ImagePath);
@@ -290,7 +372,73 @@ WHERE PersonID = @PersonID";
             return (rowsaffected != 0);
 
         }
+        public static bool IsPersonExist(int ID)
+        {
+            bool isFound = false;
 
+            SqlConnection connection = new SqlConnection(clsPeopleDataAccessSettings.ConnectionString);
+
+            string query = "SELECT Found=1 FROM people WHERE PersonID = @PersonID";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@PersonID", ID);
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                isFound = reader.HasRows;
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                //Console.WriteLine("Error: " + ex.Message);
+                isFound = false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return isFound;
+        }
+
+        public static bool IsPersonExist(string  NationalNo)
+        {
+            bool isFound = false;
+
+            SqlConnection connection = new SqlConnection(clsPeopleDataAccessSettings.ConnectionString);
+
+            string query = "SELECT Found=1 FROM people WHERE NationalNo = @NationalNo";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@NationalNo", NationalNo);
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                isFound = reader.HasRows;
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                //Console.WriteLine("Error: " + ex.Message);
+                isFound = false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return isFound;
+        }
     }
     public class clsPeopleDataAccessSettings
     {

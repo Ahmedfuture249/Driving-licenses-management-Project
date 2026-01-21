@@ -54,8 +54,10 @@
             this.label14 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.CbCountries = new System.Windows.Forms.ComboBox();
-            this.btnClose = new System.Windows.Forms.Button();
             this.lblMode = new System.Windows.Forms.Label();
+            this.linklblSelectImage = new System.Windows.Forms.LinkLabel();
+            this.linklblRemoveImage = new System.Windows.Forms.LinkLabel();
+            this.btnClose = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
@@ -66,8 +68,6 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.linklblSelectImage = new System.Windows.Forms.LinkLabel();
-            this.linklblRemoveImage = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -83,7 +83,7 @@
             // 
             this.lblPerosnID.AutoSize = true;
             this.lblPerosnID.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPerosnID.Location = new System.Drawing.Point(160, 68);
+            this.lblPerosnID.Location = new System.Drawing.Point(103, 60);
             this.lblPerosnID.Name = "lblPerosnID";
             this.lblPerosnID.Size = new System.Drawing.Size(41, 20);
             this.lblPerosnID.TabIndex = 48;
@@ -93,7 +93,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(497, 302);
+            this.label9.Location = new System.Drawing.Point(440, 294);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(62, 20);
             this.label9.TabIndex = 38;
@@ -103,7 +103,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(497, 239);
+            this.label8.Location = new System.Drawing.Point(440, 231);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(52, 20);
             this.label8.TabIndex = 30;
@@ -113,7 +113,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(496, 182);
+            this.label7.Location = new System.Drawing.Point(439, 174);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(84, 20);
             this.label7.TabIndex = 31;
@@ -123,7 +123,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(117, 331);
+            this.label6.Location = new System.Drawing.Point(60, 323);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(64, 20);
             this.label6.TabIndex = 32;
@@ -133,7 +133,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(117, 275);
+            this.label5.Location = new System.Drawing.Point(60, 267);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(47, 20);
             this.label5.TabIndex = 33;
@@ -143,7 +143,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(117, 224);
+            this.label4.Location = new System.Drawing.Point(60, 216);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(58, 20);
             this.label4.TabIndex = 34;
@@ -153,7 +153,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(117, 182);
+            this.label3.Location = new System.Drawing.Point(60, 174);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 20);
             this.label3.TabIndex = 35;
@@ -163,7 +163,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(117, 126);
+            this.label2.Location = new System.Drawing.Point(60, 118);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 20);
             this.label2.TabIndex = 36;
@@ -173,7 +173,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(59, 68);
+            this.label1.Location = new System.Drawing.Point(2, 60);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 20);
             this.label1.TabIndex = 37;
@@ -181,42 +181,42 @@
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(267, 124);
+            this.txtFirstName.Location = new System.Drawing.Point(210, 116);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(160, 22);
             this.txtFirstName.TabIndex = 49;
             // 
             // txtSecondName
             // 
-            this.txtSecondName.Location = new System.Drawing.Point(451, 124);
+            this.txtSecondName.Location = new System.Drawing.Point(394, 116);
             this.txtSecondName.Name = "txtSecondName";
             this.txtSecondName.Size = new System.Drawing.Size(160, 22);
             this.txtSecondName.TabIndex = 50;
             // 
             // txtThirdName
             // 
-            this.txtThirdName.Location = new System.Drawing.Point(634, 124);
+            this.txtThirdName.Location = new System.Drawing.Point(577, 116);
             this.txtThirdName.Name = "txtThirdName";
             this.txtThirdName.Size = new System.Drawing.Size(160, 22);
             this.txtThirdName.TabIndex = 51;
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(814, 124);
+            this.txtLastName.Location = new System.Drawing.Point(757, 116);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(160, 22);
             this.txtLastName.TabIndex = 52;
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(634, 239);
+            this.txtPhone.Location = new System.Drawing.Point(577, 231);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(160, 22);
             this.txtPhone.TabIndex = 53;
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(267, 331);
+            this.txtAddress.Location = new System.Drawing.Point(210, 323);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(473, 85);
@@ -224,14 +224,14 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(267, 286);
+            this.txtEmail.Location = new System.Drawing.Point(210, 278);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(160, 22);
             this.txtEmail.TabIndex = 55;
             // 
             // txtNationalNo
             // 
-            this.txtNationalNo.Location = new System.Drawing.Point(267, 179);
+            this.txtNationalNo.Location = new System.Drawing.Point(210, 171);
             this.txtNationalNo.Name = "txtNationalNo";
             this.txtNationalNo.Size = new System.Drawing.Size(160, 22);
             this.txtNationalNo.TabIndex = 56;
@@ -239,7 +239,7 @@
             // rbMale
             // 
             this.rbMale.AutoSize = true;
-            this.rbMale.Location = new System.Drawing.Point(267, 239);
+            this.rbMale.Location = new System.Drawing.Point(210, 231);
             this.rbMale.Name = "rbMale";
             this.rbMale.Size = new System.Drawing.Size(58, 20);
             this.rbMale.TabIndex = 57;
@@ -250,7 +250,7 @@
             // rbFemale
             // 
             this.rbFemale.AutoSize = true;
-            this.rbFemale.Location = new System.Drawing.Point(353, 239);
+            this.rbFemale.Location = new System.Drawing.Point(296, 231);
             this.rbFemale.Name = "rbFemale";
             this.rbFemale.Size = new System.Drawing.Size(74, 20);
             this.rbFemale.TabIndex = 58;
@@ -262,7 +262,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(876, 101);
+            this.label11.Location = new System.Drawing.Point(819, 93);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(35, 20);
             this.label11.TabIndex = 59;
@@ -273,7 +273,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(698, 101);
+            this.label12.Location = new System.Drawing.Point(641, 93);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(42, 20);
             this.label12.TabIndex = 60;
@@ -283,7 +283,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(496, 101);
+            this.label13.Location = new System.Drawing.Point(439, 93);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(55, 20);
             this.label13.TabIndex = 61;
@@ -293,7 +293,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(312, 101);
+            this.label14.Location = new System.Drawing.Point(255, 93);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(37, 20);
             this.label14.TabIndex = 62;
@@ -301,7 +301,8 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(639, 180);
+            this.dateTimePicker1.Location = new System.Drawing.Point(582, 172);
+            this.dateTimePicker1.MinDate = new System.DateTime(1926, 2, 1, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(155, 22);
             this.dateTimePicker1.TabIndex = 63;
@@ -309,135 +310,25 @@
             // CbCountries
             // 
             this.CbCountries.FormattingEnabled = true;
-            this.CbCountries.Location = new System.Drawing.Point(641, 291);
+            this.CbCountries.Location = new System.Drawing.Point(584, 283);
             this.CbCountries.Name = "CbCountries";
             this.CbCountries.Size = new System.Drawing.Size(152, 24);
             this.CbCountries.TabIndex = 64;
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Image = global::DVLD.Properties.Resources.Close_32;
-            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(814, 433);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(147, 46);
-            this.btnClose.TabIndex = 66;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // lblMode
             // 
             this.lblMode.AutoSize = true;
             this.lblMode.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMode.Location = new System.Drawing.Point(445, 35);
+            this.lblMode.Location = new System.Drawing.Point(388, 27);
             this.lblMode.Name = "lblMode";
             this.lblMode.Size = new System.Drawing.Size(218, 33);
             this.lblMode.TabIndex = 68;
             this.lblMode.Text = "Add New Mode";
             // 
-            // btnSave
-            // 
-            this.btnSave.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Image = global::DVLD.Properties.Resources.Save_32;
-            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(619, 433);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(147, 46);
-            this.btnSave.TabIndex = 65;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::DVLD.Properties.Resources.Female_512;
-            this.pictureBox1.Location = new System.Drawing.Point(814, 166);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(160, 168);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 47;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = global::DVLD.Properties.Resources.Calendar_32;
-            this.pictureBox9.Location = new System.Drawing.Point(582, 182);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(29, 33);
-            this.pictureBox9.TabIndex = 46;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::DVLD.Properties.Resources.Man_32;
-            this.pictureBox8.Location = new System.Drawing.Point(205, 224);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(41, 36);
-            this.pictureBox8.TabIndex = 45;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::DVLD.Properties.Resources.Email_32;
-            this.pictureBox7.Location = new System.Drawing.Point(205, 275);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(41, 36);
-            this.pictureBox7.TabIndex = 44;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::DVLD.Properties.Resources.Phone_32;
-            this.pictureBox6.Location = new System.Drawing.Point(582, 239);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(41, 36);
-            this.pictureBox6.TabIndex = 43;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::DVLD.Properties.Resources.Number_32;
-            this.pictureBox5.Location = new System.Drawing.Point(207, 179);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(41, 36);
-            this.pictureBox5.TabIndex = 42;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::DVLD.Properties.Resources.Country_32;
-            this.pictureBox4.Location = new System.Drawing.Point(582, 286);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(41, 36);
-            this.pictureBox4.TabIndex = 41;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::DVLD.Properties.Resources.Person_32;
-            this.pictureBox3.Location = new System.Drawing.Point(207, 126);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(41, 36);
-            this.pictureBox3.TabIndex = 40;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::DVLD.Properties.Resources.Address_32;
-            this.pictureBox2.Location = new System.Drawing.Point(207, 331);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(41, 36);
-            this.pictureBox2.TabIndex = 39;
-            this.pictureBox2.TabStop = false;
-            // 
             // linklblSelectImage
             // 
             this.linklblSelectImage.AutoSize = true;
-            this.linklblSelectImage.Location = new System.Drawing.Point(847, 353);
+            this.linklblSelectImage.Location = new System.Drawing.Point(803, 377);
             this.linklblSelectImage.Name = "linklblSelectImage";
             this.linklblSelectImage.Size = new System.Drawing.Size(68, 16);
             this.linklblSelectImage.TabIndex = 69;
@@ -448,18 +339,131 @@
             // linklblRemoveImage
             // 
             this.linklblRemoveImage.AutoSize = true;
-            this.linklblRemoveImage.Location = new System.Drawing.Point(847, 379);
+            this.linklblRemoveImage.Location = new System.Drawing.Point(787, 343);
             this.linklblRemoveImage.Name = "linklblRemoveImage";
             this.linklblRemoveImage.Size = new System.Drawing.Size(100, 16);
             this.linklblRemoveImage.TabIndex = 70;
             this.linklblRemoveImage.TabStop = true;
             this.linklblRemoveImage.Text = "Remove Image";
             // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Image = global::DVLD.Properties.Resources.Close_32;
+            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClose.Location = new System.Drawing.Point(757, 425);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(147, 46);
+            this.btnClose.TabIndex = 66;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Image = global::DVLD.Properties.Resources.Save_32;
+            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.Location = new System.Drawing.Point(562, 425);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(147, 46);
+            this.btnSave.TabIndex = 65;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::DVLD.Properties.Resources.Female_512;
+            this.pictureBox1.Location = new System.Drawing.Point(757, 158);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(160, 168);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 47;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::DVLD.Properties.Resources.Calendar_32;
+            this.pictureBox9.Location = new System.Drawing.Point(525, 174);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(29, 33);
+            this.pictureBox9.TabIndex = 46;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::DVLD.Properties.Resources.Man_32;
+            this.pictureBox8.Location = new System.Drawing.Point(148, 216);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(41, 36);
+            this.pictureBox8.TabIndex = 45;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::DVLD.Properties.Resources.Email_32;
+            this.pictureBox7.Location = new System.Drawing.Point(148, 267);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(41, 36);
+            this.pictureBox7.TabIndex = 44;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::DVLD.Properties.Resources.Phone_32;
+            this.pictureBox6.Location = new System.Drawing.Point(525, 231);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(41, 36);
+            this.pictureBox6.TabIndex = 43;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::DVLD.Properties.Resources.Number_32;
+            this.pictureBox5.Location = new System.Drawing.Point(150, 171);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(41, 36);
+            this.pictureBox5.TabIndex = 42;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::DVLD.Properties.Resources.Country_32;
+            this.pictureBox4.Location = new System.Drawing.Point(525, 278);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(41, 36);
+            this.pictureBox4.TabIndex = 41;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::DVLD.Properties.Resources.Person_32;
+            this.pictureBox3.Location = new System.Drawing.Point(150, 118);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(41, 36);
+            this.pictureBox3.TabIndex = 40;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::DVLD.Properties.Resources.Address_32;
+            this.pictureBox2.Location = new System.Drawing.Point(150, 323);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(41, 36);
+            this.pictureBox2.TabIndex = 39;
+            this.pictureBox2.TabStop = false;
+            // 
             // AddEditPersonfrm
             // 
+            this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1027, 486);
+            this.CancelButton = this.btnClose;
+            this.ClientSize = new System.Drawing.Size(940, 486);
             this.Controls.Add(this.linklblRemoveImage);
             this.Controls.Add(this.linklblSelectImage);
             this.Controls.Add(this.lblMode);

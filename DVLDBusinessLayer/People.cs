@@ -27,9 +27,14 @@ namespace DVLDBusinessLayer
         public string Address                  { set; get; }
       public DateTime DateOfBirth              { set; get; }
           
-        public string ImagePath { set; get; }
+        private string _ImagePath ;
+        public string ImagePath
+        {
+            get { return _ImagePath; }
+            set { _ImagePath = value; }
+        }
 
-        public int CountryID { set; get; }
+        public clsCountries CountryInfo;
 
         public clsPeople()
 
@@ -45,7 +50,7 @@ namespace DVLDBusinessLayer
             this.Phone = "";
             this.Address = "";
             this.DateOfBirth = DateTime.Now;
-            this.CountryID = -1;
+            this.CountryInfo = new clsCountries();
             this.ImagePath = "";
             this.SecondName = "";
 
@@ -56,17 +61,17 @@ namespace DVLDBusinessLayer
         private clsPeople(int ID, string FirstName, string SecondName,string ThirdName,
             int NationalityCountryID, string NationalNo ,int Gendor,
         string Email, string Phone, string Address, DateTime DateOfBirth,
-            int CountryID, string ImagePath,string LastName)
+            string ImagePath,string LastName)
 
         {
-            this.CountryID = ID;
+            this.PersonID = ID;
             this.FirstName = FirstName;
             this.LastName = LastName;
             this.Email = Email;
             this.Phone = Phone;
             this.Address = Address;
             this.DateOfBirth = DateOfBirth;
-            this.CountryID = CountryID;
+           // this.CountryInfo =CountryInfo ;
             this.ImagePath = ImagePath;
             this.NationalityCountryID = NationalityCountryID;
             this.NationalNo = NationalNo;
@@ -84,7 +89,7 @@ namespace DVLDBusinessLayer
 
             this.PersonID = PeopleDataAccess.AddNewPerson(this.FirstName,this.SecondName,this.ThirdName ,this.NationalityCountryID
               ,this.NationalNo,this.Gendor,   this.Email, this.Phone,
-                this.Address, this.DateOfBirth, this.CountryID, this.ImagePath, this.LastName);
+                this.Address, this.DateOfBirth, this.ImagePath, this.LastName);
 
             return (this.PersonID != -1);
         }
@@ -95,7 +100,7 @@ namespace DVLDBusinessLayer
 
             return PeopleDataAccess.UpdatePerson(this.PersonID, this.FirstName, this.SecondName, this.ThirdName, this.NationalityCountryID
               , this.NationalNo, this.Gendor, this.Email, this.Phone,
-                this.Address, this.DateOfBirth, this.CountryID, this.ImagePath, this.LastName);
+                this.Address, this.DateOfBirth,  this.ImagePath, this.LastName);
 
         }
 
@@ -119,7 +124,34 @@ namespace DVLDBusinessLayer
                 return new clsPeople(ID, FirstName, SecondName, ThirdName,
              NationalityCountryID, NationalNo, Gendor,
          Email, Phone, Address, DateOfBirth,
-             CountryID, ImagePath,LastName);
+             ImagePath,LastName);
+            }
+
+            else
+                return null;
+        }
+        public static clsPeople Find(string NationalNo)
+        {
+
+            string FirstName = "", SecondName = "", Email = "", Phone = "", Address = "", ImagePath = "";
+            DateTime DateOfBirth = DateTime.Now;
+            int CountryID = -1;
+            string ThirdName = "";
+            //string NationalNo = "";
+            int Gendor = 0;
+            int NationalityCountryID = 0;
+            string LastName = "";
+            int ID = -1;
+
+            if (PeopleDataAccess.GetPersonNationalNo(ref ID, ref FirstName, ref SecondName, ref ThirdName, ref NationalityCountryID
+                ,  NationalNo,
+                          ref Email, ref Address, ref Gendor, ref CountryID, ref ImagePath, ref DateOfBirth,
+                          ref Phone, ref LastName))
+            {
+                return new clsPeople(ID, FirstName, SecondName, ThirdName,
+             NationalityCountryID, NationalNo, Gendor,
+         Email, Phone, Address, DateOfBirth,
+             ImagePath, LastName);
             }
 
             else
@@ -168,12 +200,17 @@ namespace DVLDBusinessLayer
             return PeopleDataAccess.DeletePerson(ID);
         }
 
-        //public static bool isContactExist(int ID)
-        //{
-        //    return clsContactDataAccess.IsContactExist(ID);
-        //}
+        public static bool isPersonExist(int ID)
+        {
+            return PeopleDataAccess.IsPersonExist(ID);
+        }
 
 
-        //   }
+        public static bool isPersonExist(string NationalNO)
+        {
+            return PeopleDataAccess.IsPersonExist(NationalNO);
+        }
+
+
     }
 }

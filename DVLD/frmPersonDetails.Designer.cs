@@ -47,14 +47,14 @@
             // 
             this.userControl11.Location = new System.Drawing.Point(12, 45);
             this.userControl11.Name = "userControl11";
-            this.userControl11.Size = new System.Drawing.Size(651, 297);
+            this.userControl11.Size = new System.Drawing.Size(683, 297);
             this.userControl11.TabIndex = 2;
             // 
             // frmPersonDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(665, 354);
+            this.ClientSize = new System.Drawing.Size(704, 354);
             this.Controls.Add(this.userControl11);
             this.Controls.Add(this.label1);
             this.Name = "frmPersonDetails";

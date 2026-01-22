@@ -30,20 +30,22 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgvGetAllPeople = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbFilterBy = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtFilterBy = new System.Windows.Forms.TextBox();
+            this.txtFilterByValue = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.callPhoneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addPersonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editPersonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sendEmailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.callPhoneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAddNewPerson = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblRecordsCount = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGetAllPeople)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -63,26 +65,27 @@
             this.dgvGetAllPeople.Size = new System.Drawing.Size(1334, 400);
             this.dgvGetAllPeople.TabIndex = 0;
             // 
-            // comboBox1
+            // cbFilterBy
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "PersonID             ",
-            "FirstName            ",
-            "LastName             ",
-            "ThirdName            ",
-            "NationalityCountryID ",
-            "NationalNo           ",
-            " Gendor              ",
+            this.cbFilterBy.FormattingEnabled = true;
+            this.cbFilterBy.Items.AddRange(new object[] {
+            "None",
+            "Person ID             ",
+            "First Name            ",
+            "Last Name             ",
+            "Third Name            ",
+            "Nationality CountryID ",
+            "National No           ",
+            "Gendor              ",
             "Email                ",
-            "Phone                ",
-            "Address              ",
+            "Phone                            ",
             "DateOfBirth  ",
             "CountryID        "});
-            this.comboBox1.Location = new System.Drawing.Point(143, 149);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(133, 24);
-            this.comboBox1.TabIndex = 2;
+            this.cbFilterBy.Location = new System.Drawing.Point(143, 149);
+            this.cbFilterBy.Name = "cbFilterBy";
+            this.cbFilterBy.Size = new System.Drawing.Size(133, 24);
+            this.cbFilterBy.TabIndex = 2;
+            this.cbFilterBy.SelectedIndexChanged += new System.EventHandler(this.cbFilterBy_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -104,12 +107,13 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Filter by";
             // 
-            // txtFilterBy
+            // txtFilterByValue
             // 
-            this.txtFilterBy.Location = new System.Drawing.Point(299, 149);
-            this.txtFilterBy.Name = "txtFilterBy";
-            this.txtFilterBy.Size = new System.Drawing.Size(146, 22);
-            this.txtFilterBy.TabIndex = 7;
+            this.txtFilterByValue.Location = new System.Drawing.Point(299, 149);
+            this.txtFilterByValue.Name = "txtFilterByValue";
+            this.txtFilterByValue.Size = new System.Drawing.Size(146, 22);
+            this.txtFilterByValue.TabIndex = 7;
+            this.txtFilterByValue.TextChanged += new System.EventHandler(this.txtFilterByValue_TextChanged);
             // 
             // contextMenuStrip1
             // 
@@ -123,13 +127,6 @@
             this.callPhoneToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(169, 160);
-            // 
-            // callPhoneToolStripMenuItem
-            // 
-            this.callPhoneToolStripMenuItem.Image = global::DVLD.Properties.Resources.call_321;
-            this.callPhoneToolStripMenuItem.Name = "callPhoneToolStripMenuItem";
-            this.callPhoneToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
-            this.callPhoneToolStripMenuItem.Text = "Call Phone";
             // 
             // addPersonToolStripMenuItem
             // 
@@ -169,6 +166,13 @@
             this.sendEmailToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
             this.sendEmailToolStripMenuItem.Text = "Send Email";
             // 
+            // callPhoneToolStripMenuItem
+            // 
+            this.callPhoneToolStripMenuItem.Image = global::DVLD.Properties.Resources.call_321;
+            this.callPhoneToolStripMenuItem.Name = "callPhoneToolStripMenuItem";
+            this.callPhoneToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
+            this.callPhoneToolStripMenuItem.Text = "Call Phone";
+            // 
             // btnAddNewPerson
             // 
             this.btnAddNewPerson.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -202,18 +206,40 @@
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(34, 607);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 25);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "#ٌ Records";
+            // 
+            // lblRecordsCount
+            // 
+            this.lblRecordsCount.AutoSize = true;
+            this.lblRecordsCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRecordsCount.Location = new System.Drawing.Point(140, 607);
+            this.lblRecordsCount.Name = "lblRecordsCount";
+            this.lblRecordsCount.Size = new System.Drawing.Size(23, 25);
+            this.lblRecordsCount.TabIndex = 9;
+            this.lblRecordsCount.Text = "0";
+            // 
             // ManagePeoplefrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1407, 644);
             this.ContextMenuStrip = this.contextMenuStrip1;
-            this.Controls.Add(this.txtFilterBy);
+            this.Controls.Add(this.lblRecordsCount);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtFilterByValue);
             this.Controls.Add(this.btnAddNewPerson);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbFilterBy);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.dgvGetAllPeople);
             this.Name = "ManagePeoplefrm";
@@ -231,12 +257,12 @@
 
         private System.Windows.Forms.DataGridView dgvGetAllPeople;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbFilterBy;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnAddNewPerson;
-        private System.Windows.Forms.TextBox txtFilterBy;
+        private System.Windows.Forms.TextBox txtFilterByValue;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem addPersonToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editPersonToolStripMenuItem;
@@ -244,5 +270,7 @@
         private System.Windows.Forms.ToolStripMenuItem showDetailsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sendEmailToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem callPhoneToolStripMenuItem;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblRecordsCount;
     }
 }

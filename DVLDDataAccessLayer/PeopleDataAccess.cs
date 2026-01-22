@@ -163,7 +163,29 @@ namespace DVLDDataAccessLayer
         {
             DataTable dt = new DataTable();
             SqlConnection connection = new SqlConnection(clsPeopleDataAccessSettings.ConnectionString);
-            string query = "\r\nSELECT [PersonID]\r\n      ,[NationalNo]\r\n      ,[FirstName]\r\n      ,[SecondName]\r\n      ,[ThirdName]\r\n      ,[LastName]\r\n      ,[DateOfBirth]\r\n      ,[Gendor],\r\n\t  case \r\n\t  when Gendor=0 Then 'MALE'\r\n\t  ELSE \r\n\t  'FEMALE' END AS GendorCaption\r\n      ,[Address]\r\n      ,[Phone]\r\n      ,[Email]\r\n      ,[NationalityCountryID]\r\n      ,[ImagePath]\r\n  FROM [dbo].[People]\r\n";
+            //string query = "\r\nSELECT [PersonID]\r\n      ,[NationalNo]\r\n      ,[FirstName]\r\n      ,[SecondName]\r\n      ,[ThirdName]\r\n      ,[LastName]\r\n      ,[DateOfBirth]\r\n      ,[Gendor],\r\n\t  case \r\n\t  when Gendor=0 Then 'MALE'\r\n\t  ELSE \r\n\t  'FEMALE' END AS GendorCaption\r\n      ,[Address]\r\n      ,[Phone]\r\n      ,[Email]\r\n      ,[NationalityCountryID]\r\n      ,[ImagePath]\r\n  FROM [dbo].[People]\r\n";
+            string query = @"
+SELECT
+    PersonID,
+    NationalNo,
+    FirstName,
+    SecondName,
+    ThirdName,
+    LastName,
+    DateOfBirth,
+    Gendor,
+    CASE 
+        WHEN Gendor = 0 THEN 'MALE'
+        ELSE 'FEMALE'
+    END AS GendorCaption,
+    Address,
+    Phone,
+    Email,
+    NationalityCountryID,
+    ImagePath
+FROM dbo.People;
+";
+
             SqlCommand command = new SqlCommand(query, connection);
 
             try

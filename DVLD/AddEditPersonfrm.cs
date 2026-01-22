@@ -148,7 +148,7 @@ namespace DVLD
             _Person.PersonID = _PersonID;
             _Person.NationalityCountryID = NationalityCountryID;
             //pictureBox1.ImageLocation = "kdjkldfj";
-            if (pictureBox1.Image != null)
+            if (pictureBox1.ImageLocation != null)
             {
                 _Person.ImagePath = pictureBox1.ImageLocation;
             }
@@ -160,9 +160,9 @@ namespace DVLD
             {
                 _Person.Gendor = 1;
             }
-            else
+            if (rbMale.Checked == true)
             {
-                _Person.Gendor = 1;
+                _Person.Gendor = 0;
             }
             _Person.Save();
         }

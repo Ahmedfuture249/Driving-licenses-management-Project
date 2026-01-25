@@ -10,7 +10,7 @@ namespace DVLDDataAccessLayer
 {
     public class UsersData
     {
-        public static bool GetUser(int UserID, ref string UserName, ref int PersonID, ref bool IsActive)
+        public static bool GetUser(int UserID, ref string UserName, ref int PersonID, ref bool IsActive,ref string Password)
         {
             bool isFound = false;
             SqlConnection connection = new SqlConnection(clsPeopleDataAccessSettings.ConnectionString);
@@ -26,6 +26,7 @@ namespace DVLDDataAccessLayer
                     isFound = true;
 
                     PersonID = (int)reader["PersonID"];
+                    Password = (string)reader["Password"];
                     UserName = (string)reader["UserName"];
                     IsActive = (bool)reader["IsActive"];
                    
@@ -185,6 +186,37 @@ UPDATE Users SET
 
             return (rowsaffected != 0);
         }
+        public static bool DeleteUser(int UserID)
+        {
+            int rowsaffected = 0;
+            SqlConnection connection = new SqlConnection(clsPeopleDataAccessSettings.ConnectionString);
+            string query = @" Delete From Users
+               WHERE UserID = @UserID";
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@UserID", UserID);
+            try
+            {
+                connection.Open();
 
+                rowsaffected = command.ExecuteNonQuery();
+
+
+            }
+
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+
+            }
+
+            finally
+            {
+                connection.Close();
+            }
+
+
+            return (rowsaffected != 0);
+
+        }
     }
 }

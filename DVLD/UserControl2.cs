@@ -52,7 +52,7 @@ namespace DVLD
         }
         public void LoadPersonInfo(int id)
         {
-            cbFilterBy.SelectedIndex = 1;
+            cbFilterBy.SelectedIndex = 0;
             txtFindBy.Text = id.ToString();
             FindNow();
         }

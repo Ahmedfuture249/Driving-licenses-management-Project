@@ -15,21 +15,49 @@ namespace DVLD
     {
         clsUsers _User;
         clsPeople _person;
+        int _UserID;
         int _PersonID;
         enum enMode { AddNew = 0, Update = 1 }
         enMode Mode;
-        public frmAddNewUser()
+        public frmAddNewUser(int ID)
         {
             InitializeComponent();
-          
-            Mode = enMode.AddNew;
-            if (Mode == enMode.AddNew)
-            {
-                _User = new clsUsers();
-            }
-            _PersonID = userControl22.personID;
-            _person = clsPeople.Find(_PersonID);
 
+            _UserID = ID;
+            
+
+            if (_UserID == -1)
+            {
+                Mode = enMode.AddNew;
+                _User = new clsUsers();
+                
+            }
+            else
+            {
+                Mode = enMode.Update;
+                _User = clsUsers.Find(_UserID);
+                if (_User == null)
+                    MessageBox.Show("USER NOT FOUNDED", "NOT FOUNDED", MessageBoxButtons.OK);
+                else
+                {
+                    userControl22.LoadPersonInfo(_User.PersonID);
+                    userControl22.FilterByEnabled = false;
+                    
+                    LoadUserInfo();
+                }
+            }
+
+        }
+         public void LoadUserInfo()
+        {
+            txtPassword.Text = _User.UserPassword;
+            txtConfirmPassword.Text = _User.UserPassword;
+            txtUserName.Text = _User.UserName;
+            if (_User.IsActive == true)
+                checkBoxIsActive.Checked = true;
+            else
+                checkBoxIsActive.Checked = false;
+            lblUserID.Text = _User.UserID.ToString();
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -68,7 +96,7 @@ namespace DVLD
             }
            if( _User.Save())
             {
-                MessageBox.Show("new user with ID = " + _User.UserID + "Added");
+                MessageBox.Show("saved succussfuly");
             }
            else
             {
@@ -113,7 +141,17 @@ namespace DVLD
                 e.Cancel = true;
                 errorProvider1.SetError(txtConfirmPassword, "The password confirmation does not match");
             }
-           
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(txtConfirmPassword, "");
+            }
+
+        }
+
+        private void frmAddNewUser_Load(object sender, EventArgs e)
+        {
+             
         }
     }
 }

@@ -42,7 +42,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.userControl22 = new DVLD.UserControl2();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnNext = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -50,15 +50,15 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.userControl22 = new DVLD.UserControl2();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -199,14 +199,9 @@
             this.tabControl1.Size = new System.Drawing.Size(799, 424);
             this.tabControl1.TabIndex = 8;
             // 
-            // userControl22
+            // errorProvider1
             // 
-            this.userControl22.FilterByEnabled = true;
-            this.userControl22.Location = new System.Drawing.Point(6, 6);
-            this.userControl22.Name = "userControl22";
-            this.userControl22.showAddPerson = true;
-            this.userControl22.Size = new System.Drawing.Size(779, 383);
-            this.userControl22.TabIndex = 10;
+            this.errorProvider1.ContainerControl = this;
             // 
             // btnNext
             // 
@@ -288,9 +283,14 @@
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
             // 
-            // errorProvider1
+            // userControl22
             // 
-            this.errorProvider1.ContainerControl = this;
+            this.userControl22.FilterByEnabled = true;
+            this.userControl22.Location = new System.Drawing.Point(6, 6);
+            this.userControl22.Name = "userControl22";
+            this.userControl22.showAddPerson = true;
+            this.userControl22.Size = new System.Drawing.Size(779, 383);
+            this.userControl22.TabIndex = 10;
             // 
             // frmAddNewUser
             // 
@@ -301,15 +301,16 @@
             this.Controls.Add(this.btnClose);
             this.Name = "frmAddNewUser";
             this.Text = "frmAddNewUser";
+            this.Load += new System.EventHandler(this.frmAddNewUser_Load);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -35,7 +35,7 @@ namespace DVLD
 
         private void btnAddNewUser_Click(object sender, EventArgs e)
         {
-            frmAddNewUser frm = new frmAddNewUser();
+            frmAddNewUser frm = new frmAddNewUser(-1);
             frm.ShowDialog();
             _RefreshUsersList();
         }
@@ -82,9 +82,9 @@ namespace DVLD
 
         private void editPersonToolStripMenuItem_Click(object sender, EventArgs e)
         {
-          //  frmAddNewUser frm = new frmAddNewUser((int)dgvGetAllPeople.CurrentRow.Cells[0].Value);
-            //frm.ShowDialog();
-            //_RefreshUsersList();
+            frmAddNewUser frm = new frmAddNewUser((int)dgvGetAllUsers.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+            _RefreshUsersList();
         }
 
         private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -93,6 +93,28 @@ namespace DVLD
             UserDetailsfrm frm = new UserDetailsfrm(ID);
             frm.ShowDialog();
             _RefreshUsersList();
+        }
+
+        private void addPersonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddNewUser frm = new frmAddNewUser(-1);
+            frm.ShowDialog();
+            _RefreshUsersList();
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if
+            (clsUsers.DeleteUser((int)dgvGetAllUsers.CurrentRow.Cells[0].Value))
+            {
+                
+                MessageBox.Show("user deleted successfuly");
+                dgvGetAllUsers.DataSource = clsUsers.GetAllUsers();
+            }
+            else
+            {
+                MessageBox.Show("user not deleted !!");
+            }
         }
     }
 }

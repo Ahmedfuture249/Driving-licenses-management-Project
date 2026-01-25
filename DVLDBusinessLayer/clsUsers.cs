@@ -8,7 +8,7 @@ namespace DVLDBusinessLayer
    public class clsUsers
     {
         public enum enMode { AddNew = 0, Update = 1 };
-        public enMode Mode = enMode.AddNew;
+        public enMode Mode ;
 
         int _UserID;
         int _PersonID;
@@ -17,13 +17,15 @@ namespace DVLDBusinessLayer
         clsPeople _Person;
         bool _IsActive;
 
-        public clsUsers (int UserID ,int PersonID,string UserName,bool IsActive )
+        public clsUsers (int UserID ,int PersonID,string UserName,bool IsActive,string Password )
         {
             _UserID = UserID;
             _PersonID = PersonID;
-            _Person = clsPeople.Find(_PersonID);
+            //_Person = clsPeople.Find(_PersonID);
             _UserName = UserName;
             _IsActive = IsActive;
+            _UserPassword = Password;
+            Mode = enMode.Update;
         }
         public clsUsers()
         {
@@ -68,8 +70,9 @@ namespace DVLDBusinessLayer
             int PersonID = -1;
             string UserName = "";
             bool IsActive=false;
-            if (UsersData.GetUser(UserID, ref UserName, ref PersonID, ref IsActive))
-                return new clsUsers(UserID, PersonID, UserName, IsActive);
+            string Password = "";
+            if (UsersData.GetUser(UserID, ref UserName, ref PersonID, ref IsActive,ref Password))
+                return new clsUsers(UserID, PersonID, UserName, IsActive,Password);
             else
                 return null;
 
@@ -123,6 +126,9 @@ namespace DVLDBusinessLayer
 
             return false;
         }
-
+        public static bool DeleteUser(int ID)
+        {
+            return UsersData.DeleteUser(ID);
+        }
     }
 }

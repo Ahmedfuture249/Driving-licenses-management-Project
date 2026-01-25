@@ -44,10 +44,10 @@ namespace DVLD
         {
             userControl11.LoadPersonInfo(_User.PersonID);
             lblUserName.Text = _User.UserName;
-            if (_User.IsActive == 0)
-                LABEL.Text = " NO ";
+            if (_User.IsActive == false)
+                lblIsActive.Text = " NO ";
             else
-                LABEL.Text = " yes ";
+                lblIsActive.Text = " yes ";
             lblUserID.Text = _User.UserID.ToString();
         }
         private void CtrlUserInfo_Load(object sender, EventArgs e)

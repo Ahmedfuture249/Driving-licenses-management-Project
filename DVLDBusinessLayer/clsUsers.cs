@@ -15,9 +15,9 @@ namespace DVLDBusinessLayer
         string _UserPassword;
         string _UserName;
         clsPeople _Person;
-        int _IsActive;
+        bool _IsActive;
 
-        public clsUsers (int UserID ,int PersonID,string UserName,int IsActive )
+        public clsUsers (int UserID ,int PersonID,string UserName,bool IsActive )
         {
             _UserID = UserID;
             _PersonID = PersonID;
@@ -31,7 +31,7 @@ namespace DVLDBusinessLayer
             _PersonID = -1;
             //_Person = clsPeople.Find(_PersonID);
             _UserName = "";
-            _IsActive = -1;
+            _IsActive = false;
         }
         public int UserID
         {
@@ -53,7 +53,7 @@ namespace DVLDBusinessLayer
               set { _UserName = value; }
             get { return _UserName; }
         }
-        public int IsActive
+        public bool IsActive
         {
             set { _IsActive = value; }
             get { return _IsActive; }
@@ -67,7 +67,7 @@ namespace DVLDBusinessLayer
         {
             int PersonID = -1;
             string UserName = "";
-            int IsActive=-1;
+            bool IsActive=false;
             if (UsersData.GetUser(UserID, ref UserName, ref PersonID, ref IsActive))
                 return new clsUsers(UserID, PersonID, UserName, IsActive);
             else

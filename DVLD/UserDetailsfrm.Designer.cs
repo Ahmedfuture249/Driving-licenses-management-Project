@@ -45,15 +45,14 @@
             // 
             // ctrlUserInfo1
             // 
-            this.ctrlUserInfo1.Location = new System.Drawing.Point(12, 62);
+            this.ctrlUserInfo1.Location = new System.Drawing.Point(25, 62);
             this.ctrlUserInfo1.Name = "ctrlUserInfo1";
             this.ctrlUserInfo1.Size = new System.Drawing.Size(695, 376);
             this.ctrlUserInfo1.TabIndex = 0;
             // 
             // UserDetailsfrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(743, 450);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ctrlUserInfo1);

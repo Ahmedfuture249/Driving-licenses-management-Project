@@ -56,11 +56,11 @@ namespace DVLD
             _User.UserPassword = txtPassword.Text;
             if(checkBoxIsActive.Checked==true)
             {
-                _User.IsActive = 1;
+                _User.IsActive = true;
             }
             else
             {
-                _User.IsActive = 0;
+                _User.IsActive =false;
             }
             if(_person!=null)
             {
@@ -74,6 +74,46 @@ namespace DVLD
             {
                 MessageBox.Show("SOMTHING WRONG HAPPEND");
             }
+        }
+
+        private void txtUserName_Validating(object sender, CancelEventArgs e)
+        {
+            if(string.IsNullOrWhiteSpace(txtUserName.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtUserName, "user name must have value");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(txtUserName, "");
+            }
+
+        }
+
+        private void txtPassword_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtPassword.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtPassword, "Password must have value");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(txtPassword, "");
+            }
+
+        }
+
+        private void txtConfirmPassword_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtPassword.Text!=txtConfirmPassword.Text)
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtConfirmPassword, "The password confirmation does not match");
+            }
+           
         }
     }
 }

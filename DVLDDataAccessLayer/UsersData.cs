@@ -10,7 +10,7 @@ namespace DVLDDataAccessLayer
 {
     public class UsersData
     {
-        public static bool GetUser(int UserID, ref string UserName, ref int PersonID, ref int IsActive)
+        public static bool GetUser(int UserID, ref string UserName, ref int PersonID, ref bool IsActive)
         {
             bool isFound = false;
             SqlConnection connection = new SqlConnection(clsPeopleDataAccessSettings.ConnectionString);
@@ -27,7 +27,7 @@ namespace DVLDDataAccessLayer
 
                     PersonID = (int)reader["PersonID"];
                     UserName = (string)reader["UserName"];
-                    IsActive = (int)reader["IsActive"];
+                    IsActive = (bool)reader["IsActive"];
                    
 
 
@@ -88,7 +88,7 @@ namespace DVLDDataAccessLayer
 
         }
 
-        public static int AddNewUser(string UserName, string Password, int IsActive,
+        public static int AddNewUser(string UserName, string Password, bool IsActive,
     int PersonID)
         {
             int UserID = -1;
@@ -141,7 +141,7 @@ VALUES
 
             return UserID;
          }
-        public static bool UpdateUser(int UserID ,string UserName, string Password, int IsActive,
+        public static bool UpdateUser(int UserID ,string UserName, string Password, bool IsActive,
     int PersonID)
         {
             int rowsaffected = 0;

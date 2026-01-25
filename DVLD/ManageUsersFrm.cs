@@ -116,5 +116,11 @@ namespace DVLD
                 MessageBox.Show("user not deleted !!");
             }
         }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChangePasswordfrm frm = new ChangePasswordfrm((int)dgvGetAllUsers.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+        }
     }
 }

@@ -52,6 +52,12 @@
     <Compile Include="AddEditPersonfrm.Designer.cs">
       <DependentUpon>AddEditPersonfrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChangePasswordfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePasswordfrm.Designer.cs">
+      <DependentUpon>ChangePasswordfrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CtrlUserInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     </Compile>
     <EmbeddedResource Include="AddEditPersonfrm.resx">
       <DependentUpon>AddEditPersonfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePasswordfrm.resx">
+      <DependentUpon>ChangePasswordfrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CtrlUserInfo.resx">
       <DependentUpon>CtrlUserInfo.cs</DependentUpon>

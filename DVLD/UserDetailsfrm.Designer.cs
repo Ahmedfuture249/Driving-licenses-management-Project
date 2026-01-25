@@ -1,6 +1,6 @@
 ﻿namespace DVLD
 {
-    partial class frmPersonDetails
+    partial class UserDetailsfrm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.userControl11 = new DVLD.UserControl1();
+            this.ctrlUserInfo1 = new DVLD.CtrlUserInfo();
             this.SuspendLayout();
             // 
             // label1
@@ -37,37 +37,37 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label1.Location = new System.Drawing.Point(231, 9);
+            this.label1.Location = new System.Drawing.Point(295, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(175, 33);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Person Details";
+            this.label1.Size = new System.Drawing.Size(115, 33);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "User Info";
             // 
-            // userControl11
+            // ctrlUserInfo1
             // 
-            this.userControl11.Location = new System.Drawing.Point(12, 45);
-            this.userControl11.Name = "userControl11";
-            this.userControl11.Size = new System.Drawing.Size(683, 297);
-            this.userControl11.TabIndex = 2;
-            this.userControl11.Load += new System.EventHandler(this.userControl11_Load_1);
+            this.ctrlUserInfo1.Location = new System.Drawing.Point(12, 62);
+            this.ctrlUserInfo1.Name = "ctrlUserInfo1";
+            this.ctrlUserInfo1.Size = new System.Drawing.Size(695, 376);
+            this.ctrlUserInfo1.TabIndex = 0;
             // 
-            // frmPersonDetails
+            // UserDetailsfrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(704, 354);
-            this.Controls.Add(this.userControl11);
+            this.ClientSize = new System.Drawing.Size(743, 450);
             this.Controls.Add(this.label1);
-            this.Name = "frmPersonDetails";
-            this.Text = "frmPersonDetails";
-            this.Load += new System.EventHandler(this.frmPersonDetails_Load);
+            this.Controls.Add(this.ctrlUserInfo1);
+            this.Name = "UserDetailsfrm";
+            this.Text = "UserDetailsfrm";
+            this.Load += new System.EventHandler(this.UserDetailsfrm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
+
+        private CtrlUserInfo ctrlUserInfo1;
         private System.Windows.Forms.Label label1;
-        private UserControl1 userControl11;
     }
 }

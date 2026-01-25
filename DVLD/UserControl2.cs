@@ -22,7 +22,7 @@ namespace DVLD
                 Handler(PersonID);  
             }
         }
-        private bool _ShowAddPerson = false;
+        private bool _ShowAddPerson = true;
         public bool showAddPerson
         {
             get { return _ShowAddPerson; }
@@ -32,7 +32,7 @@ namespace DVLD
         public bool FilterByEnabled
         {
             get { return _FilterByEnabled; }
-            set { _FilterByEnabled = value; cbFilterBy.Visible = _ShowAddPerson; }
+            set { _FilterByEnabled = value; cbFilterBy.Visible = _FilterByEnabled; }
         }
         clsPeople _person;
         int _PersonID = -1;
@@ -102,7 +102,7 @@ namespace DVLD
 
         private void btnAddPerson_Click(object sender, EventArgs e)
         {
-            FindPersonfrm frm = new FindPersonfrm();
+            AddEditPersonfrm frm = new AddEditPersonfrm(-1);
             frm.DataBack += DataBackEvent;
             frm.ShowDialog();
         }

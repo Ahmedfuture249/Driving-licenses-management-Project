@@ -14,6 +14,7 @@ namespace DVLD
     public partial class ManagePeoplefrm: Form
     {
         private static DataTable _dtAllPeople = clsPeople.GetAllPeople();
+        
         private DataTable _dtPeople = _dtAllPeople.DefaultView.ToTable(false, "PersonID", "NationalNo", "FirstName", "SecondName", "ThirdName", 
             "LastName", "GendorCaption", "Phone", "Email", "DateOfBirth");
         public ManagePeoplefrm()
@@ -35,6 +36,7 @@ namespace DVLD
             frm.ShowDialog();
             _RefreshPeopleList();
         }
+
 
         private void editPersonToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -118,6 +120,11 @@ namespace DVLD
                 txtFilterByValue.Text = "";
                 txtFilterByValue.Focus();
             }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

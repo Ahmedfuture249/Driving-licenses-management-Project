@@ -33,9 +33,9 @@
             this.cbFilterBy = new System.Windows.Forms.ComboBox();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.gbFilterBY = new System.Windows.Forms.GroupBox();
-            this.txtFindBy = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnAddPerson = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtFindBy = new System.Windows.Forms.TextBox();
             this.btnFindPerson = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.gbFilterBY.SuspendLayout();
@@ -46,7 +46,7 @@
             // 
             this.userControl11.Location = new System.Drawing.Point(3, 71);
             this.userControl11.Name = "userControl11";
-            this.userControl11.Size = new System.Drawing.Size(674, 305);
+            this.userControl11.Size = new System.Drawing.Size(874, 334);
             this.userControl11.TabIndex = 1;
             this.userControl11.Load += new System.EventHandler(this.userControl11_Load);
             // 
@@ -71,29 +71,10 @@
             this.gbFilterBY.Controls.Add(this.cbFilterBy);
             this.gbFilterBY.Location = new System.Drawing.Point(3, 13);
             this.gbFilterBY.Name = "gbFilterBY";
-            this.gbFilterBY.Size = new System.Drawing.Size(682, 52);
+            this.gbFilterBY.Size = new System.Drawing.Size(882, 81);
             this.gbFilterBY.TabIndex = 3;
             this.gbFilterBY.TabStop = false;
             this.gbFilterBY.Text = "Filter by";
-            // 
-            // txtFindBy
-            // 
-            this.txtFindBy.Location = new System.Drawing.Point(350, 21);
-            this.txtFindBy.Name = "txtFindBy";
-            this.txtFindBy.Size = new System.Drawing.Size(208, 22);
-            this.txtFindBy.TabIndex = 4;
-            this.txtFindBy.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            this.txtFindBy.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFindBy_KeyPress);
-            this.txtFindBy.Validating += new System.ComponentModel.CancelEventHandler(this.txtFindBy_Validating);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 16);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Filter By";
             // 
             // btnAddPerson
             // 
@@ -104,6 +85,25 @@
             this.btnAddPerson.TabIndex = 6;
             this.btnAddPerson.UseVisualStyleBackColor = true;
             this.btnAddPerson.Click += new System.EventHandler(this.btnAddPerson_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(34, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 16);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Filter By";
+            // 
+            // txtFindBy
+            // 
+            this.txtFindBy.Location = new System.Drawing.Point(350, 21);
+            this.txtFindBy.Name = "txtFindBy";
+            this.txtFindBy.Size = new System.Drawing.Size(208, 22);
+            this.txtFindBy.TabIndex = 4;
+            this.txtFindBy.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtFindBy.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFindBy_KeyPress);
+            this.txtFindBy.Validating += new System.ComponentModel.CancelEventHandler(this.txtFindBy_Validating);
             // 
             // btnFindPerson
             // 
@@ -121,12 +121,11 @@
             // 
             // UserControl2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.gbFilterBY);
             this.Controls.Add(this.userControl11);
             this.Name = "UserControl2";
-            this.Size = new System.Drawing.Size(692, 393);
+            this.Size = new System.Drawing.Size(914, 458);
             this.Load += new System.EventHandler(this.UserControl2_Load);
             this.gbFilterBY.ResumeLayout(false);
             this.gbFilterBY.PerformLayout();

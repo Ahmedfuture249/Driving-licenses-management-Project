@@ -19,6 +19,10 @@ namespace DVLD
         enMode Mode;
         int _PersonID;
         clsPeople _Person;
+        public delegate void DataBackEventHandler(object sender, int PersonID);
+
+        // Declare an event using the delegate
+        public event DataBackEventHandler DataBack;
         public AddEditPersonfrm(int PerosnID)
         {
             InitializeComponent();
@@ -43,7 +47,7 @@ namespace DVLD
         private void _ResetDefaultValues()
         {
             _FillCountriesInComoboBox();
-            if (Mode == enMode.Update)
+            if (Mode == enMode.AddNew)
                 lblMode.Text = "ADD NEW PERSON";
             else
                 lblMode.Text = "UPDATE MODE";
@@ -52,7 +56,7 @@ namespace DVLD
             if (rbMale.Checked)
                 pictureBox1.Image= Properties.Resources.Male_512;
             else
-                pictureBox1.Image= Properties.Resources.Male_512;
+                pictureBox1.Image= Properties.Resources.Female_512;
 
             _Person = new clsPeople();
             lblPerosnID.Text = "";
@@ -64,8 +68,8 @@ namespace DVLD
             txtEmail.Text =      "";
             txtPhone.Text = "";
             txtAddress.Text = "";
-            //dateTimePicker1.MinDate=DateTime.Now.AddYears(100);
-            //dateTimePicker1.MaxDate = DateTime.Now.AddYears(18);
+            dateTimePicker1.MinDate=DateTime.Now.AddYears(-100);
+            dateTimePicker1.MaxDate = DateTime.Now.AddYears(-18);
             dateTimePicker1.Value = dateTimePicker1.MaxDate;
             rbMale.Checked = true;
 
@@ -171,7 +175,9 @@ namespace DVLD
 
         private void btnClose_Click(object sender, EventArgs e)
         {
+
             this.Close();
+           
         }
         string _SelectedImagePath;
         private void linklblSelectImage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

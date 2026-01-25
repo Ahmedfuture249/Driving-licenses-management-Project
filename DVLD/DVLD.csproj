@@ -52,6 +52,12 @@
     <Compile Include="AddEditPersonfrm.Designer.cs">
       <DependentUpon>AddEditPersonfrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CtrlUserInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlUserInfo.Designer.cs">
+      <DependentUpon>CtrlUserInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FindPersonfrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,17 +70,35 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAddNewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddNewUser.Designer.cs">
+      <DependentUpon>frmAddNewUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPersonDetails.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPersonDetails.Designer.cs">
       <DependentUpon>frmPersonDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManagePeoplefrm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ManagePeoplefrm.Designer.cs">
       <DependentUpon>ManagePeoplefrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageUsersFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageUsersFrm.Designer.cs">
+      <DependentUpon>ManageUsersFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -90,8 +114,17 @@
     <Compile Include="UserControl2.Designer.cs">
       <DependentUpon>UserControl2.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserDetailsfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserDetailsfrm.Designer.cs">
+      <DependentUpon>UserDetailsfrm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddEditPersonfrm.resx">
       <DependentUpon>AddEditPersonfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlUserInfo.resx">
+      <DependentUpon>CtrlUserInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FindPersonfrm.resx">
       <DependentUpon>FindPersonfrm.cs</DependentUpon>
@@ -99,11 +132,20 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAddNewUser.resx">
+      <DependentUpon>frmAddNewUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPersonDetails.resx">
       <DependentUpon>frmPersonDetails.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManagePeoplefrm.resx">
       <DependentUpon>ManagePeoplefrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageUsersFrm.resx">
+      <DependentUpon>ManageUsersFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -120,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl2.resx">
       <DependentUpon>UserControl2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserDetailsfrm.resx">
+      <DependentUpon>UserDetailsfrm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -223,6 +268,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AddPerson 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Users 2 400.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Drivers 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Users 2 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add New User 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add New User 72.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

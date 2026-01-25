@@ -28,19 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.userControl21 = new DVLD.UserControl2();
             this.label1 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
+            this.userControl21 = new DVLD.UserControl2();
             this.SuspendLayout();
-            // 
-            // userControl21
-            // 
-            this.userControl21.FilterByEnabled = true;
-            this.userControl21.Location = new System.Drawing.Point(12, 55);
-            this.userControl21.Name = "userControl21";
-            this.userControl21.showAddPerson = false;
-            this.userControl21.Size = new System.Drawing.Size(721, 371);
-            this.userControl21.TabIndex = 0;
             // 
             // label1
             // 
@@ -64,6 +55,15 @@
             this.btnClose.Text = "close";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // userControl21
+            // 
+            this.userControl21.FilterByEnabled = true;
+            this.userControl21.Location = new System.Drawing.Point(12, 55);
+            this.userControl21.Name = "userControl21";
+            this.userControl21.showAddPerson = false;
+            this.userControl21.Size = new System.Drawing.Size(721, 371);
+            this.userControl21.TabIndex = 0;
             // 
             // FindPersonfrm
             // 

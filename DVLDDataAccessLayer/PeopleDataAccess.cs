@@ -26,8 +26,6 @@ namespace DVLDDataAccessLayer
                 SqlDataReader reader = command.ExecuteReader();
                 if(reader.Read())
                 {
-                    //  PersonID = (int)reader["PersonID"];
-
                     isFound = true;
 
                     FirstName = (string)reader["FirstName"];
@@ -37,12 +35,10 @@ namespace DVLDDataAccessLayer
                     Phone = (string)reader["Phone"];
                     Address = (string)reader["Address"];
                     DateOfBirth = (DateTime)reader["DateOfBirth"];
-                   // CountryID = (int)reader["CountryID"];
-                    //ThirdName = (string)reader["ThirdName"];
                     NationalityCountryID = (int)reader["NationalityCountryID"];
                     NationalNo = (string)reader["NationalNo"];
                     Gendor = (int)reader["Gendor"];
-                    ImagePath = (string)reader["ImagePath"];
+                
                     // ImagePath: allows null in database so we should handle null
                     if (reader["ImagePath"] != DBNull.Value)
                     {
@@ -54,7 +50,7 @@ namespace DVLDDataAccessLayer
                     }
 
 
-                    ImagePath = "adkjd";
+                    
                     if (reader["ThirdName"] != DBNull.Value)
                     {
                         ThirdName = (string)reader["ThirdName"];
@@ -64,9 +60,6 @@ namespace DVLDDataAccessLayer
                         ThirdName = "";
                     }
                     
-                    NationalityCountryID = (int)reader["NationalityCountryID"];
-                    NationalNo = (string)reader["NationalNo"]; 
-                    Gendor = (int)reader["Gendor"];
                   
                     
                 }
@@ -248,7 +241,7 @@ VALUES
     @Email,
     @NationalityCountryID,
     @ImagePath
-);";
+); select SCOPE_IDENTITY(); ";
 
             SqlCommand command = new SqlCommand(query, connection);
 

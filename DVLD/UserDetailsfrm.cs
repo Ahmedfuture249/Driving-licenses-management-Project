@@ -10,19 +10,15 @@ using System.Windows.Forms;
 
 namespace DVLD
 {
-    public partial class LoginForm: Form
+    public partial class UserDetailsfrm: Form
     {
-        public LoginForm()
+        public UserDetailsfrm(int UserID)
         {
             InitializeComponent();
+            ctrlUserInfo1._LoadUserInof(UserID);
         }
 
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
+        private void UserDetailsfrm_Load(object sender, EventArgs e)
         {
 
         }

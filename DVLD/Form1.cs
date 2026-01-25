@@ -27,5 +27,11 @@ namespace DVLD
             ManagePeoplefrm frm = new ManagePeoplefrm();
             frm.ShowDialog();
         }
+
+        private void usersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManageUsersFrm frm = new ManageUsersFrm();
+            frm.ShowDialog();
+        }
     }
 }

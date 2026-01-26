@@ -77,6 +77,18 @@ namespace DVLDBusinessLayer
                 return null;
 
         }
+        public static clsUsers Find(string UserName)
+        {
+            int PersonID = -1;
+            int UserID = -1;
+            bool IsActive = false;
+            string Password = "";
+            if (UsersData.GetUserByUserName(ref UserID, UserName, ref PersonID, ref IsActive, ref Password))
+                return new clsUsers(UserID, PersonID, UserName, IsActive, Password);
+            else
+                return null;
+
+        }
         public static DataTable GetAllUsers()
         {
             return UsersData.GetAllUsers();

@@ -122,5 +122,10 @@ namespace DVLD
             ChangePasswordfrm frm = new ChangePasswordfrm((int)dgvGetAllUsers.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

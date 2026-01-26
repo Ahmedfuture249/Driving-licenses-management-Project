@@ -56,7 +56,7 @@
             // 
             this.lblRecordsCount.AutoSize = true;
             this.lblRecordsCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecordsCount.Location = new System.Drawing.Point(128, 647);
+            this.lblRecordsCount.Location = new System.Drawing.Point(128, 636);
             this.lblRecordsCount.Name = "lblRecordsCount";
             this.lblRecordsCount.Size = new System.Drawing.Size(23, 25);
             this.lblRecordsCount.TabIndex = 19;
@@ -66,7 +66,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 647);
+            this.label3.Location = new System.Drawing.Point(12, 636);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 25);
             this.label3.TabIndex = 18;
@@ -141,7 +141,7 @@
             this.sendEmailToolStripMenuItem,
             this.callPhoneToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(215, 214);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(198, 186);
             // 
             // addPersonToolStripMenuItem
             // 
@@ -223,12 +223,13 @@
             // 
             this.btnClose.Image = global::DVLD.Properties.Resources.Close_32;
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnClose.Location = new System.Drawing.Point(916, 642);
+            this.btnClose.Location = new System.Drawing.Point(916, 631);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(228, 41);
             this.btnClose.TabIndex = 11;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // ManageUsersFrm
             // 

@@ -259,5 +259,42 @@ UPDATE Users SET
             return (rowsaffected != 0);
 
         }
+        public static bool IsUserExistForPersonID(int PersonID)
+        {
+            bool isFound = false;
+
+            SqlConnection connection = new SqlConnection(clsPeopleDataAccessSettings.ConnectionString);
+
+            string query = "SELECT 1  FROM Users WHERE PersonID = @PersonID";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            
+            command.Parameters.AddWithValue("@PersonID", PersonID);
+
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                if(reader.Read())
+                { isFound = true; }
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                //Console.WriteLine("Error: " + ex.Message);
+                isFound = false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return isFound;
+        }
     }
 }
+

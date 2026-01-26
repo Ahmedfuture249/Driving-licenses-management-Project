@@ -46,7 +46,7 @@
             // 
             this.userControl11.Location = new System.Drawing.Point(3, 71);
             this.userControl11.Name = "userControl11";
-            this.userControl11.Size = new System.Drawing.Size(874, 334);
+            this.userControl11.Size = new System.Drawing.Size(701, 334);
             this.userControl11.TabIndex = 1;
             this.userControl11.Load += new System.EventHandler(this.userControl11_Load);
             // 
@@ -71,7 +71,7 @@
             this.gbFilterBY.Controls.Add(this.cbFilterBy);
             this.gbFilterBY.Location = new System.Drawing.Point(3, 13);
             this.gbFilterBY.Name = "gbFilterBY";
-            this.gbFilterBY.Size = new System.Drawing.Size(882, 81);
+            this.gbFilterBY.Size = new System.Drawing.Size(701, 64);
             this.gbFilterBY.TabIndex = 3;
             this.gbFilterBY.TabStop = false;
             this.gbFilterBY.Text = "Filter by";
@@ -125,7 +125,7 @@
             this.Controls.Add(this.gbFilterBY);
             this.Controls.Add(this.userControl11);
             this.Name = "UserControl2";
-            this.Size = new System.Drawing.Size(914, 458);
+            this.Size = new System.Drawing.Size(733, 387);
             this.Load += new System.EventHandler(this.UserControl2_Load);
             this.gbFilterBY.ResumeLayout(false);
             this.gbFilterBY.PerformLayout();

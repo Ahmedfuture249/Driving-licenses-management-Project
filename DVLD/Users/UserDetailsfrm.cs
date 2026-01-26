@@ -22,5 +22,10 @@ namespace DVLD
         {
 
         }
+
+        private void ctrlUserInfo1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -46,28 +46,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddEditPersonfrm.cs">
+    <Compile Include="People\AddEditPersonfrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddEditPersonfrm.Designer.cs">
+    <Compile Include="People\AddEditPersonfrm.Designer.cs">
       <DependentUpon>AddEditPersonfrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChangePasswordfrm.cs">
+    <Compile Include="Users\ChangePasswordfrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChangePasswordfrm.Designer.cs">
+    <Compile Include="Users\ChangePasswordfrm.Designer.cs">
       <DependentUpon>ChangePasswordfrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CtrlUserInfo.cs">
+    <Compile Include="Controls\CtrlUserInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CtrlUserInfo.Designer.cs">
+    <Compile Include="Controls\CtrlUserInfo.Designer.cs">
       <DependentUpon>CtrlUserInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="FindPersonfrm.cs">
+    <Compile Include="People\FindPersonfrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FindPersonfrm.Designer.cs">
+    <Compile Include="People\FindPersonfrm.Designer.cs">
       <DependentUpon>FindPersonfrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
@@ -76,16 +76,16 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAddNewUser.cs">
+    <Compile Include="Users\frmAddNewUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddNewUser.Designer.cs">
+    <Compile Include="Users\frmAddNewUser.Designer.cs">
       <DependentUpon>frmAddNewUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPersonDetails.cs">
+    <Compile Include="People\frmPersonDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPersonDetails.Designer.cs">
+    <Compile Include="People\frmPersonDetails.Designer.cs">
       <DependentUpon>frmPersonDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
@@ -94,66 +94,66 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManagePeoplefrm.cs">
+    <Compile Include="People\ManagePeoplefrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManagePeoplefrm.Designer.cs">
+    <Compile Include="People\ManagePeoplefrm.Designer.cs">
       <DependentUpon>ManagePeoplefrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageUsersFrm.cs">
+    <Compile Include="Users\ManageUsersFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageUsersFrm.Designer.cs">
+    <Compile Include="Users\ManageUsersFrm.Designer.cs">
       <DependentUpon>ManageUsersFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserControl1.cs">
+    <Compile Include="Controls\UserControl1.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControl1.Designer.cs">
+    <Compile Include="Controls\UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl2.cs">
+    <Compile Include="Controls\UserControl2.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControl2.Designer.cs">
+    <Compile Include="Controls\UserControl2.Designer.cs">
       <DependentUpon>UserControl2.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserDetailsfrm.cs">
+    <Compile Include="Users\UserDetailsfrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserDetailsfrm.Designer.cs">
+    <Compile Include="Users\UserDetailsfrm.Designer.cs">
       <DependentUpon>UserDetailsfrm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddEditPersonfrm.resx">
+    <EmbeddedResource Include="People\AddEditPersonfrm.resx">
       <DependentUpon>AddEditPersonfrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChangePasswordfrm.resx">
+    <EmbeddedResource Include="Users\ChangePasswordfrm.resx">
       <DependentUpon>ChangePasswordfrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CtrlUserInfo.resx">
+    <EmbeddedResource Include="Controls\CtrlUserInfo.resx">
       <DependentUpon>CtrlUserInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FindPersonfrm.resx">
+    <EmbeddedResource Include="People\FindPersonfrm.resx">
       <DependentUpon>FindPersonfrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddNewUser.resx">
+    <EmbeddedResource Include="Users\frmAddNewUser.resx">
       <DependentUpon>frmAddNewUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPersonDetails.resx">
+    <EmbeddedResource Include="People\frmPersonDetails.resx">
       <DependentUpon>frmPersonDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManagePeoplefrm.resx">
+    <EmbeddedResource Include="People\ManagePeoplefrm.resx">
       <DependentUpon>ManagePeoplefrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageUsersFrm.resx">
+    <EmbeddedResource Include="Users\ManageUsersFrm.resx">
       <DependentUpon>ManageUsersFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -166,13 +166,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UserControl1.resx">
+    <EmbeddedResource Include="Controls\UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControl2.resx">
+    <EmbeddedResource Include="Controls\UserControl2.resx">
       <DependentUpon>UserControl2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserDetailsfrm.resx">
+    <EmbeddedResource Include="Users\UserDetailsfrm.resx">
       <DependentUpon>UserDetailsfrm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">

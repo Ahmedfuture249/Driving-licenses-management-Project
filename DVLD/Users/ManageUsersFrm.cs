@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,9 +15,12 @@ namespace DVLD
     public partial class ManageUsersFrm: Form
     {
         private static DataTable _dtAllUsers = clsUsers.GetAllUsers();
+        //this.AcceptButton = null;
+       
         public ManageUsersFrm()
         {
             InitializeComponent();
+            this.AcceptButton = null;
         }
         
         private void _RefreshUsersList()
@@ -35,6 +39,7 @@ namespace DVLD
 
         private void btnAddNewUser_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("ADD USER CLICKED");
             frmAddNewUser frm = new frmAddNewUser(-1);
             frm.ShowDialog();
             _RefreshUsersList();

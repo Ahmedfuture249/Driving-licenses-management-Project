@@ -123,9 +123,9 @@
             this.lblCurrentPassword.AutoSize = true;
             this.lblCurrentPassword.Location = new System.Drawing.Point(62, 431);
             this.lblCurrentPassword.Name = "lblCurrentPassword";
-            this.lblCurrentPassword.Size = new System.Drawing.Size(115, 16);
+            this.lblCurrentPassword.Size = new System.Drawing.Size(110, 16);
             this.lblCurrentPassword.TabIndex = 81;
-            this.lblCurrentPassword.Text = "Confirm Password";
+            this.lblCurrentPassword.Text = "current Password";
             // 
             // txtCurrentPassword
             // 

@@ -30,26 +30,34 @@ namespace DVLD
             {
                 Mode = enMode.AddNew;
                 _User = new clsUsers();
+                lblMode.Text = "Add New User";
                 
             }
             else
             {
                 Mode = enMode.Update;
-                _User = clsUsers.Find(_UserID);
-                if (_User == null)
-                    MessageBox.Show("USER NOT FOUNDED", "NOT FOUNDED", MessageBoxButtons.OK);
-                else
-                {
-                    userControl22.LoadPersonInfo(_User.PersonID);
-                    userControl22.FilterByEnabled = false;
-                    
-                    LoadUserInfo();
-                }
+                lblMode.Text = "Update User";
+              
+                   LoadUserInfo();
+                
             }
 
         }
          public void LoadUserInfo()
         {
+            _User = clsUsers.Find(_UserID);
+            if (_User == null)
+            {
+                MessageBox.Show("USER NOT FOUNDED", "NOT FOUNDED", MessageBoxButtons.OK);
+                return;
+            }
+           
+            
+                userControl22.LoadPersonInfo(_User.PersonID);
+               userControl22.FilterByEnabled = false;
+
+              
+            
             txtPassword.Text = _User.UserPassword;
             txtConfirmPassword.Text = _User.UserPassword;
             txtUserName.Text = _User.UserName;
@@ -152,6 +160,31 @@ namespace DVLD
         private void frmAddNewUser_Load(object sender, EventArgs e)
         {
              
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            if(Mode==enMode.Update)
+            {
+                tabPageLoginInfo.Enabled = true;
+                tabControl1.SelectedTab = tabControl1.TabPages["tabPageLoginInfo"];
+                return;
+            }
+             if(userControl22.personID!=-1)
+            {
+              if(clsUsers.IsUserExistForPersonID(userControl22.personID))
+                {
+                    MessageBox.Show("selected person is already has user ,chose another One");
+                }
+                else
+                {
+                tabPageLoginInfo.Enabled = true;
+                tabControl1.SelectedTab = tabControl1.TabPages["tabPagePersonInfo"];
+
+                    
+                }
+            }
+
         }
     }
 }

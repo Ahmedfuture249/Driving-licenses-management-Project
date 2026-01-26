@@ -21,7 +21,7 @@ namespace DVLDBusinessLayer
         {
             _UserID = UserID;
             _PersonID = PersonID;
-            //_Person = clsPeople.Find(_PersonID);
+            _Person = clsPeople.Find(_PersonID);
             _UserName = UserName;
             _IsActive = IsActive;
             _UserPassword = Password;
@@ -31,7 +31,7 @@ namespace DVLDBusinessLayer
         {
             _UserID = -1;
             _PersonID = -1;
-            //_Person = clsPeople.Find(_PersonID);
+            //_Person = new clsPeople();
             _UserName = "";
             _IsActive = false;
         }
@@ -88,6 +88,10 @@ namespace DVLDBusinessLayer
             else
                 return null;
 
+        }
+        public static bool IsUserExistForPersonID(int PersonID)
+        {
+            return UsersData.IsUserExistForPersonID( PersonID);
         }
         public static DataTable GetAllUsers()
         {

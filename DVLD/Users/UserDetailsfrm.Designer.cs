@@ -49,6 +49,7 @@
             this.ctrlUserInfo1.Name = "ctrlUserInfo1";
             this.ctrlUserInfo1.Size = new System.Drawing.Size(695, 376);
             this.ctrlUserInfo1.TabIndex = 0;
+            this.ctrlUserInfo1.Load += new System.EventHandler(this.ctrlUserInfo1_Load);
             // 
             // UserDetailsfrm
             // 

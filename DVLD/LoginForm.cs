@@ -68,6 +68,7 @@ namespace DVLD
             string username = txtUserName.Text;
             string password = txtPassword.Text;
             CurrentUser = clsUsers.Find(username);
+            ClsGloabalSettings.CurrentUser = CurrentUser;
             if(CurrentUser==null)
             {
                 MessageBox.Show("User Was Not Founded !!");

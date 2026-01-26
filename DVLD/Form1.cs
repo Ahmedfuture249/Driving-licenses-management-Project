@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DVLDBusinessLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,6 +32,12 @@ namespace DVLD
         private void usersToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ManageUsersFrm frm = new ManageUsersFrm();
+            frm.ShowDialog();
+        }
+
+        private void currentUserInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UserDetailsfrm frm = new UserDetailsfrm(ClsGloabalSettings.CurrentUser.UserID);
             frm.ShowDialog();
         }
     }

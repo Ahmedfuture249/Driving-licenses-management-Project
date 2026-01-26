@@ -65,7 +65,7 @@ namespace DVLDDataAccessLayer
                 if (reader.Read())
                 {
                     isFound = true;
-                    PersonID = (int)reader["UserID"];
+                    UserID = (int)reader["UserID"];
                     PersonID = (int)reader["PersonID"];
                     Password = (string)reader["Password"];
                    

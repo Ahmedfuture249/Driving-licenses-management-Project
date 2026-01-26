@@ -40,5 +40,17 @@ namespace DVLD
             UserDetailsfrm frm = new UserDetailsfrm(ClsGloabalSettings.CurrentUser.UserID);
             frm.ShowDialog();
         }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChangePasswordfrm frm = new ChangePasswordfrm(ClsGloabalSettings.CurrentUser.UserID);
+            frm.ShowDialog();
+        }
+
+        private void signOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ClsGloabalSettings.CurrentUser = null;
+            this.Close();
+        }
     }
 }

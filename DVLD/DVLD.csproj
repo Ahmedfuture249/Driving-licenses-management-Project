@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EditApplicationTypefrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditApplicationTypefrm.Designer.cs">
+      <DependentUpon>EditApplicationTypefrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageApplicationTypesfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageApplicationTypesfrm.Designer.cs">
+      <DependentUpon>ManageApplicationTypesfrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="People\AddEditPersonfrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +138,12 @@
     <Compile Include="Users\UserDetailsfrm.Designer.cs">
       <DependentUpon>UserDetailsfrm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="EditApplicationTypefrm.resx">
+      <DependentUpon>EditApplicationTypefrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageApplicationTypesfrm.resx">
+      <DependentUpon>ManageApplicationTypesfrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="People\AddEditPersonfrm.resx">
       <DependentUpon>AddEditPersonfrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -313,6 +331,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\sign_out 32 -2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Applications 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Driver License 48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Application Types 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Detain 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Test Type 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Manage Applications 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Application Types 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit 321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notes 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money 32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

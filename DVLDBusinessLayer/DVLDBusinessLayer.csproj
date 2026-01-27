@@ -42,7 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClsGloabalSettings.cs" />
+    <Compile Include="clsManageApplications.cs" />
     <Compile Include="clsUsers.cs" />
+    <Compile Include="clsValdition.cs" />
     <Compile Include="Countries.cs" />
     <Compile Include="People.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

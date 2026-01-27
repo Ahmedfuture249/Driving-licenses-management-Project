@@ -56,6 +56,7 @@
             this.dgvGetAllPeople.AllowUserToAddRows = false;
             this.dgvGetAllPeople.AllowUserToDeleteRows = false;
             this.dgvGetAllPeople.AllowUserToOrderColumns = true;
+            this.dgvGetAllPeople.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvGetAllPeople.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvGetAllPeople.Location = new System.Drawing.Point(28, 184);
             this.dgvGetAllPeople.Name = "dgvGetAllPeople";

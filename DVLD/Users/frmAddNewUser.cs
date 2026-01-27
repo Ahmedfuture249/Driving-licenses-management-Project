@@ -164,26 +164,26 @@ namespace DVLD
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            if(Mode==enMode.Update)
-            {
-                tabPageLoginInfo.Enabled = true;
-                tabControl1.SelectedTab = tabControl1.TabPages["tabPageLoginInfo"];
-                return;
-            }
-             if(userControl22.personID!=-1)
-            {
-              if(clsUsers.IsUserExistForPersonID(userControl22.personID))
-                {
-                    MessageBox.Show("selected person is already has user ,chose another One");
-                }
-                else
-                {
-                tabPageLoginInfo.Enabled = true;
-                tabControl1.SelectedTab = tabControl1.TabPages["tabPagePersonInfo"];
+            //if (Mode == enMode.Update)
+            //{
+            //    tabPageLoginInfo.Enabled = true;
+            //    tabControl1.SelectedTab = tabControl1.TabPages["tabPageLoginInfo"];
+            //    return;
+            //}
+            //if (userControl22.personID != -1)
+            //{
+            //    if (clsUsers.IsUserExistForPersonID(userControl22.personID))
+            //    {
+            //        MessageBox.Show("selected person is already has user ,chose another One");
+            //    }
+            //    else
+            //    {
+            //        tabPageLoginInfo.Enabled = true;
+            //        tabControl1.SelectedTab = tabControl1.TabPages["tabPagePersonInfo"];
 
-                    
-                }
-            }
+
+            //    };
+            //};
 
         }
     }

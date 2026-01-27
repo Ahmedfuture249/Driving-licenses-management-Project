@@ -25,8 +25,8 @@ namespace DVLD
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            ManagePeoplefrm frm = new ManagePeoplefrm();
-            frm.ShowDialog();
+            //ManagePeoplefrm frm = new ManagePeoplefrm();
+            //frm.ShowDialog();
         }
 
         private void usersToolStripMenuItem_Click(object sender, EventArgs e)
@@ -51,6 +51,23 @@ namespace DVLD
         {
             ClsGloabalSettings.CurrentUser = null;
             this.Close();
+        }
+
+        private void peopleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManagePeoplefrm frm = new ManagePeoplefrm();
+            frm.ShowDialog();
+        }
+
+        private void manageApplicationsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void manageApplicationsTaypesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManageApplicationTypesfrm frm = new ManageApplicationTypesfrm();
+            frm.ShowDialog();
         }
     }
 }

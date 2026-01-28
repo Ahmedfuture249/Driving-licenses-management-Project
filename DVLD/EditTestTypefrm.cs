@@ -57,5 +57,57 @@ namespace DVLD
 
 
         }
+
+        private void txtFees_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtFees.Text.Trim()))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtFees, "this field is Should not be empty");
+            }
+            else
+            {
+                errorProvider1.SetError(txtFees, null);
+            }
+            ;
+            if (!clsValdition.IsNumber(txtFees.Text.Trim()))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtFees, "Invalid number");
+            }
+            else
+            {
+                errorProvider1.SetError(txtFees, null);
+            }
+            ;
+        }
+
+        private void txtTitle_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtTitle.Text.Trim()))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtTitle, "this field is Should not be empty");
+            }
+            else
+            {
+                errorProvider1.SetError(txtTitle, null);
+            }
+            ;
+        }
+
+        private void txtDescription_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtDescription.Text.Trim()))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtDescription, "this field is Should not be empty");
+            }
+            else
+            {
+                errorProvider1.SetError(txtDescription, null);
+            }
+            ;
+        }
     }
 }

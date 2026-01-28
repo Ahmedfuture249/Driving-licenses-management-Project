@@ -16,5 +16,10 @@ namespace DVLD
         {
             InitializeComponent();
         }
+
+        private void dgvGetAllPeople_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -46,17 +46,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EditApplicationTypefrm.cs">
+    <Compile Include="Application Types\EditApplicationTypefrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditApplicationTypefrm.Designer.cs">
+    <Compile Include="Application Types\EditApplicationTypefrm.Designer.cs">
       <DependentUpon>EditApplicationTypefrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageApplicationTypesfrm.cs">
+    <Compile Include="Application Types\ManageApplicationTypesfrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageApplicationTypesfrm.Designer.cs">
+    <Compile Include="Application Types\ManageApplicationTypesfrm.Designer.cs">
       <DependentUpon>ManageApplicationTypesfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditTestTypefrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditTestTypefrm.Designer.cs">
+      <DependentUpon>EditTestTypefrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageTestTypesfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageTestTypesfrm.Designer.cs">
+      <DependentUpon>ManageTestTypesfrm.cs</DependentUpon>
     </Compile>
     <Compile Include="People\AddEditPersonfrm.cs">
       <SubType>Form</SubType>
@@ -138,11 +150,17 @@
     <Compile Include="Users\UserDetailsfrm.Designer.cs">
       <DependentUpon>UserDetailsfrm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="EditApplicationTypefrm.resx">
+    <EmbeddedResource Include="Application Types\EditApplicationTypefrm.resx">
       <DependentUpon>EditApplicationTypefrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageApplicationTypesfrm.resx">
+    <EmbeddedResource Include="Application Types\ManageApplicationTypesfrm.resx">
       <DependentUpon>ManageApplicationTypesfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditTestTypefrm.resx">
+      <DependentUpon>EditTestTypefrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageTestTypesfrm.resx">
+      <DependentUpon>ManageTestTypesfrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="People\AddEditPersonfrm.resx">
       <DependentUpon>AddEditPersonfrm.cs</DependentUpon>
@@ -361,6 +379,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\money 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TestType 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ApplicationTitle.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

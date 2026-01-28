@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="ClsGloabalSettings.cs" />
     <Compile Include="clsManageApplications.cs" />
+    <Compile Include="clsTestTypes.cs" />
     <Compile Include="clsUsers.cs" />
     <Compile Include="clsValdition.cs" />
     <Compile Include="Countries.cs" />

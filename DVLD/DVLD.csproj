@@ -64,10 +64,10 @@
     <Compile Include="Application Types\ManageApplicationTypesfrm.Designer.cs">
       <DependentUpon>ManageApplicationTypesfrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditTestTypefrm.cs">
+    <Compile Include="Manage Tests\EditTestTypefrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditTestTypefrm.Designer.cs">
+    <Compile Include="Manage Tests\EditTestTypefrm.Designer.cs">
       <DependentUpon>EditTestTypefrm.cs</DependentUpon>
     </Compile>
     <Compile Include="ManageLocalDrivingLicensesApplicationfrm.cs">
@@ -76,10 +76,10 @@
     <Compile Include="ManageLocalDrivingLicensesApplicationfrm.Designer.cs">
       <DependentUpon>ManageLocalDrivingLicensesApplicationfrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageTestTypesfrm.cs">
+    <Compile Include="Manage Tests\ManageTestTypesfrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageTestTypesfrm.Designer.cs">
+    <Compile Include="Manage Tests\ManageTestTypesfrm.Designer.cs">
       <DependentUpon>ManageTestTypesfrm.cs</DependentUpon>
     </Compile>
     <Compile Include="People\AddEditPersonfrm.cs">
@@ -171,13 +171,13 @@
     <EmbeddedResource Include="Application Types\ManageApplicationTypesfrm.resx">
       <DependentUpon>ManageApplicationTypesfrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditTestTypefrm.resx">
+    <EmbeddedResource Include="Manage Tests\EditTestTypefrm.resx">
       <DependentUpon>EditTestTypefrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageLocalDrivingLicensesApplicationfrm.resx">
       <DependentUpon>ManageLocalDrivingLicensesApplicationfrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageTestTypesfrm.resx">
+    <EmbeddedResource Include="Manage Tests\ManageTestTypesfrm.resx">
       <DependentUpon>ManageTestTypesfrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="People\AddEditPersonfrm.resx">

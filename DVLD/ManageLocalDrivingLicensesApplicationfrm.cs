@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DVLDBusinessLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,11 @@ namespace DVLD
         private void dgvGetAllPeople_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void ManageLocalDrivingLicensesApplicationfrm_Load(object sender, EventArgs e)
+        {
+            dgvGetAllApplications.DataSource = clsLDLApplication.ListApplications();
         }
     }
 }

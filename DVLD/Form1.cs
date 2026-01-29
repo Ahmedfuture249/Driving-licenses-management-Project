@@ -75,5 +75,22 @@ namespace DVLD
             ManageTestTypesfrm frm = new ManageTestTypesfrm();
             frm.ShowDialog();
         }
+
+        private void newDrivingLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void localDrivingLicenseApplicationsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManageLocalDrivingLicensesApplicationfrm frm = new ManageLocalDrivingLicensesApplicationfrm();
+            frm.ShowDialog();
+        }
+
+        private void localDrivingLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddLoacalDrivingLicensesApplicationfrm frm = new AddLoacalDrivingLicensesApplicationfrm();
+            frm.ShowDialog();
+        }
     }
 }

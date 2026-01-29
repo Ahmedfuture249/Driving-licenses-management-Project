@@ -28,6 +28,7 @@ namespace DVLDBusinessLayer
       public DateTime DateOfBirth              { set; get; }
           
         private string _ImagePath ;
+        public string FullName { get { return FirstName + " " + SecondName + " " + ThirdName + " " + LastName; } }
         public string ImagePath
         {
             get { return _ImagePath; }

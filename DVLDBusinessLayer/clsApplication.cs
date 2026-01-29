@@ -48,8 +48,9 @@ namespace DVLDBusinessLayer
         public DateTime ApplicationLastStatusDate { set; get; }
         public decimal PaidFees { set; get; }
         public int CreatedByUserID { set; get; }
+        public clsPeople personInfo;
 
-        clsApplication(int applicationID, int applicantPersonlID, DateTime applicationDate, int applicationTypeID, enApplicationStatus applicationStatus, DateTime applicationLastStatusDate, decimal paidFees, int createdByUserID)
+       public clsApplication(int applicationID, int applicantPersonlID, DateTime applicationDate, int applicationTypeID, enApplicationStatus applicationStatus, DateTime applicationLastStatusDate, decimal paidFees, int createdByUserID)
         {
             ApplicationID = applicationID;
             ApplicantPersonlID = applicantPersonlID;
@@ -61,9 +62,10 @@ namespace DVLDBusinessLayer
             PaidFees = paidFees;
             CreatedByUserID = createdByUserID;
             CreatedByUserInfo = clsUsers.Find(CreatedByUserID);
+            personInfo = clsPeople.Find(ApplicantPersonlID);
             Mode = enMode.Update;
         }
-        clsApplication()
+        public clsApplication()
         {
             ApplicationID = -1;
             ApplicantPersonlID = -1;

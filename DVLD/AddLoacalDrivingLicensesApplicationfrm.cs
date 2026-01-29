@@ -12,17 +12,25 @@ namespace DVLD
 {
     public partial class AddLoacalDrivingLicensesApplicationfrm: Form
     {
+        int PersonID;
+        int ApplicationID;
         public AddLoacalDrivingLicensesApplicationfrm()
         {
             InitializeComponent();
+            
         }
 
         private void label3_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void lblMode_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddLoacalDrivingLicensesApplicationfrm_Load(object sender, EventArgs e)
         {
 
         }

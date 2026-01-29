@@ -32,7 +32,6 @@
             this.lblMode = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPagePersonInfo = new System.Windows.Forms.TabPage();
-            this.userControl22 = new DVLD.UserControl2();
             this.tabPageLoginInfo = new System.Windows.Forms.TabPage();
             this.lblDLApplicationID = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,6 +42,7 @@
             this.lblCreatedBy = new System.Windows.Forms.Label();
             this.lblApplicationFees = new System.Windows.Forms.Label();
             this.lblApplicationDate = new System.Windows.Forms.Label();
+            this.comboBoxLicenseClass = new System.Windows.Forms.ComboBox();
             this.btnNext = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -51,7 +51,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.comboBoxLicenseClass = new System.Windows.Forms.ComboBox();
+            this.userControl22 = new DVLD.UserControl2();
             this.tabControl1.SuspendLayout();
             this.tabPagePersonInfo.SuspendLayout();
             this.tabPageLoginInfo.SuspendLayout();
@@ -97,32 +97,23 @@
             this.tabPagePersonInfo.Text = "Personal Info";
             this.tabPagePersonInfo.UseVisualStyleBackColor = true;
             // 
-            // userControl22
-            // 
-            this.userControl22.FilterByEnabled = true;
-            this.userControl22.Location = new System.Drawing.Point(6, 6);
-            this.userControl22.Name = "userControl22";
-            this.userControl22.showAddPerson = true;
-            this.userControl22.Size = new System.Drawing.Size(779, 371);
-            this.userControl22.TabIndex = 10;
-            // 
             // tabPageLoginInfo
             // 
             this.tabPageLoginInfo.Controls.Add(this.comboBoxLicenseClass);
-            this.tabPageLoginInfo.Controls.Add(this.pictureBox4);
             this.tabPageLoginInfo.Controls.Add(this.lblApplicationDate);
             this.tabPageLoginInfo.Controls.Add(this.lblApplicationFees);
             this.tabPageLoginInfo.Controls.Add(this.lblCreatedBy);
             this.tabPageLoginInfo.Controls.Add(this.label5);
-            this.tabPageLoginInfo.Controls.Add(this.pictureBox2);
-            this.tabPageLoginInfo.Controls.Add(this.pictureBox1);
-            this.tabPageLoginInfo.Controls.Add(this.pictureBox5);
-            this.tabPageLoginInfo.Controls.Add(this.pictureBox3);
             this.tabPageLoginInfo.Controls.Add(this.lblDLApplicationID);
             this.tabPageLoginInfo.Controls.Add(this.label1);
             this.tabPageLoginInfo.Controls.Add(this.label2);
             this.tabPageLoginInfo.Controls.Add(this.label3);
             this.tabPageLoginInfo.Controls.Add(this.label4);
+            this.tabPageLoginInfo.Controls.Add(this.pictureBox4);
+            this.tabPageLoginInfo.Controls.Add(this.pictureBox2);
+            this.tabPageLoginInfo.Controls.Add(this.pictureBox1);
+            this.tabPageLoginInfo.Controls.Add(this.pictureBox5);
+            this.tabPageLoginInfo.Controls.Add(this.pictureBox3);
             this.tabPageLoginInfo.Controls.Add(this.btnSave);
             this.tabPageLoginInfo.Location = new System.Drawing.Point(4, 25);
             this.tabPageLoginInfo.Name = "tabPageLoginInfo";
@@ -214,6 +205,14 @@
             this.lblApplicationDate.TabIndex = 78;
             this.lblApplicationDate.Text = "[???]";
             // 
+            // comboBoxLicenseClass
+            // 
+            this.comboBoxLicenseClass.FormattingEnabled = true;
+            this.comboBoxLicenseClass.Location = new System.Drawing.Point(268, 126);
+            this.comboBoxLicenseClass.Name = "comboBoxLicenseClass";
+            this.comboBoxLicenseClass.Size = new System.Drawing.Size(142, 24);
+            this.comboBoxLicenseClass.TabIndex = 80;
+            // 
             // btnNext
             // 
             this.btnNext.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -300,24 +299,25 @@
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
             // 
-            // comboBoxLicenseClass
+            // userControl22
             // 
-            this.comboBoxLicenseClass.FormattingEnabled = true;
-            this.comboBoxLicenseClass.Location = new System.Drawing.Point(268, 126);
-            this.comboBoxLicenseClass.Name = "comboBoxLicenseClass";
-            this.comboBoxLicenseClass.Size = new System.Drawing.Size(142, 24);
-            this.comboBoxLicenseClass.TabIndex = 80;
+            this.userControl22.FilterByEnabled = true;
+            this.userControl22.Location = new System.Drawing.Point(6, 6);
+            this.userControl22.Name = "userControl22";
+            this.userControl22.showAddPerson = true;
+            this.userControl22.Size = new System.Drawing.Size(779, 371);
+            this.userControl22.TabIndex = 10;
             // 
             // AddLoacalDrivingLicensesApplicationfrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(879, 575);
             this.Controls.Add(this.lblMode);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnClose);
             this.Name = "AddLoacalDrivingLicensesApplicationfrm";
             this.Text = "AddLoacalDrivingLicensesApplicationfrm";
+            this.Load += new System.EventHandler(this.AddLoacalDrivingLicensesApplicationfrm_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPagePersonInfo.ResumeLayout(false);
             this.tabPageLoginInfo.ResumeLayout(false);

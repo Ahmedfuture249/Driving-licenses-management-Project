@@ -29,21 +29,22 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddLoacalDrivingLicensesApplicationfrm));
-            this.lblMode = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPagePersonInfo = new System.Windows.Forms.TabPage();
-            this.tabPageLoginInfo = new System.Windows.Forms.TabPage();
+            this.btnNext = new System.Windows.Forms.Button();
+            this.userControl22 = new DVLD.UserControl2();
+            this.tabApplicationInfo = new System.Windows.Forms.TabPage();
+            this.comboBoxLicenseClass = new System.Windows.Forms.ComboBox();
+            this.lblApplicationDate = new System.Windows.Forms.Label();
+            this.lblApplicationFees = new System.Windows.Forms.Label();
+            this.lblCreatedBy = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.lblDLApplicationID = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lblCreatedBy = new System.Windows.Forms.Label();
-            this.lblApplicationFees = new System.Windows.Forms.Label();
-            this.lblApplicationDate = new System.Windows.Forms.Label();
-            this.comboBoxLicenseClass = new System.Windows.Forms.ComboBox();
-            this.btnNext = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -51,10 +52,9 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.userControl22 = new DVLD.UserControl2();
             this.tabControl1.SuspendLayout();
             this.tabPagePersonInfo.SuspendLayout();
-            this.tabPageLoginInfo.SuspendLayout();
+            this.tabApplicationInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -62,23 +62,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblMode
+            // lblTitle
             // 
-            this.lblMode.AutoSize = true;
-            this.lblMode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblMode.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMode.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lblMode.Location = new System.Drawing.Point(164, 24);
-            this.lblMode.Name = "lblMode";
-            this.lblMode.Size = new System.Drawing.Size(534, 32);
-            this.lblMode.TabIndex = 70;
-            this.lblMode.Text = "New Local Driving Licence Application";
-            this.lblMode.Click += new System.EventHandler(this.lblMode_Click);
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lblTitle.Location = new System.Drawing.Point(164, 24);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(534, 32);
+            this.lblTitle.TabIndex = 70;
+            this.lblTitle.Text = "New Local Driving Licence Application";
+            this.lblTitle.Click += new System.EventHandler(this.lblMode_Click);
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPagePersonInfo);
-            this.tabControl1.Controls.Add(this.tabPageLoginInfo);
+            this.tabControl1.Controls.Add(this.tabApplicationInfo);
             this.tabControl1.Location = new System.Drawing.Point(38, 76);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -97,31 +97,100 @@
             this.tabPagePersonInfo.Text = "Personal Info";
             this.tabPagePersonInfo.UseVisualStyleBackColor = true;
             // 
-            // tabPageLoginInfo
+            // btnNext
             // 
-            this.tabPageLoginInfo.Controls.Add(this.comboBoxLicenseClass);
-            this.tabPageLoginInfo.Controls.Add(this.lblApplicationDate);
-            this.tabPageLoginInfo.Controls.Add(this.lblApplicationFees);
-            this.tabPageLoginInfo.Controls.Add(this.lblCreatedBy);
-            this.tabPageLoginInfo.Controls.Add(this.label5);
-            this.tabPageLoginInfo.Controls.Add(this.lblDLApplicationID);
-            this.tabPageLoginInfo.Controls.Add(this.label1);
-            this.tabPageLoginInfo.Controls.Add(this.label2);
-            this.tabPageLoginInfo.Controls.Add(this.label3);
-            this.tabPageLoginInfo.Controls.Add(this.label4);
-            this.tabPageLoginInfo.Controls.Add(this.pictureBox4);
-            this.tabPageLoginInfo.Controls.Add(this.pictureBox2);
-            this.tabPageLoginInfo.Controls.Add(this.pictureBox1);
-            this.tabPageLoginInfo.Controls.Add(this.pictureBox5);
-            this.tabPageLoginInfo.Controls.Add(this.pictureBox3);
-            this.tabPageLoginInfo.Controls.Add(this.btnSave);
-            this.tabPageLoginInfo.Location = new System.Drawing.Point(4, 25);
-            this.tabPageLoginInfo.Name = "tabPageLoginInfo";
-            this.tabPageLoginInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageLoginInfo.Size = new System.Drawing.Size(791, 395);
-            this.tabPageLoginInfo.TabIndex = 1;
-            this.tabPageLoginInfo.Text = "Application Info";
-            this.tabPageLoginInfo.UseVisualStyleBackColor = true;
+            this.btnNext.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnNext.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
+            this.btnNext.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNext.Location = new System.Drawing.Point(632, 337);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(147, 40);
+            this.btnNext.TabIndex = 69;
+            this.btnNext.Text = "Next";
+            this.btnNext.UseVisualStyleBackColor = false;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // userControl22
+            // 
+            this.userControl22.FilterByEnabled = true;
+            this.userControl22.Location = new System.Drawing.Point(6, 6);
+            this.userControl22.Name = "userControl22";
+            this.userControl22.showAddPerson = true;
+            this.userControl22.Size = new System.Drawing.Size(779, 371);
+            this.userControl22.TabIndex = 10;
+            this.userControl22.OnPersonSelected += new System.Action<int>(this.userControl22_OnPersonSelected);
+            // 
+            // tabApplicationInfo
+            // 
+            this.tabApplicationInfo.Controls.Add(this.comboBoxLicenseClass);
+            this.tabApplicationInfo.Controls.Add(this.lblApplicationDate);
+            this.tabApplicationInfo.Controls.Add(this.lblApplicationFees);
+            this.tabApplicationInfo.Controls.Add(this.lblCreatedBy);
+            this.tabApplicationInfo.Controls.Add(this.label5);
+            this.tabApplicationInfo.Controls.Add(this.lblDLApplicationID);
+            this.tabApplicationInfo.Controls.Add(this.label1);
+            this.tabApplicationInfo.Controls.Add(this.label2);
+            this.tabApplicationInfo.Controls.Add(this.label3);
+            this.tabApplicationInfo.Controls.Add(this.label4);
+            this.tabApplicationInfo.Controls.Add(this.pictureBox4);
+            this.tabApplicationInfo.Controls.Add(this.pictureBox2);
+            this.tabApplicationInfo.Controls.Add(this.pictureBox1);
+            this.tabApplicationInfo.Controls.Add(this.pictureBox5);
+            this.tabApplicationInfo.Controls.Add(this.pictureBox3);
+            this.tabApplicationInfo.Controls.Add(this.btnSave);
+            this.tabApplicationInfo.Location = new System.Drawing.Point(4, 25);
+            this.tabApplicationInfo.Name = "tabApplicationInfo";
+            this.tabApplicationInfo.Padding = new System.Windows.Forms.Padding(3);
+            this.tabApplicationInfo.Size = new System.Drawing.Size(791, 395);
+            this.tabApplicationInfo.TabIndex = 1;
+            this.tabApplicationInfo.Text = "Application Info";
+            this.tabApplicationInfo.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxLicenseClass
+            // 
+            this.comboBoxLicenseClass.FormattingEnabled = true;
+            this.comboBoxLicenseClass.Location = new System.Drawing.Point(268, 126);
+            this.comboBoxLicenseClass.Name = "comboBoxLicenseClass";
+            this.comboBoxLicenseClass.Size = new System.Drawing.Size(142, 24);
+            this.comboBoxLicenseClass.TabIndex = 80;
+            // 
+            // lblApplicationDate
+            // 
+            this.lblApplicationDate.AutoSize = true;
+            this.lblApplicationDate.Location = new System.Drawing.Point(265, 92);
+            this.lblApplicationDate.Name = "lblApplicationDate";
+            this.lblApplicationDate.Size = new System.Drawing.Size(36, 16);
+            this.lblApplicationDate.TabIndex = 78;
+            this.lblApplicationDate.Text = "[???]";
+            // 
+            // lblApplicationFees
+            // 
+            this.lblApplicationFees.AutoSize = true;
+            this.lblApplicationFees.Location = new System.Drawing.Point(265, 172);
+            this.lblApplicationFees.Name = "lblApplicationFees";
+            this.lblApplicationFees.Size = new System.Drawing.Size(36, 16);
+            this.lblApplicationFees.TabIndex = 76;
+            this.lblApplicationFees.Text = "[???]";
+            // 
+            // lblCreatedBy
+            // 
+            this.lblCreatedBy.AutoSize = true;
+            this.lblCreatedBy.Location = new System.Drawing.Point(265, 213);
+            this.lblCreatedBy.Name = "lblCreatedBy";
+            this.lblCreatedBy.Size = new System.Drawing.Size(36, 16);
+            this.lblCreatedBy.TabIndex = 75;
+            this.lblCreatedBy.Text = "[???]";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(84, 213);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(77, 16);
+            this.label5.TabIndex = 74;
+            this.label5.Text = "Created By:";
             // 
             // lblDLApplicationID
             // 
@@ -168,64 +237,6 @@
             this.label4.Size = new System.Drawing.Size(91, 16);
             this.label4.TabIndex = 7;
             this.label4.Text = "License Class";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(84, 213);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 16);
-            this.label5.TabIndex = 74;
-            this.label5.Text = "Created By:";
-            // 
-            // lblCreatedBy
-            // 
-            this.lblCreatedBy.AutoSize = true;
-            this.lblCreatedBy.Location = new System.Drawing.Point(265, 213);
-            this.lblCreatedBy.Name = "lblCreatedBy";
-            this.lblCreatedBy.Size = new System.Drawing.Size(36, 16);
-            this.lblCreatedBy.TabIndex = 75;
-            this.lblCreatedBy.Text = "[???]";
-            // 
-            // lblApplicationFees
-            // 
-            this.lblApplicationFees.AutoSize = true;
-            this.lblApplicationFees.Location = new System.Drawing.Point(265, 172);
-            this.lblApplicationFees.Name = "lblApplicationFees";
-            this.lblApplicationFees.Size = new System.Drawing.Size(36, 16);
-            this.lblApplicationFees.TabIndex = 76;
-            this.lblApplicationFees.Text = "[???]";
-            // 
-            // lblApplicationDate
-            // 
-            this.lblApplicationDate.AutoSize = true;
-            this.lblApplicationDate.Location = new System.Drawing.Point(265, 92);
-            this.lblApplicationDate.Name = "lblApplicationDate";
-            this.lblApplicationDate.Size = new System.Drawing.Size(36, 16);
-            this.lblApplicationDate.TabIndex = 78;
-            this.lblApplicationDate.Text = "[???]";
-            // 
-            // comboBoxLicenseClass
-            // 
-            this.comboBoxLicenseClass.FormattingEnabled = true;
-            this.comboBoxLicenseClass.Location = new System.Drawing.Point(268, 126);
-            this.comboBoxLicenseClass.Name = "comboBoxLicenseClass";
-            this.comboBoxLicenseClass.Size = new System.Drawing.Size(142, 24);
-            this.comboBoxLicenseClass.TabIndex = 80;
-            // 
-            // btnNext
-            // 
-            this.btnNext.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnNext.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
-            this.btnNext.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNext.Location = new System.Drawing.Point(632, 337);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(147, 40);
-            this.btnNext.TabIndex = 69;
-            this.btnNext.Text = "Next";
-            this.btnNext.UseVisualStyleBackColor = false;
             // 
             // pictureBox4
             // 
@@ -284,6 +295,7 @@
             this.btnSave.TabIndex = 67;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnClose
             // 
@@ -299,20 +311,11 @@
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
             // 
-            // userControl22
-            // 
-            this.userControl22.FilterByEnabled = true;
-            this.userControl22.Location = new System.Drawing.Point(6, 6);
-            this.userControl22.Name = "userControl22";
-            this.userControl22.showAddPerson = true;
-            this.userControl22.Size = new System.Drawing.Size(779, 371);
-            this.userControl22.TabIndex = 10;
-            // 
             // AddLoacalDrivingLicensesApplicationfrm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(879, 575);
-            this.Controls.Add(this.lblMode);
+            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnClose);
             this.Name = "AddLoacalDrivingLicensesApplicationfrm";
@@ -320,8 +323,8 @@
             this.Load += new System.EventHandler(this.AddLoacalDrivingLicensesApplicationfrm_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPagePersonInfo.ResumeLayout(false);
-            this.tabPageLoginInfo.ResumeLayout(false);
-            this.tabPageLoginInfo.PerformLayout();
+            this.tabApplicationInfo.ResumeLayout(false);
+            this.tabApplicationInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -334,12 +337,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblMode;
+        private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPagePersonInfo;
         private System.Windows.Forms.Button btnNext;
         private UserControl2 userControl22;
-        private System.Windows.Forms.TabPage tabPageLoginInfo;
+        private System.Windows.Forms.TabPage tabApplicationInfo;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox5;

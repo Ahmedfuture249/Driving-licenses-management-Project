@@ -42,7 +42,7 @@ namespace DVLDBusinessLayer
             personInfo = clsPeople.Find(ApplicantPersonlID);
             Mode = enMode.Update;
         }
-        clsLDLApplication()
+        public  clsLDLApplication()
         {
             LocalDrivingLicensApplicationID = -1;
             LicenseClass = -1;

@@ -44,6 +44,7 @@
     <Compile Include="ApplicationsData.cs" />
     <Compile Include="CountriesData.cs" />
     <Compile Include="LDLApplicationsData.cs" />
+    <Compile Include="LicenseClassesData.cs" />
     <Compile Include="ManageApplicationsTypesData.cs" />
     <Compile Include="PeopleDataAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

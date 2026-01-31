@@ -106,7 +106,7 @@ namespace DVLDDataAccessLayer
 INSERT INTO LocalDrivingLicenseApplications
 (
     [ApplicationID],
-    [LicenseClass]
+    [LicenseClassID]
     
 )
 VALUES

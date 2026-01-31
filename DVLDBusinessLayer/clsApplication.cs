@@ -114,6 +114,12 @@ namespace DVLDBusinessLayer
                     , (byte)this.ApplicationStatus, this.ApplicationLastStatusDate, this.PaidFees, this.CreatedByUserID);
         }
 
+        public static int GetActiveApplicationForLicenseClass(int personID,enApplicationType ApplicAtionTypeID,int LicenseClassID)
+        {
+            int ActiveApplicationID = -1;
+            ActiveApplicationID= ApplicationsData.GetActiveApplicationIDForLicenseClass(personID, (int)ApplicAtionTypeID, LicenseClassID);
+            return ActiveApplicationID;
+        }
         public bool Cancel()
         {
             return ApplicationsData.UpdateStatus(this.ApplicationID, 2);

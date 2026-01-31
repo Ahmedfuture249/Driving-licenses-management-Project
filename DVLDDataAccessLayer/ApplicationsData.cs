@@ -288,8 +288,7 @@ public class ApplicationsData
 
             SqlConnection connection = new SqlConnection(clsPeopleDataAccessSettings.ConnectionString);
 
-            string query = "Update Applications set ApplicationStatus=@NewStatus ,LastStatusDate=@LastStatusDate" +
-                "where ApplicationID=@ApplicationID";
+            string query = "Update Applications set ApplicationStatus=@NewStatus ,LastStatusDate=@LastStatusDate where ApplicationID=@ApplicationID";
 
             SqlCommand command = new SqlCommand(query, connection);
 

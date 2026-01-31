@@ -120,14 +120,14 @@ namespace DVLDBusinessLayer
             ActiveApplicationID= ApplicationsData.GetActiveApplicationIDForLicenseClass(personID, (int)ApplicAtionTypeID, LicenseClassID);
             return ActiveApplicationID;
         }
-        public bool Cancel()
+        public static bool Cancel(int ID)
         {
-            return ApplicationsData.UpdateStatus(this.ApplicationID, 2);
+            return ApplicationsData.UpdateStatus(ID, 2);
         }
 
-        public bool SetCompleted()
+        public static bool SetCompleted(int ID)
         {
-            return ApplicationsData.UpdateStatus(this.ApplicationID, 3);
+            return ApplicationsData.UpdateStatus(ID, 3);
         }
         public static bool DeleteApplication(int ID)
         {

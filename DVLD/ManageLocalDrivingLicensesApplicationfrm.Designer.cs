@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblRecordsCount = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtFilterByValue = new System.Windows.Forms.TextBox();
@@ -35,11 +36,21 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cbFilterBy = new System.Windows.Forms.ComboBox();
             this.dgvGetAllApplications = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnAddNewPerson = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.Button();
+            this.showApplicationDetailesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteApplicatonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cancelApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sheduleTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.issueDrivingLicenseFirstTimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showLicenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showPersonLicensesHistoreyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGetAllApplications)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -130,6 +141,21 @@
             this.dgvGetAllApplications.TabIndex = 10;
             this.dgvGetAllApplications.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGetAllPeople_CellContentClick);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showApplicationDetailesToolStripMenuItem,
+            this.editApplicationToolStripMenuItem,
+            this.deleteApplicatonToolStripMenuItem,
+            this.cancelApplicationToolStripMenuItem,
+            this.sheduleTestToolStripMenuItem,
+            this.issueDrivingLicenseFirstTimeToolStripMenuItem,
+            this.showLicenseToolStripMenuItem,
+            this.showPersonLicensesHistoreyToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(297, 212);
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::DVLD.Properties.Resources.Local_321;
@@ -150,6 +176,7 @@
             this.btnAddNewPerson.Size = new System.Drawing.Size(75, 76);
             this.btnAddNewPerson.TabIndex = 16;
             this.btnAddNewPerson.UseVisualStyleBackColor = true;
+            this.btnAddNewPerson.Click += new System.EventHandler(this.btnAddNewPerson_Click);
             // 
             // pictureBox1
             // 
@@ -172,11 +199,71 @@
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
             // 
+            // showApplicationDetailesToolStripMenuItem
+            // 
+            this.showApplicationDetailesToolStripMenuItem.Image = global::DVLD.Properties.Resources.PersonDetails_322;
+            this.showApplicationDetailesToolStripMenuItem.Name = "showApplicationDetailesToolStripMenuItem";
+            this.showApplicationDetailesToolStripMenuItem.Size = new System.Drawing.Size(296, 26);
+            this.showApplicationDetailesToolStripMenuItem.Text = "Show Application Detailes";
+            // 
+            // editApplicationToolStripMenuItem
+            // 
+            this.editApplicationToolStripMenuItem.Image = global::DVLD.Properties.Resources.edit_322;
+            this.editApplicationToolStripMenuItem.Name = "editApplicationToolStripMenuItem";
+            this.editApplicationToolStripMenuItem.Size = new System.Drawing.Size(296, 26);
+            this.editApplicationToolStripMenuItem.Text = "Edit Application";
+            this.editApplicationToolStripMenuItem.Click += new System.EventHandler(this.editApplicationToolStripMenuItem_Click);
+            // 
+            // deleteApplicatonToolStripMenuItem
+            // 
+            this.deleteApplicatonToolStripMenuItem.Image = global::DVLD.Properties.Resources.Delete_32_2;
+            this.deleteApplicatonToolStripMenuItem.Name = "deleteApplicatonToolStripMenuItem";
+            this.deleteApplicatonToolStripMenuItem.Size = new System.Drawing.Size(296, 26);
+            this.deleteApplicatonToolStripMenuItem.Text = "Delete Applicaton";
+            this.deleteApplicatonToolStripMenuItem.Click += new System.EventHandler(this.deleteApplicatonToolStripMenuItem_Click);
+            // 
+            // cancelApplicationToolStripMenuItem
+            // 
+            this.cancelApplicationToolStripMenuItem.Image = global::DVLD.Properties.Resources.Delete_322;
+            this.cancelApplicationToolStripMenuItem.Name = "cancelApplicationToolStripMenuItem";
+            this.cancelApplicationToolStripMenuItem.Size = new System.Drawing.Size(296, 26);
+            this.cancelApplicationToolStripMenuItem.Text = "Cancel Application";
+            this.cancelApplicationToolStripMenuItem.Click += new System.EventHandler(this.cancelApplicationToolStripMenuItem_Click);
+            // 
+            // sheduleTestToolStripMenuItem
+            // 
+            this.sheduleTestToolStripMenuItem.Image = global::DVLD.Properties.Resources.Test_32;
+            this.sheduleTestToolStripMenuItem.Name = "sheduleTestToolStripMenuItem";
+            this.sheduleTestToolStripMenuItem.Size = new System.Drawing.Size(296, 26);
+            this.sheduleTestToolStripMenuItem.Text = "Shedule Test";
+            // 
+            // issueDrivingLicenseFirstTimeToolStripMenuItem
+            // 
+            this.issueDrivingLicenseFirstTimeToolStripMenuItem.Image = global::DVLD.Properties.Resources.License_View_32;
+            this.issueDrivingLicenseFirstTimeToolStripMenuItem.Name = "issueDrivingLicenseFirstTimeToolStripMenuItem";
+            this.issueDrivingLicenseFirstTimeToolStripMenuItem.Size = new System.Drawing.Size(296, 26);
+            this.issueDrivingLicenseFirstTimeToolStripMenuItem.Text = "Issue Driving License (First Time)";
+            // 
+            // showLicenseToolStripMenuItem
+            // 
+            this.showLicenseToolStripMenuItem.Image = global::DVLD.Properties.Resources.License_View_32;
+            this.showLicenseToolStripMenuItem.Name = "showLicenseToolStripMenuItem";
+            this.showLicenseToolStripMenuItem.Size = new System.Drawing.Size(296, 26);
+            this.showLicenseToolStripMenuItem.Text = "Show License";
+            // 
+            // showPersonLicensesHistoreyToolStripMenuItem
+            // 
+            this.showPersonLicensesHistoreyToolStripMenuItem.Image = global::DVLD.Properties.Resources.PersonLicenseHistory_32;
+            this.showPersonLicensesHistoreyToolStripMenuItem.Name = "showPersonLicensesHistoreyToolStripMenuItem";
+            this.showPersonLicensesHistoreyToolStripMenuItem.Size = new System.Drawing.Size(296, 26);
+            this.showPersonLicensesHistoreyToolStripMenuItem.Text = "Show person Licenses Historey";
+            // 
             // ManageLocalDrivingLicensesApplicationfrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1418, 724);
+            this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lblRecordsCount);
             this.Controls.Add(this.label3);
@@ -192,6 +279,7 @@
             this.Text = "ManageLocalDrivingLicensesApplicationfrm";
             this.Load += new System.EventHandler(this.ManageLocalDrivingLicensesApplicationfrm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGetAllApplications)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -212,5 +300,14 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.DataGridView dgvGetAllApplications;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem showApplicationDetailesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editApplicationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteApplicatonToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cancelApplicationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sheduleTestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem issueDrivingLicenseFirstTimeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem showLicenseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem showPersonLicensesHistoreyToolStripMenuItem;
     }
 }

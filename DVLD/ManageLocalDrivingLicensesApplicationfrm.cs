@@ -27,5 +27,32 @@ namespace DVLD
         {
             dgvGetAllApplications.DataSource = clsLDLApplication.ListApplications();
         }
+
+        private void editApplicationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddLoacalDrivingLicensesApplicationfrm frm = new AddLoacalDrivingLicensesApplicationfrm((int)dgvGetAllApplications.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+            dgvGetAllApplications.DataSource = clsLDLApplication.ListApplications();
+        }
+
+        private void deleteApplicatonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            clsLDLApplication.DeleteApplication((int)dgvGetAllApplications.CurrentRow.Cells[0].Value);
+            dgvGetAllApplications.DataSource = clsLDLApplication.ListApplications();
+        }
+
+        private void cancelApplicationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            clsLDLApplication.Cancel((int)dgvGetAllApplications.CurrentRow.Cells[0].Value);
+            dgvGetAllApplications.DataSource = clsLDLApplication.ListApplications();
+        }
+
+        private void btnAddNewPerson_Click(object sender, EventArgs e)
+        {
+            AddLoacalDrivingLicensesApplicationfrm frm = new AddLoacalDrivingLicensesApplicationfrm();
+            frm.ShowDialog();
+            
+            dgvGetAllApplications.DataSource = clsLDLApplication.ListApplications();
+        }
     }
 }

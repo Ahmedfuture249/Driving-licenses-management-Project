@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -75,6 +76,10 @@ namespace DVLDBusinessLayer
         {
             return LDLApplicationsData.UpdateLocalDrivingLicenseApplicatioN(this.LocalDrivingLicensApplicationID, this.ApplicationID, this.LicenseClass);
          
+        }
+        public static bool DeleteLocalDrivingLicenseApplication(int ID)
+        {
+            return LDLApplicationsData.DeleteLocalDrivingLicenseApplication(ID);
         }
 
         public bool Save()

@@ -254,8 +254,8 @@ public class ApplicationsData
         {
             int rowsaffected = 0;
             SqlConnection connection = new SqlConnection(clsPeopleDataAccessSettings.ConnectionString);
-            string query = @" Delete From Applications
-               WHERE ApplicationID = @ApplicationID";
+            string query = @" Delete Applications 
+                                where ApplicationID = @ApplicationID";
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@ApplicationID", ApplicationID);
             try

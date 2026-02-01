@@ -37,13 +37,19 @@ namespace DVLD
 
         private void deleteApplicatonToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            clsLDLApplication.DeleteApplication((int)dgvGetAllApplications.CurrentRow.Cells[0].Value);
+            int ID = (int)dgvGetAllApplications.CurrentRow.Cells[0].Value;
+            
+            clsLDLApplication.DeleteLocalDrivingLicenseApplication(ID);
             dgvGetAllApplications.DataSource = clsLDLApplication.ListApplications();
         }
 
         private void cancelApplicationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            clsLDLApplication.Cancel((int)dgvGetAllApplications.CurrentRow.Cells[0].Value);
+
+            int ID = (int)dgvGetAllApplications.CurrentRow.Cells[0].Value;
+            clsLDLApplication Application = clsLDLApplication.FindLocalDrivingLicenseApplication(ID);
+            ID = Application.ApplicationID;
+            clsLDLApplication.Cancel(ID);
             dgvGetAllApplications.DataSource = clsLDLApplication.ListApplications();
         }
 

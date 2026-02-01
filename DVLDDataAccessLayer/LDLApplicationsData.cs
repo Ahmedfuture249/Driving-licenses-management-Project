@@ -193,7 +193,7 @@ UPDATE LocalDrivingLicenseApplications SET
         {
             int rowsaffected = 0;
             SqlConnection connection = new SqlConnection(clsPeopleDataAccessSettings.ConnectionString);
-            string query = @" Delete From LocalDrivingLicenseApplications
+            string query = @" Delete  LocalDrivingLicenseApplications
                WHERE LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID";
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", ID);

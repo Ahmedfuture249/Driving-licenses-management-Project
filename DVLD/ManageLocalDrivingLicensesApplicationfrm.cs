@@ -17,6 +17,10 @@ namespace DVLD
         {
             InitializeComponent();
         }
+        private void _RefreshList()
+        {
+            dgvGetAllApplications.DataSource = clsLDLApplication.ListApplications();
+        }
 
         private void dgvGetAllPeople_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -25,14 +29,14 @@ namespace DVLD
 
         private void ManageLocalDrivingLicensesApplicationfrm_Load(object sender, EventArgs e)
         {
-            dgvGetAllApplications.DataSource = clsLDLApplication.ListApplications();
+            _RefreshList();
         }
 
         private void editApplicationToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AddLoacalDrivingLicensesApplicationfrm frm = new AddLoacalDrivingLicensesApplicationfrm((int)dgvGetAllApplications.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
-            dgvGetAllApplications.DataSource = clsLDLApplication.ListApplications();
+            _RefreshList();
         }
 
         private void deleteApplicatonToolStripMenuItem_Click(object sender, EventArgs e)
@@ -40,7 +44,7 @@ namespace DVLD
             int ID = (int)dgvGetAllApplications.CurrentRow.Cells[0].Value;
             
             clsLDLApplication.DeleteLocalDrivingLicenseApplication(ID);
-            dgvGetAllApplications.DataSource = clsLDLApplication.ListApplications();
+            _RefreshList();  
         }
 
         private void cancelApplicationToolStripMenuItem_Click(object sender, EventArgs e)
@@ -50,15 +54,14 @@ namespace DVLD
             clsLDLApplication Application = clsLDLApplication.FindLocalDrivingLicenseApplication(ID);
             ID = Application.ApplicationID;
             clsLDLApplication.Cancel(ID);
-            dgvGetAllApplications.DataSource = clsLDLApplication.ListApplications();
+            _RefreshList();
         }
 
         private void btnAddNewPerson_Click(object sender, EventArgs e)
         {
             AddLoacalDrivingLicensesApplicationfrm frm = new AddLoacalDrivingLicensesApplicationfrm();
             frm.ShowDialog();
-            
-            dgvGetAllApplications.DataSource = clsLDLApplication.ListApplications();
+            _RefreshList();
         }
     }
 }

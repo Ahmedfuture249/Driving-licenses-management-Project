@@ -49,7 +49,7 @@ namespace DVLDDataAccessLayer
             return dt;
 
         }
-        public static bool GetUserByLicensClassName(ref int LicensClassID, string ClassName, ref string LicensClassDescription, ref int MinimumAllowedAGE, ref decimal LicensClassFees)
+        public static bool GetLicensClassByLicensClassName(ref int LicensClassID, string ClassName, ref string LicensClassDescription, ref int MinimumAllowedAGE, ref decimal LicensClassFees)
         {
             bool isFound = false;
             SqlConnection connection = new SqlConnection(clsPeopleDataAccessSettings.ConnectionString);
@@ -90,5 +90,47 @@ namespace DVLDDataAccessLayer
             return isFound;
 
         }
-    }
+        public static bool GetLicensClassByLicensClassID(int LicensClassID, ref string ClassName, ref string LicensClassDescription, ref int MinimumAllowedAGE, ref decimal LicensClassFees)
+        {
+            bool isFound = false;
+            SqlConnection connection = new SqlConnection(clsPeopleDataAccessSettings.ConnectionString);
+            string query = "select * from LicenseClasses where LicenseClassID =@LicensClassID";
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@LicensClassID", LicensClassID);
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    isFound = true;
+                    ClassName = (string)reader["ClassName"];
+                    LicensClassDescription = (string)reader["ClassDescription"];
+                    MinimumAllowedAGE = (int)reader["MinimumAllowedAge"];
+
+                    LicensClassFees = (decimal)reader["ClassFees"];
+
+
+
+
+                }
+                else
+                {
+                    isFound = false;
+                }
+                reader.Close();
+            }
+            catch (Exception E)
+            {
+                Console.WriteLine(E.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return isFound;
+
+        }
+    
+}
 }

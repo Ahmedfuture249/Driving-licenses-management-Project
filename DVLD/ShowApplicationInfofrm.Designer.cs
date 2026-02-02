@@ -28,16 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ctrlDrivingLicenseApplicationInfocs1 = new DVLD.ctrlDrivingLicenseApplicationInfocs();
             this.label1 = new System.Windows.Forms.Label();
+            this.ctrlDrivingLicenseApplicationInfocs1 = new DVLD.ctrlDrivingLicenseApplicationInfocs();
             this.SuspendLayout();
-            // 
-            // ctrlDrivingLicenseApplicationInfocs1
-            // 
-            this.ctrlDrivingLicenseApplicationInfocs1.Location = new System.Drawing.Point(12, 82);
-            this.ctrlDrivingLicenseApplicationInfocs1.Name = "ctrlDrivingLicenseApplicationInfocs1";
-            this.ctrlDrivingLicenseApplicationInfocs1.Size = new System.Drawing.Size(608, 326);
-            this.ctrlDrivingLicenseApplicationInfocs1.TabIndex = 0;
             // 
             // label1
             // 
@@ -50,10 +43,17 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Applicaation Detailes";
             // 
+            // ctrlDrivingLicenseApplicationInfocs1
+            // 
+            this.ctrlDrivingLicenseApplicationInfocs1.Location = new System.Drawing.Point(12, 75);
+            this.ctrlDrivingLicenseApplicationInfocs1.Name = "ctrlDrivingLicenseApplicationInfocs1";
+            this.ctrlDrivingLicenseApplicationInfocs1.Size = new System.Drawing.Size(791, 326);
+            this.ctrlDrivingLicenseApplicationInfocs1.TabIndex = 0;
+            // 
             // ShowApplicationInfofrm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(620, 413);
+            this.ClientSize = new System.Drawing.Size(732, 413);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ctrlDrivingLicenseApplicationInfocs1);
             this.ForeColor = System.Drawing.SystemColors.HotTrack;

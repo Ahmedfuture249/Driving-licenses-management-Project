@@ -97,43 +97,43 @@ public class ApplicationsData
         //    return isFound;
 
         //}
-//        public static DataTable GetAllApplications()
-//        {
-//            DataTable dt = new DataTable();
-//            SqlConnection connection = new SqlConnection(clsPeopleDataAccessSettings.ConnectionString);
-//            //string query = "\r\nSELECT [PersonID]\r\n      ,[NationalNo]\r\n      ,[FirstName]\r\n      ,[SecondName]\r\n      ,[ThirdName]\r\n      ,[LastName]\r\n      ,[DateOfBirth]\r\n      ,[Gendor],\r\n\t  case \r\n\t  when Gendor=0 Then 'MALE'\r\n\t  ELSE \r\n\t  'FEMALE' END AS GendorCaption\r\n      ,[Address]\r\n      ,[Phone]\r\n      ,[Email]\r\n      ,[NationalityCountryID]\r\n      ,[ImagePath]\r\n  FROM [dbo].[People]\r\n";
-//            string query = @"select UserID , People.PersonID, CONCAT(
-//        People.FirstName, ' ',
-//        People.SecondName, ' ',
-//        People.ThirdName, ' ',
-//        People.LastName
-//    ) AS FullName,Users.UserName ,Users.IsActive from users inner join People on Users.PersonID =People.PersonID;
-//";
+        public static DataTable GetAllApplications()
+        {
+            DataTable dt = new DataTable();
+            SqlConnection connection = new SqlConnection(clsPeopleDataAccessSettings.ConnectionString);
+            //string query = "\r\nSELECT [PersonID]\r\n      ,[NationalNo]\r\n      ,[FirstName]\r\n      ,[SecondName]\r\n      ,[ThirdName]\r\n      ,[LastName]\r\n      ,[DateOfBirth]\r\n      ,[Gendor],\r\n\t  case \r\n\t  when Gendor=0 Then 'MALE'\r\n\t  ELSE \r\n\t  'FEMALE' END AS GendorCaption\r\n      ,[Address]\r\n      ,[Phone]\r\n      ,[Email]\r\n      ,[NationalityCountryID]\r\n      ,[ImagePath]\r\n  FROM [dbo].[People]\r\n";
+            string query = @"select UserID , People.PersonID, CONCAT(
+        People.FirstName, ' ',
+        People.SecondName, ' ',
+        People.ThirdName, ' ',
+        People.LastName
+    ) AS FullName,Users.UserName ,Users.IsActive from users inner join People on Users.PersonID =People.PersonID;
+";
 
-//            SqlCommand command = new SqlCommand(query, connection);
+            SqlCommand command = new SqlCommand(query, connection);
 
-//            try
-//            {
-//                connection.Open();
-//                SqlDataReader reader = command.ExecuteReader();
-//                if (reader.Read())
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
 
-//                {
-//                    dt.Load(reader);
-//                }
-//                reader.Close();
-//            }
-//            catch (Exception e)
-//            {
-//                Console.WriteLine(e.Message);
-//            }
-//            finally
-//            {
-//                connection.Close();
-//            }
-//            return dt;
+                {
+                    dt.Load(reader);
+                }
+                reader.Close();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return dt;
 
-//        }
+        }
 
         public static int AddNewApplication( int applicantPersonID, DateTime applicationDate, int applicationTypeID, byte applicationStatus, DateTime applicationLastStatusDate, decimal paidFees, int createdByUserID)
         {
@@ -213,7 +213,7 @@ public class ApplicationsData
                       @ApplicationStatus,
                       @LastStatusDate,
                       @PaidFees,
-                      @CreatedByUserID)";
+                      @CreatedByUserID) where ApplicationID=@ApplicationID";
             SqlCommand command = new SqlCommand(query, connection);
 
 
@@ -224,10 +224,12 @@ public class ApplicationsData
             command.Parameters.AddWithValue("@LastStatusDate", applicationLastStatusDate);
             command.Parameters.AddWithValue("@PaidFees", paidFees);
             command.Parameters.AddWithValue("@CreatedByUserID", createdByUserID);
+			command.Parameters.AddWithValue("@applicationID", applicationID);
 
 
 
-            try
+
+			try
             {
                 connection.Open();
 

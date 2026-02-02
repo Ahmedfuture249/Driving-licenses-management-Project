@@ -18,8 +18,9 @@ namespace DVLDBusinessLayer
         public enMode Mode = enMode.AddNew;
         public int LocalDrivingLicensApplicationID { set; get; }
         public int LicenseClass { set; get; }
-        
-        public string FullName
+       public clsLicenseClasses LicenseClassInfo { set; get; }
+
+		public string FullName
         {
             get { return base.personInfo.FullName; }
         }
@@ -30,6 +31,7 @@ namespace DVLDBusinessLayer
             LocalDrivingLicensApplicationID = localDrivingLicensApplicationID;
             ApplicationID = applicationID;
             LicenseClass = licenseClass;
+           LicenseClassInfo= clsLicenseClasses.Find(licenseClass);
             
             ApplicantPersonlID = applicantPersonlID;
             ApplicationDate = applicationDate;

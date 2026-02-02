@@ -35,7 +35,7 @@ namespace DVLDBusinessLayer
             string ClassDescription = "";
             decimal ClassFees = 0;
             int MinimumAllowedAge = 0;
-            if (LicenseClassesData.GetUserByLicensClassName(ref LicenseClassID, ClassName, ref ClassDescription, ref MinimumAllowedAge, ref ClassFees))
+            if (LicenseClassesData.GetLicensClassByLicensClassName(ref LicenseClassID, ClassName, ref ClassDescription, ref MinimumAllowedAge, ref ClassFees))
             {
                 return new clsLicenseClasses(LicenseClassID, ClassName, ClassDescription, MinimumAllowedAge, ClassFees);
             }
@@ -43,5 +43,19 @@ namespace DVLDBusinessLayer
                 return null;
 
         }
-    }
+		public static clsLicenseClasses Find(int id)
+		{
+			string LicenseClassName = "";
+			string ClassDescription = "";
+			decimal ClassFees = 0;
+			int MinimumAllowedAge = 0;
+			if (LicenseClassesData.GetLicensClassByLicensClassID(id,ref LicenseClassName, ref ClassDescription, ref MinimumAllowedAge, ref ClassFees))
+			{
+				return new clsLicenseClasses(id, LicenseClassName, ClassDescription, MinimumAllowedAge, ClassFees);
+			}
+			else
+				return null;
+
+		}
+	}
 }

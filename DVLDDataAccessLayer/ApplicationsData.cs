@@ -25,15 +25,15 @@ public class ApplicationsData
                 {
                     isFound = true;
 
-                    applicantPersonlID = (int)reader["applicantPersonlID"];
-                    applicationID= (int)reader["applicationID"];
-                    applicationDate = (DateTime)reader["applicationDate"];
-                    applicationTypeID = (int)reader["applicationTypeID"];
-                    applicationStatus = (byte)reader["applicationStatus"];
-                    applicationLastStatusDate = (DateTime)reader["applicationLastStatusDate"];
-                    paidFees = (decimal)reader["paidFees"];
+                    applicantPersonlID = (int)reader["ApplicantPersonID"];
+                    applicationID= (int)reader["ApplicationID"];
+                    applicationDate = (DateTime)reader["ApplicationDate"];
+                    applicationTypeID = (int)reader["ApplicationTypeID"];
+                    applicationStatus = (byte)reader["ApplicationStatus"];
+                    applicationLastStatusDate = (DateTime)reader["LastStatusDate"];
+                    paidFees = (decimal)reader["PaidFees"];
 
-                    createdByUserID = (int)reader["createdByUserID"];
+                    createdByUserID = (int)reader["CreatedByUserID"];
 
 
 

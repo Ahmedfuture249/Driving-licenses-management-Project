@@ -37,10 +37,6 @@
             this.cbFilterBy = new System.Windows.Forms.ComboBox();
             this.dgvGetAllApplications = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnAddNewPerson = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnClose = new System.Windows.Forms.Button();
             this.showApplicationDetailesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteApplicatonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,6 +45,10 @@
             this.issueDrivingLicenseFirstTimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showLicenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showPersonLicensesHistoreyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnAddNewPerson = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGetAllApplications)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -156,55 +156,13 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(297, 212);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::DVLD.Properties.Resources.Local_321;
-            this.pictureBox2.Location = new System.Drawing.Point(748, 56);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(49, 49);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 20;
-            this.pictureBox2.TabStop = false;
-            // 
-            // btnAddNewPerson
-            // 
-            this.btnAddNewPerson.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAddNewPerson.Image = global::DVLD.Properties.Resources.New_Application_64;
-            this.btnAddNewPerson.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnAddNewPerson.Location = new System.Drawing.Point(1326, 183);
-            this.btnAddNewPerson.Name = "btnAddNewPerson";
-            this.btnAddNewPerson.Size = new System.Drawing.Size(75, 76);
-            this.btnAddNewPerson.TabIndex = 16;
-            this.btnAddNewPerson.UseVisualStyleBackColor = true;
-            this.btnAddNewPerson.Click += new System.EventHandler(this.btnAddNewPerson_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::DVLD.Properties.Resources.Applications;
-            this.pictureBox1.Location = new System.Drawing.Point(611, 44);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(170, 129);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnClose
-            // 
-            this.btnClose.Image = global::DVLD.Properties.Resources.Close_32;
-            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnClose.Location = new System.Drawing.Point(1164, 677);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(237, 41);
-            this.btnClose.TabIndex = 11;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = true;
-            // 
             // showApplicationDetailesToolStripMenuItem
             // 
             this.showApplicationDetailesToolStripMenuItem.Image = global::DVLD.Properties.Resources.PersonDetails_322;
             this.showApplicationDetailesToolStripMenuItem.Name = "showApplicationDetailesToolStripMenuItem";
             this.showApplicationDetailesToolStripMenuItem.Size = new System.Drawing.Size(296, 26);
             this.showApplicationDetailesToolStripMenuItem.Text = "Show Application Detailes";
+            this.showApplicationDetailesToolStripMenuItem.Click += new System.EventHandler(this.showApplicationDetailesToolStripMenuItem_Click);
             // 
             // editApplicationToolStripMenuItem
             // 
@@ -250,6 +208,7 @@
             this.showLicenseToolStripMenuItem.Name = "showLicenseToolStripMenuItem";
             this.showLicenseToolStripMenuItem.Size = new System.Drawing.Size(296, 26);
             this.showLicenseToolStripMenuItem.Text = "Show License";
+            this.showLicenseToolStripMenuItem.Click += new System.EventHandler(this.showLicenseToolStripMenuItem_Click);
             // 
             // showPersonLicensesHistoreyToolStripMenuItem
             // 
@@ -257,6 +216,49 @@
             this.showPersonLicensesHistoreyToolStripMenuItem.Name = "showPersonLicensesHistoreyToolStripMenuItem";
             this.showPersonLicensesHistoreyToolStripMenuItem.Size = new System.Drawing.Size(296, 26);
             this.showPersonLicensesHistoreyToolStripMenuItem.Text = "Show person Licenses Historey";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::DVLD.Properties.Resources.Local_321;
+            this.pictureBox2.Location = new System.Drawing.Point(748, 56);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(49, 49);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 20;
+            this.pictureBox2.TabStop = false;
+            // 
+            // btnAddNewPerson
+            // 
+            this.btnAddNewPerson.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAddNewPerson.Image = global::DVLD.Properties.Resources.New_Application_64;
+            this.btnAddNewPerson.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAddNewPerson.Location = new System.Drawing.Point(1326, 183);
+            this.btnAddNewPerson.Name = "btnAddNewPerson";
+            this.btnAddNewPerson.Size = new System.Drawing.Size(75, 76);
+            this.btnAddNewPerson.TabIndex = 16;
+            this.btnAddNewPerson.UseVisualStyleBackColor = true;
+            this.btnAddNewPerson.Click += new System.EventHandler(this.btnAddNewPerson_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::DVLD.Properties.Resources.Applications;
+            this.pictureBox1.Location = new System.Drawing.Point(611, 44);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(170, 129);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Image = global::DVLD.Properties.Resources.Close_32;
+            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnClose.Location = new System.Drawing.Point(1164, 677);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(237, 41);
+            this.btnClose.TabIndex = 11;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = true;
             // 
             // ManageLocalDrivingLicensesApplicationfrm
             // 

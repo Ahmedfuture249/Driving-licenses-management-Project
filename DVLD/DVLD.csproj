@@ -64,6 +64,12 @@
     <Compile Include="Application Types\ManageApplicationTypesfrm.Designer.cs">
       <DependentUpon>ManageApplicationTypesfrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ctrlDrivingLicenseApplicationInfocs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlDrivingLicenseApplicationInfocs.Designer.cs">
+      <DependentUpon>ctrlDrivingLicenseApplicationInfocs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Manage Tests\EditTestTypefrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,12 @@
     </Compile>
     <Compile Include="People\AddEditPersonfrm.Designer.cs">
       <DependentUpon>AddEditPersonfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowApplicationInfofrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowApplicationInfofrm.Designer.cs">
+      <DependentUpon>ShowApplicationInfofrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Users\ChangePasswordfrm.cs">
       <SubType>Form</SubType>
@@ -171,6 +183,9 @@
     <EmbeddedResource Include="Application Types\ManageApplicationTypesfrm.resx">
       <DependentUpon>ManageApplicationTypesfrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ctrlDrivingLicenseApplicationInfocs.resx">
+      <DependentUpon>ctrlDrivingLicenseApplicationInfocs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Manage Tests\EditTestTypefrm.resx">
       <DependentUpon>EditTestTypefrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="People\AddEditPersonfrm.resx">
       <DependentUpon>AddEditPersonfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowApplicationInfofrm.resx">
+      <DependentUpon>ShowApplicationInfofrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users\ChangePasswordfrm.resx">
       <DependentUpon>ChangePasswordfrm.cs</DependentUpon>
@@ -463,6 +481,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\International 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Number 321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Application Types 641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Person 321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar 322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\License Type 321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Test 321.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

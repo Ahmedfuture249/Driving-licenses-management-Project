@@ -63,5 +63,17 @@ namespace DVLD
             frm.ShowDialog();
             _RefreshList();
         }
+
+        private void showLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void showApplicationDetailesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int ID = (int)dgvGetAllApplications.CurrentRow.Cells[0].Value;
+            ShowApplicationInfofrm frm = new ShowApplicationInfofrm(ID);
+            frm.ShowDialog();
+        }
     }
 }

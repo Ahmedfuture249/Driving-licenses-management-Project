@@ -72,9 +72,9 @@ public class clsTestAppointment
                 return null;
 
         }
-        public static DataTable ListTestAppointments()
+        public static DataTable ListTestAppointments(int LocalDrivingLicenseApplicationID)
         {
-            return TestAppointmentsData.GetAllTestAppointments();
+            return TestAppointmentsData.GetAllTestAppointments(LocalDrivingLicenseApplicationID);
         }
         private  bool _AddNewTestAppointment()
         {

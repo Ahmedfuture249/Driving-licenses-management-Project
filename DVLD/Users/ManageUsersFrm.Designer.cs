@@ -107,7 +107,7 @@
             "None",
             "User ID",
             "User Name"});
-            this.cbFilterBy.Location = new System.Drawing.Point(115, 208);
+            this.cbFilterBy.Location = new System.Drawing.Point(116, 208);
             this.cbFilterBy.Name = "cbFilterBy";
             this.cbFilterBy.Size = new System.Drawing.Size(124, 24);
             this.cbFilterBy.TabIndex = 12;
@@ -147,7 +147,7 @@
             // 
             this.addPersonToolStripMenuItem.Image = global::DVLD.Properties.Resources.Add_Person_40;
             this.addPersonToolStripMenuItem.Name = "addPersonToolStripMenuItem";
-            this.addPersonToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.addPersonToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
             this.addPersonToolStripMenuItem.Text = "Add User";
             this.addPersonToolStripMenuItem.Click += new System.EventHandler(this.addPersonToolStripMenuItem_Click);
             // 
@@ -155,7 +155,7 @@
             // 
             this.editPersonToolStripMenuItem.Image = global::DVLD.Properties.Resources.edit_32;
             this.editPersonToolStripMenuItem.Name = "editPersonToolStripMenuItem";
-            this.editPersonToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.editPersonToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
             this.editPersonToolStripMenuItem.Text = "Edit User";
             this.editPersonToolStripMenuItem.Click += new System.EventHandler(this.editPersonToolStripMenuItem_Click);
             // 
@@ -163,7 +163,7 @@
             // 
             this.deleteToolStripMenuItem.Image = global::DVLD.Properties.Resources.Delete_32;
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
@@ -171,7 +171,7 @@
             // 
             this.showDetailsToolStripMenuItem.Image = global::DVLD.Properties.Resources.PersonDetails_32;
             this.showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
-            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
             this.showDetailsToolStripMenuItem.Text = "Show Details";
             this.showDetailsToolStripMenuItem.Click += new System.EventHandler(this.showDetailsToolStripMenuItem_Click);
             // 
@@ -179,7 +179,7 @@
             // 
             this.changePasswordToolStripMenuItem.Image = global::DVLD.Properties.Resources.Password_32;
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
             this.changePasswordToolStripMenuItem.Text = "Change Password";
             this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
@@ -187,14 +187,14 @@
             // 
             this.sendEmailToolStripMenuItem.Image = global::DVLD.Properties.Resources.send_email_32;
             this.sendEmailToolStripMenuItem.Name = "sendEmailToolStripMenuItem";
-            this.sendEmailToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.sendEmailToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
             this.sendEmailToolStripMenuItem.Text = "Send Email";
             // 
             // callPhoneToolStripMenuItem
             // 
             this.callPhoneToolStripMenuItem.Image = global::DVLD.Properties.Resources.call_321;
             this.callPhoneToolStripMenuItem.Name = "callPhoneToolStripMenuItem";
-            this.callPhoneToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.callPhoneToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
             this.callPhoneToolStripMenuItem.Text = "Call Phone";
             // 
             // btnAddNewUser

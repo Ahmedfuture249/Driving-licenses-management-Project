@@ -57,15 +57,18 @@ namespace DVLDDataAccessLayer
             return isFound;
 
         }
-        public static DataTable GetAllTestAppointments()
+        public static DataTable GetAllTestAppointments(int LocalDrivingLicenseApplicationID)
         {
             DataTable dt = new DataTable();
             SqlConnection connection = new SqlConnection(clsPeopleDataAccessSettings.ConnectionString);
            
-            string query = @"select * from TestAppointments;
+            string query = @"select * from TestAppointments where LocalDrivingLicenseApplicationID=@LocalDrivingLicenseApplicationID;
+
 ";
 
+
             SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LocalDrivingLicenseApplicationID);
 
             try
             {

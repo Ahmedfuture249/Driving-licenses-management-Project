@@ -1,0 +1,187 @@
+﻿namespace DVLD
+{
+    partial class ManageTestAppointmentsfrm
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.ctrlDrivingLicenseApplicationInfocs1 = new DVLD.ctrlDrivingLicenseApplicationInfocs();
+            this.lblRecordsCount = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dgvGetAllAppointments = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnAddNeAppointment = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGetAllAppointments)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // ctrlDrivingLicenseApplicationInfocs1
+            // 
+            this.ctrlDrivingLicenseApplicationInfocs1.Location = new System.Drawing.Point(5, 186);
+            this.ctrlDrivingLicenseApplicationInfocs1.Name = "ctrlDrivingLicenseApplicationInfocs1";
+            this.ctrlDrivingLicenseApplicationInfocs1.Size = new System.Drawing.Size(710, 321);
+            this.ctrlDrivingLicenseApplicationInfocs1.TabIndex = 0;
+            // 
+            // lblRecordsCount
+            // 
+            this.lblRecordsCount.AutoSize = true;
+            this.lblRecordsCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRecordsCount.Location = new System.Drawing.Point(-93, 533);
+            this.lblRecordsCount.Name = "lblRecordsCount";
+            this.lblRecordsCount.Size = new System.Drawing.Size(23, 25);
+            this.lblRecordsCount.TabIndex = 28;
+            this.lblRecordsCount.Text = "0";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(-209, 533);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 25);
+            this.label3.TabIndex = 27;
+            this.label3.Text = "#ٌ Records";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(-209, 101);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(80, 25);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "Filter by";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 523);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(108, 22);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Appointments";
+            // 
+            // dgvGetAllAppointments
+            // 
+            this.dgvGetAllAppointments.AllowUserToAddRows = false;
+            this.dgvGetAllAppointments.AllowUserToDeleteRows = false;
+            this.dgvGetAllAppointments.AllowUserToOrderColumns = true;
+            this.dgvGetAllAppointments.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvGetAllAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvGetAllAppointments.Location = new System.Drawing.Point(16, 565);
+            this.dgvGetAllAppointments.Name = "dgvGetAllAppointments";
+            this.dgvGetAllAppointments.ReadOnly = true;
+            this.dgvGetAllAppointments.RowHeadersWidth = 51;
+            this.dgvGetAllAppointments.RowTemplate.Height = 24;
+            this.dgvGetAllAppointments.Size = new System.Drawing.Size(692, 162);
+            this.dgvGetAllAppointments.TabIndex = 20;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::DVLD.Properties.Resources.Vision_512;
+            this.pictureBox1.Location = new System.Drawing.Point(258, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(190, 115);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 29;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnAddNeAppointment
+            // 
+            this.btnAddNeAppointment.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnAddNeAppointment.Image = global::DVLD.Properties.Resources.AddAppointment_32;
+            this.btnAddNeAppointment.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAddNeAppointment.Location = new System.Drawing.Point(630, 514);
+            this.btnAddNeAppointment.Name = "btnAddNeAppointment";
+            this.btnAddNeAppointment.Size = new System.Drawing.Size(67, 45);
+            this.btnAddNeAppointment.TabIndex = 25;
+            this.btnAddNeAppointment.UseVisualStyleBackColor = false;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Image = global::DVLD.Properties.Resources.Close_32;
+            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnClose.Location = new System.Drawing.Point(459, 748);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(249, 41);
+            this.btnClose.TabIndex = 21;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label4.Location = new System.Drawing.Point(279, 148);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(147, 35);
+            this.label4.TabIndex = 30;
+            this.label4.Text = "Vision Test";
+            // 
+            // ManageTestAppointmentsfrm
+            // 
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(738, 797);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.lblRecordsCount);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.btnAddNeAppointment);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.dgvGetAllAppointments);
+            this.Controls.Add(this.ctrlDrivingLicenseApplicationInfocs1);
+            this.Name = "ManageTestAppointmentsfrm";
+            this.Text = "ManageTestAppointmentsfrm";
+            this.Load += new System.EventHandler(this.ManageTestAppointmentsfrm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGetAllAppointments)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private ctrlDrivingLicenseApplicationInfocs ctrlDrivingLicenseApplicationInfocs1;
+        private System.Windows.Forms.Label lblRecordsCount;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnAddNeAppointment;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.DataGridView dgvGetAllAppointments;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label4;
+    }
+}

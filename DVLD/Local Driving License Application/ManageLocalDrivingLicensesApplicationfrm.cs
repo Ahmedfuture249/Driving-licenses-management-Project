@@ -75,5 +75,12 @@ namespace DVLD
             ShowApplicationInfofrm frm = new ShowApplicationInfofrm(ID);
             frm.ShowDialog();
         }
+
+        private void sheduleTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int ID = (int)dgvGetAllApplications.CurrentRow.Cells[0].Value;
+            ManageTestAppointmentsfrm frm = new ManageTestAppointmentsfrm(ID);
+            frm.ShowDialog();
+        }
     }
 }

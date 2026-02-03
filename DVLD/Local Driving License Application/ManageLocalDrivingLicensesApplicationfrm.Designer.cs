@@ -154,7 +154,7 @@
             this.showLicenseToolStripMenuItem,
             this.showPersonLicensesHistoreyToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(297, 212);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(297, 240);
             // 
             // showApplicationDetailesToolStripMenuItem
             // 
@@ -194,6 +194,7 @@
             this.sheduleTestToolStripMenuItem.Name = "sheduleTestToolStripMenuItem";
             this.sheduleTestToolStripMenuItem.Size = new System.Drawing.Size(296, 26);
             this.sheduleTestToolStripMenuItem.Text = "Shedule Test";
+            this.sheduleTestToolStripMenuItem.Click += new System.EventHandler(this.sheduleTestToolStripMenuItem_Click);
             // 
             // issueDrivingLicenseFirstTimeToolStripMenuItem
             // 

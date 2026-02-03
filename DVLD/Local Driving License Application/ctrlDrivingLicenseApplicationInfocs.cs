@@ -15,8 +15,8 @@ namespace DVLD
     {
        int  _localDrivingLicenseApplicatinID=-1;
         clsLDLApplication _LocalDrivingLicenseApplicatin;
-        public int LocalDrivingLicenseApplicationID { get { return _localDrivingLicenseApplicatinID; } 
-        }
+        public int LocalDrivingLicenseApplicationID { set; get; } 
+        
         int _LicenseID;
 
         public ctrlDrivingLicenseApplicationInfocs()

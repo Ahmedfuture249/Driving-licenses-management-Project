@@ -127,7 +127,14 @@ SELECT SCOPE_IDENTITY();"
             command.Parameters.AddWithValue("@PaidFees", PaidFees);
             command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
             command.Parameters.AddWithValue("@IsLocked", IsLocked);
-            command.Parameters.AddWithValue("@RetakeTestApplicatonID", RetakeTestApplicatonID);
+            if (RetakeTestApplicatonID == -1)
+            {
+                command.Parameters.AddWithValue("@RetakeTestApplicationID", DBNull.Value);
+            }
+            else
+            {
+                command.Parameters.AddWithValue("@RetakeTestApplicationID", RetakeTestApplicatonID);
+            }
 
             try
             {

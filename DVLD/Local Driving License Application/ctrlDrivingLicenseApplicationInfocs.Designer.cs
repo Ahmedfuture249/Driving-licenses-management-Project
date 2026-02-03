@@ -66,6 +66,7 @@
             this.llllllllllllllllllllllllllllllllll = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
+            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -542,5 +543,6 @@
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.LinkLabel lblShowLicenseInfo;
         private System.Windows.Forms.LinkLabel lblviewPersonInfo;
+        private System.ComponentModel.BackgroundWorker backgroundWorker2;
     }
 }

@@ -21,7 +21,7 @@ public class clsTestAppointment
         public DateTime AppointmentDate { set; get; }
         public decimal PaidFees { set; get; }
         public int CreatedByUserID { set; get; }
-        bool IsLocked { set; get; }
+       public bool IsLocked { set; get; }
         public int RetakeTestApplicationID { set; get; }
 
         clsTestAppointment(int TestAppointmentID,int TestTypeID,int LocalDrivingLicenseApplicationID

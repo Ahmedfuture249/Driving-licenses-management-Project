@@ -78,8 +78,20 @@ namespace DVLD
 
         private void sheduleTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int ID = (int)dgvGetAllApplications.CurrentRow.Cells[0].Value;
-            ManageTestAppointmentsfrm frm = new ManageTestAppointmentsfrm(ID);
+            //int ID = (int)dgvGetAllApplications.CurrentRow.Cells[0].Value;
+            //ManageTestAppointmentsfrm frm = new ManageTestAppointmentsfrm(ID);
+            //frm.ShowDialog();
+        }
+        private void toolStripMenuItemVisionTest_Click(object sender, EventArgs e)
+        {
+            //AddLoacalDrivingLicensesApplicationfrm frm = new AddLoacalDrivingLicensesApplicationfrm();
+            //frm.ShowDialog();
+            //_RefreshList();
+        }
+
+        private void visionTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManageTestAppointmentsfrm frm =new  ManageTestAppointmentsfrm(1, (int)dgvGetAllApplications.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
         }
     }

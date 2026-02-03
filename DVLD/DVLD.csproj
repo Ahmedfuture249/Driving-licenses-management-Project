@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ctrlScheduleTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlScheduleTest.Designer.cs">
+      <DependentUpon>ctrlScheduleTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Local Driving License Application\AddLoacalDrivingLicensesApplicationfrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,11 +106,17 @@
     <Compile Include="Local Driving License Application\ShowApplicationInfofrm.Designer.cs">
       <DependentUpon>ShowApplicationInfofrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SheduleTestfrm.cs">
+    <Compile Include="ManageTestAppointmentsfrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SheduleTestfrm.Designer.cs">
-      <DependentUpon>SheduleTestfrm.cs</DependentUpon>
+    <Compile Include="ManageTestAppointmentsfrm.Designer.cs">
+      <DependentUpon>ManageTestAppointmentsfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScheduleTestfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScheduleTestfrm.Designer.cs">
+      <DependentUpon>ScheduleTestfrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Users\ChangePasswordfrm.cs">
       <SubType>Form</SubType>
@@ -180,6 +192,9 @@
     <Compile Include="Users\UserDetailsfrm.Designer.cs">
       <DependentUpon>UserDetailsfrm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ctrlScheduleTest.resx">
+      <DependentUpon>ctrlScheduleTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Local Driving License Application\AddLoacalDrivingLicensesApplicationfrm.resx">
       <DependentUpon>AddLoacalDrivingLicensesApplicationfrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -207,8 +222,11 @@
     <EmbeddedResource Include="Local Driving License Application\ShowApplicationInfofrm.resx">
       <DependentUpon>ShowApplicationInfofrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SheduleTestfrm.resx">
-      <DependentUpon>SheduleTestfrm.cs</DependentUpon>
+    <EmbeddedResource Include="ManageTestAppointmentsfrm.resx">
+      <DependentUpon>ManageTestAppointmentsfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScheduleTestfrm.resx">
+      <DependentUpon>ScheduleTestfrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users\ChangePasswordfrm.resx">
       <DependentUpon>ChangePasswordfrm.cs</DependentUpon>
@@ -514,6 +532,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Vision 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Count 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vision 5121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vision Test 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Written Test 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Street Test 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Written Test 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\driving-test 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\NewFolder1\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

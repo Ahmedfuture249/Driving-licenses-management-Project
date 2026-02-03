@@ -34,16 +34,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvGetAllAppointments = new System.Windows.Forms.DataGridView();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAddNeAppointment = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGetAllAppointments)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // ctrlDrivingLicenseApplicationInfocs1
             // 
+            this.ctrlDrivingLicenseApplicationInfocs1.LocalDrivingLicenseApplicationID = 0;
             this.ctrlDrivingLicenseApplicationInfocs1.Location = new System.Drawing.Point(5, 186);
             this.ctrlDrivingLicenseApplicationInfocs1.Name = "ctrlDrivingLicenseApplicationInfocs1";
             this.ctrlDrivingLicenseApplicationInfocs1.Size = new System.Drawing.Size(710, 321);
@@ -104,9 +105,20 @@
             this.dgvGetAllAppointments.Size = new System.Drawing.Size(692, 162);
             this.dgvGetAllAppointments.TabIndex = 20;
             // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lblTitle.Location = new System.Drawing.Point(279, 148);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(147, 35);
+            this.lblTitle.TabIndex = 30;
+            this.lblTitle.Text = "Vision Test";
+            // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::DVLD.Properties.Resources.Vision_512;
+            this.pictureBox1.Image = global::DVLD.Properties.Resources.driving_test_512;
             this.pictureBox1.Location = new System.Drawing.Point(258, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(190, 115);
@@ -124,6 +136,7 @@
             this.btnAddNeAppointment.Size = new System.Drawing.Size(67, 45);
             this.btnAddNeAppointment.TabIndex = 25;
             this.btnAddNeAppointment.UseVisualStyleBackColor = false;
+            this.btnAddNeAppointment.Click += new System.EventHandler(this.btnAddNeAppointment_Click);
             // 
             // btnClose
             // 
@@ -136,22 +149,11 @@
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label4.Location = new System.Drawing.Point(279, 148);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(147, 35);
-            this.label4.TabIndex = 30;
-            this.label4.Text = "Vision Test";
-            // 
             // ManageTestAppointmentsfrm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(738, 797);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblRecordsCount);
             this.Controls.Add(this.label3);
@@ -182,6 +184,6 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.DataGridView dgvGetAllAppointments;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblTitle;
     }
 }

@@ -1,0 +1,63 @@
+﻿using DVLDBusinessLayer;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace DVLD
+{
+    public partial class ManageTestAppointmentsfrm: Form
+    {
+        int LocalDrivingLicenseApplicationID;
+        public int TestTypeID { set; get; }
+        public ManageTestAppointmentsfrm(int TestTypeID, int ID)
+        {
+            InitializeComponent();
+            LocalDrivingLicenseApplicationID=ctrlDrivingLicenseApplicationInfocs1.LocalDrivingLicenseApplicationID = ID;
+            this.TestTypeID = TestTypeID;
+            ctrlDrivingLicenseApplicationInfocs1._LoadApplicationInfo(LocalDrivingLicenseApplicationID);
+            switch(this.TestTypeID)
+            {
+                case 1:
+                    pictureBox1.Image = Properties.Resources.Vision_512;
+                    lblTitle.Text = "Vision Test Appointment ";
+                    
+                    break;
+                case 2:
+                    pictureBox1.Image = Properties.Resources.Written_Test_512;
+                    lblTitle.Text = "Written Test Appointment ";
+                    break;
+                case 3:
+                    pictureBox1.Image = Properties.Resources.driving_test_512;
+                    lblTitle.Text = "Driving Test Appointment ";
+                    break;
+                default:
+                    pictureBox1.Image = Properties.Resources.Vision_512;
+                    break;
+
+            }
+            
+        }
+        
+        private void _RefreshList()
+        {
+            dgvGetAllAppointments.DataSource = clsTestAppointment.ListTestAppointments(LocalDrivingLicenseApplicationID);
+        }
+       
+        private void ManageTestAppointmentsfrm_Load(object sender, EventArgs e)
+        {
+            _RefreshList();
+        }
+
+        private void btnAddNeAppointment_Click(object sender, EventArgs e)
+        {
+            ScheduleTestfrm frm = new ScheduleTestfrm(TestTypeID, LocalDrivingLicenseApplicationID);
+            frm.ShowDialog();
+        }
+    }
+}

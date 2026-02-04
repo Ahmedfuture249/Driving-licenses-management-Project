@@ -52,6 +52,12 @@
     <Compile Include="ctrlScheduleTest.Designer.cs">
       <DependentUpon>ctrlScheduleTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="ctrlTakeTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlTakeTest.Designer.cs">
+      <DependentUpon>ctrlTakeTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Local Driving License Application\AddLoacalDrivingLicensesApplicationfrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,12 @@
     </Compile>
     <Compile Include="ScheduleTestfrm.Designer.cs">
       <DependentUpon>ScheduleTestfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TakeTestfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TakeTestfrm.Designer.cs">
+      <DependentUpon>TakeTestfrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Users\ChangePasswordfrm.cs">
       <SubType>Form</SubType>
@@ -195,6 +207,9 @@
     <EmbeddedResource Include="ctrlScheduleTest.resx">
       <DependentUpon>ctrlScheduleTest.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ctrlTakeTest.resx">
+      <DependentUpon>ctrlTakeTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Local Driving License Application\AddLoacalDrivingLicensesApplicationfrm.resx">
       <DependentUpon>AddLoacalDrivingLicensesApplicationfrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -227,6 +242,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ScheduleTestfrm.resx">
       <DependentUpon>ScheduleTestfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TakeTestfrm.resx">
+      <DependentUpon>TakeTestfrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users\ChangePasswordfrm.resx">
       <DependentUpon>ChangePasswordfrm.cs</DependentUpon>
@@ -556,6 +574,24 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\NewFolder1\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Test 322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Written Test 321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Street Test 321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vision Test 321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit 323.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Test 323.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -94,5 +94,16 @@ namespace DVLD
             ManageTestAppointmentsfrm frm =new  ManageTestAppointmentsfrm(1, (int)dgvGetAllApplications.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
         }
+        private void writtenTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManageTestAppointmentsfrm frm = new ManageTestAppointmentsfrm(1, (int)dgvGetAllApplications.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+        }
+       
+
+        private void shduleTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -46,7 +46,7 @@ namespace DVLD
         
         private void _RefreshList()
         {
-            dgvGetAllAppointments.DataSource = clsTestAppointment.ListTestAppointments(LocalDrivingLicenseApplicationID);
+            dgvGetAllAppointments.DataSource = clsTestAppointment.ListTestAppointments(LocalDrivingLicenseApplicationID,TestTypeID);
         }
        
         private void ManageTestAppointmentsfrm_Load(object sender, EventArgs e)
@@ -56,8 +56,27 @@ namespace DVLD
 
         private void btnAddNeAppointment_Click(object sender, EventArgs e)
         {
+           if( clsTestAppointment.IsApplicantHasAnActiveAppointmentForThisTest(LocalDrivingLicenseApplicationID, TestTypeID))
+            {
+                MessageBox.Show("this person already sat for this test");
+                return;
+            }
             ScheduleTestfrm frm = new ScheduleTestfrm(TestTypeID, LocalDrivingLicenseApplicationID);
             frm.ShowDialog();
+        }
+
+        private void takeTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(clsTestAppointment.IsApplicantAlreadySatForThisTestAndPass(LocalDrivingLicenseApplicationID, TestTypeID))
+            {
+                MessageBox.Show("this peroson already Pass this test Move to the Next Test");
+                return;
+            }
+           
+            int i = (int)dgvGetAllAppointments.CurrentRow.Cells[0].Value;
+            TakeTestfrm frm = new TakeTestfrm(i);
+            frm.ShowDialog();
+            _RefreshList();
         }
     }
 }

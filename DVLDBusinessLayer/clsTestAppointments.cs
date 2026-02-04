@@ -15,9 +15,9 @@ public class clsTestAppointment
         public enMode Mode = enMode.AddNew;
         public int TestAppointmentID { set; get; }
         public int TestTypeID { set; get; }
-        clsTestTypes TestType { set; get; }
+       public clsTestTypes TestType { set; get; }
         public int LocalDrivingLicenseApplicationID { set; get; }
-        clsLDLApplication LocalDrivingLicenseApplication { set; get; }
+       public clsLDLApplication LocalDrivingLicenseApplication { set; get; }
         public DateTime AppointmentDate { set; get; }
         public decimal PaidFees { set; get; }
         public int CreatedByUserID { set; get; }
@@ -72,9 +72,9 @@ public class clsTestAppointment
                 return null;
 
         }
-        public static DataTable ListTestAppointments(int LocalDrivingLicenseApplicationID)
+        public static DataTable ListTestAppointments(int LocalDrivingLicenseApplicationID,int TestTypeID)
         {
-            return TestAppointmentsData.GetAllTestAppointments(LocalDrivingLicenseApplicationID);
+            return TestAppointmentsData.GetAllTestAppointments(LocalDrivingLicenseApplicationID,TestTypeID);
         }
         private  bool _AddNewTestAppointment()
         {
@@ -85,6 +85,10 @@ public class clsTestAppointment
         private bool _UpdateTestAppointmentDate()
         {
             return TestAppointmentsData.UpdateTestAppointmentDate(this.TestAppointmentID, this.AppointmentDate);
+        }
+        public static bool IsApplicantAlreadySatForThisTestAndPass(int LDLApplicationID, int TestTypeID)
+        {
+            return TestAppointmentsData.IsApplicantAlreadySatForThisTestAndPass(LDLApplicationID, TestTypeID);
         }
         public static bool Delete(int ID)
         {
@@ -115,6 +119,10 @@ public class clsTestAppointment
 
             }
 
+        }
+      public static bool  IsApplicantHasAnActiveAppointmentForThisTest(int LDLApplicationID,int TestTypeID)
+        {
+            return TestAppointmentsData.IsApplicantHasAnActiveAppointmentForThisTest(LDLApplicationID, TestTypeID);
         }
 
 

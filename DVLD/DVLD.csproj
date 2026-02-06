@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ctrlRetakeTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlRetakeTest.Designer.cs">
+      <DependentUpon>ctrlRetakeTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="ctrlScheduleTest.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -204,6 +210,9 @@
     <Compile Include="Users\UserDetailsfrm.Designer.cs">
       <DependentUpon>UserDetailsfrm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ctrlRetakeTest.resx">
+      <DependentUpon>ctrlRetakeTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ctrlScheduleTest.resx">
       <DependentUpon>ctrlScheduleTest.cs</DependentUpon>
     </EmbeddedResource>

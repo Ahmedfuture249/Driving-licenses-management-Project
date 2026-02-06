@@ -16,6 +16,9 @@ namespace DVLD
         public ManageLocalDrivingLicensesApplicationfrm()
         {
             InitializeComponent();
+
+
+            
         }
         private void _RefreshList()
         {
@@ -94,16 +97,24 @@ namespace DVLD
             ManageTestAppointmentsfrm frm =new  ManageTestAppointmentsfrm(1, (int)dgvGetAllApplications.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
         }
-        private void writtenTestToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ManageTestAppointmentsfrm frm = new ManageTestAppointmentsfrm(1, (int)dgvGetAllApplications.CurrentRow.Cells[0].Value);
-            frm.ShowDialog();
-        }
+      
        
 
         private void shduleTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void writtenTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManageTestAppointmentsfrm frm = new ManageTestAppointmentsfrm(2, (int)dgvGetAllApplications.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+        }
+
+        private void streetTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManageTestAppointmentsfrm frm = new ManageTestAppointmentsfrm(3, (int)dgvGetAllApplications.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
         }
     }
 }

@@ -239,6 +239,7 @@
             this.writtenTestToolStripMenuItem.Name = "writtenTestToolStripMenuItem";
             this.writtenTestToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.writtenTestToolStripMenuItem.Text = "Written Test";
+            this.writtenTestToolStripMenuItem.Click += new System.EventHandler(this.writtenTestToolStripMenuItem_Click);
             // 
             // streetTestToolStripMenuItem
             // 
@@ -246,6 +247,7 @@
             this.streetTestToolStripMenuItem.Name = "streetTestToolStripMenuItem";
             this.streetTestToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.streetTestToolStripMenuItem.Text = "Street Test";
+            this.streetTestToolStripMenuItem.Click += new System.EventHandler(this.streetTestToolStripMenuItem_Click);
             // 
             // pictureBox2
             // 

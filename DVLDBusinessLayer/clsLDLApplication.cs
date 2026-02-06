@@ -79,7 +79,16 @@ namespace DVLDBusinessLayer
             return LDLApplicationsData.UpdateLocalDrivingLicenseApplicatioN(this.LocalDrivingLicensApplicationID, this.ApplicationID, this.LicenseClass);
          
         }
-        public static bool DeleteLocalDrivingLicenseApplication(int ID)
+		public  bool DoesAttendTestType(int LocalDrivingLicenseApplicationID, int TestTypeID)
+        {
+            return LDLApplicationsData.DoesAttendTestType(LocalDrivingLicenseApplicationID, TestTypeID); 
+        }
+		public byte TotalTrialsPerTest(int TestTypeID)
+		{
+			return LDLApplicationsData.TotalTrialsPerTest(this.LocalDrivingLicensApplicationID, (int)TestTypeID);
+		}
+
+		public static bool DeleteLocalDrivingLicenseApplication(int ID)
         {
             return LDLApplicationsData.DeleteLocalDrivingLicenseApplication(ID);
         }

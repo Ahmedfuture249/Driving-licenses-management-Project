@@ -52,6 +52,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblRetakeTest = new System.Windows.Forms.Label();
             this.groupBoxTest.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTestImage)).BeginInit();
@@ -65,6 +66,7 @@
             // 
             // groupBoxTest
             // 
+            this.groupBoxTest.Controls.Add(this.lblRetakeTest);
             this.groupBoxTest.Controls.Add(this.pictureBox4);
             this.groupBoxTest.Controls.Add(this.label1);
             this.groupBoxTest.Controls.Add(this.lblTestID);
@@ -94,13 +96,14 @@
             this.groupBoxTest.TabIndex = 1;
             this.groupBoxTest.TabStop = false;
             this.groupBoxTest.Text = "groupBox1";
+            this.groupBoxTest.Enter += new System.EventHandler(this.groupBoxTest_Enter);
             // 
             // lbltitle
             // 
             this.lbltitle.AutoSize = true;
             this.lbltitle.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbltitle.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbltitle.Location = new System.Drawing.Point(161, 157);
+            this.lbltitle.Location = new System.Drawing.Point(98, 132);
             this.lbltitle.Name = "lbltitle";
             this.lbltitle.Size = new System.Drawing.Size(56, 33);
             this.lbltitle.TabIndex = 52;
@@ -312,12 +315,24 @@
             this.pictureBox1.TabIndex = 38;
             this.pictureBox1.TabStop = false;
             // 
+            // lblRetakeTest
+            // 
+            this.lblRetakeTest.AutoSize = true;
+            this.lblRetakeTest.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRetakeTest.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lblRetakeTest.Location = new System.Drawing.Point(98, 165);
+            this.lblRetakeTest.Name = "lblRetakeTest";
+            this.lblRetakeTest.Size = new System.Drawing.Size(152, 33);
+            this.lblRetakeTest.TabIndex = 57;
+            this.lblRetakeTest.Text = "ReTake Test";
+            this.lblRetakeTest.Visible = false;
+            // 
             // ctrlTakeTest
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.groupBoxTest);
             this.Name = "ctrlTakeTest";
-            this.Size = new System.Drawing.Size(371, 482);
+            this.Size = new System.Drawing.Size(371, 483);
             this.Load += new System.EventHandler(this.ctrlTakeTest_Load);
             this.groupBoxTest.ResumeLayout(false);
             this.groupBoxTest.PerformLayout();
@@ -359,5 +374,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblTestID;
         private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Label lblRetakeTest;
     }
 }

@@ -13,13 +13,16 @@ namespace DVLD
 {
     public partial class ManageTestAppointmentsfrm: Form
     {
-        int LocalDrivingLicenseApplicationID;
+       static int LocalDrivingLicenseApplicationID;
         public int TestTypeID { set; get; }
+        static clsTestAppointment appointment = clsTestAppointment.FindByLDLApp(LocalDrivingLicenseApplicationID);
+       
         public ManageTestAppointmentsfrm(int TestTypeID, int ID)
         {
             InitializeComponent();
             LocalDrivingLicenseApplicationID=ctrlDrivingLicenseApplicationInfocs1.LocalDrivingLicenseApplicationID = ID;
             this.TestTypeID = TestTypeID;
+            
             ctrlDrivingLicenseApplicationInfocs1._LoadApplicationInfo(LocalDrivingLicenseApplicationID);
             switch(this.TestTypeID)
             {
@@ -58,9 +61,11 @@ namespace DVLD
         {
            if( clsTestAppointment.IsApplicantHasAnActiveAppointmentForThisTest(LocalDrivingLicenseApplicationID, TestTypeID))
             {
+              
                 MessageBox.Show("this person already sat for this test");
                 return;
             }
+           
             ScheduleTestfrm frm = new ScheduleTestfrm(TestTypeID, LocalDrivingLicenseApplicationID);
             frm.ShowDialog();
         }
@@ -77,6 +82,11 @@ namespace DVLD
             TakeTestfrm frm = new TakeTestfrm(i);
             frm.ShowDialog();
             _RefreshList();
+        }
+
+        private void lblTitle_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

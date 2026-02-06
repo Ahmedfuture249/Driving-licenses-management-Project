@@ -27,6 +27,11 @@ namespace DVLD
                 MessageBox.Show("Appointment Was Not Founded !!");
                 return;
             }
+            if(TestAppointment.LocalDrivingLicenseApplication.ApplicationTypeID==7)
+            {
+                lbltitle.Visible = false;
+                lblRetakeTest.Visible = true;
+            }
 
 
             _FillData();
@@ -71,6 +76,11 @@ namespace DVLD
         }
 
         private void ctrlTakeTest_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBoxTest_Enter(object sender, EventArgs e)
         {
 
         }

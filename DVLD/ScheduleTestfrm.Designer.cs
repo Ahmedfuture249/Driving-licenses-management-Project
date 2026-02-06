@@ -40,7 +40,7 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(121, 518);
+            this.btnClose.Location = new System.Drawing.Point(121, 683);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(147, 46);
             this.btnClose.TabIndex = 69;
@@ -52,14 +52,15 @@
             // 
             this.ctrlScheduleTest1.Location = new System.Drawing.Point(12, 12);
             this.ctrlScheduleTest1.Name = "ctrlScheduleTest1";
-            this.ctrlScheduleTest1.Size = new System.Drawing.Size(371, 500);
+            this.ctrlScheduleTest1.Size = new System.Drawing.Size(371, 650);
             this.ctrlScheduleTest1.TabIndex = 0;
             this.ctrlScheduleTest1.TestTypeID = 0;
+            this.ctrlScheduleTest1.Load += new System.EventHandler(this.ctrlScheduleTest1_Load);
             // 
             // ScheduleTestfrm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(402, 581);
+            this.ClientSize = new System.Drawing.Size(402, 751);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.ctrlScheduleTest1);
             this.Name = "ScheduleTestfrm";

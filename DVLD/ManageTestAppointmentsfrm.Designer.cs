@@ -115,11 +115,12 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblTitle.Location = new System.Drawing.Point(279, 148);
+            this.lblTitle.Location = new System.Drawing.Point(278, 130);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(147, 35);
             this.lblTitle.TabIndex = 30;
             this.lblTitle.Text = "Vision Test";
+            this.lblTitle.Click += new System.EventHandler(this.lblTitle_Click);
             // 
             // contextMenuStrip1
             // 

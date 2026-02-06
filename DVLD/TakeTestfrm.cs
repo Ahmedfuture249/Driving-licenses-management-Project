@@ -14,11 +14,12 @@ namespace DVLD
     public partial class TakeTestfrm: Form
     {
         clsTest Test;
-        public int TestAppointmentID;
-        public TakeTestfrm(int TestAppointmentID)
+        static public int TestAppointmentID;
+        clsTestAppointment TestAppointment=clsTestAppointment.Find(TestAppointmentID);
+        public TakeTestfrm(int TestAppointmentid)
         {
             InitializeComponent();
-            this.TestAppointmentID = TestAppointmentID;
+            TestAppointmentID = TestAppointmentid;
             ctrlTakeTest1.LoadData(TestAppointmentID);
         }
 
@@ -32,16 +33,23 @@ namespace DVLD
             Test = new clsTest();
             if (rbyes.Checked)
                 Test.TestResult = true;
-            else
+            if (rbNo.Checked)
+            {
                 Test.TestResult = false;
+             
+                
+            }
 
             Test.Notes = txtNotes.Text;
             Test.CreatedByUserID = ClsGloabalSettings.CurrentUser.UserID;
             Test.TestAppointmentID = TestAppointmentID;
-
-            if(Test.TakeTest())
+            TestAppointment.IsLocked = true;
+            if (Test.TakeTest())
             {
                 MessageBox.Show("Data Saved Successfuly ");
+                TestAppointment.IsLocked = true;
+                TestAppointment.Save();
+                this.Close();
             }
             else
             {

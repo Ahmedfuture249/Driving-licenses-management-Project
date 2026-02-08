@@ -473,6 +473,16 @@ namespace DVLD.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap International_321 {
+            get {
+                object obj = ResourceManager.GetObject("International 321", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap License_Type_32 {
             get {
                 object obj = ResourceManager.GetObject("License Type 32", resourceCulture);
@@ -526,6 +536,16 @@ namespace DVLD.Properties {
         internal static System.Drawing.Bitmap Local_322 {
             get {
                 object obj = ResourceManager.GetObject("Local 322", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Local_323 {
+            get {
+                object obj = ResourceManager.GetObject("Local 323", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

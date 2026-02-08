@@ -77,10 +77,6 @@ namespace DVLDDataAccessLayer
                 if (reader.Read())
                 {
                     isFound = true;
-                    //if((int)reader["RetakeTestApplicatonID"]==null)
-                    //{
-                    //    RetakeTestApplicatonID = 0;
-                    //}
                     //RetakeTestApplicatonID = (int)reader["RetakeTestApplicatonID"];
                     TestTypeID = (int)reader["TestTypeID"];
                     AppointmentDate = (DateTime)reader["AppointmentDate"];
@@ -114,11 +110,13 @@ namespace DVLDDataAccessLayer
         {
             DataTable dt = new DataTable();
             SqlConnection connection = new SqlConnection(clsPeopleDataAccessSettings.ConnectionString);
-           
-            string query = @"select * from TestAppointments where LocalDrivingLicenseApplicationID=@LocalDrivingLicenseApplicationID and TestTypeID=@TestTypeID;
 
-";
-
+            string query = @"SELECT TestAppointmentID, AppointmentDate,PaidFees, IsLocked
+                        FROM TestAppointments
+                        WHERE  
+                        (TestTypeID = @TestTypeID) 
+                        AND (LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID)
+                        order by TestAppointmentID desc;";
 
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LocalDrivingLicenseApplicationID);
@@ -219,6 +217,7 @@ SELECT SCOPE_IDENTITY();"
             command.Parameters.AddWithValue("@PaidFees", PaidFees);
             command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
             command.Parameters.AddWithValue("@IsLocked", IsLocked);
+            
             if (RetakeTestApplicatonID == -1)
             {
                 command.Parameters.AddWithValue("@RetakeTestApplicationID", DBNull.Value);

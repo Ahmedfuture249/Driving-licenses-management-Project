@@ -96,6 +96,8 @@ namespace DVLD
         {
             ManageTestAppointmentsfrm frm =new  ManageTestAppointmentsfrm(1, (int)dgvGetAllApplications.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
+
+
         }
       
        

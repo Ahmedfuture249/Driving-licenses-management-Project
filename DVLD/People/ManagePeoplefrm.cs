@@ -34,7 +34,7 @@ namespace DVLD
         {
             AddEditPersonfrm frm = new AddEditPersonfrm(-1);
             frm.ShowDialog();
-            _RefreshPeopleList();
+            ManagePeoplefrm_Load(null, null);
         }
 
 

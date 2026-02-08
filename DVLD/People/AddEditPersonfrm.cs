@@ -169,7 +169,9 @@ namespace DVLD
                 _Person.Gendor = 0;
             }
             _Person.Save();
-        }
+           
+
+		}
        
         
 

@@ -42,8 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsApplication.cs" />
+    <Compile Include="clsDriver.cs" />
     <Compile Include="ClsGloabalSettings.cs" />
     <Compile Include="clsLDLApplication.cs" />
+    <Compile Include="clsLicense.cs" />
     <Compile Include="clsLicenseClasses.cs" />
     <Compile Include="clsManageApplications.cs" />
     <Compile Include="clsTest.cs" />

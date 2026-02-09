@@ -52,13 +52,17 @@ namespace DVLDBusinessLayer
         }
         private bool _AddNewDrver()
         {
-           this.DriverID= DriversData.AddNewDriver(this.PersonID,this.CreatedByUserID,this.CreatedDateCreatedDate)
+            this.DriverID = -1;
+            this.DriverID = DriversData.AddNewDriver(this.PersonID, this.CreatedByUserID, this.CreatedDateCreatedDate);
+            return this.DriverID != -1;
         }
-        public  bool DeleteDriver()
+        public static bool DeleteDriver(int ID)
         {
+            return DriversData.DeleteDriver(ID);
         }
         private bool _UpdateDriver()
         {
+            return DriversData.UpdateDriver(this.DriverID, this.PersonID, this.CreatedByUserID);
         }
         public bool Save()
         {

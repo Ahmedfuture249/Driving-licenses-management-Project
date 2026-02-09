@@ -26,13 +26,15 @@ namespace DVLDBusinessLayer
             this.CreatedDateCreatedDate = CreateTime;
             this.CreatedByUserID = CreatedByUserID;
             this.Person = clsPeople.Find(PersonID);
+          Mode=  enMode.Update;
         }
         public clsDriver() 
         {
             this.DriverID = -1;
             this.PersonID = -1;
             this.CreatedDateCreatedDate = DateTime.Now;
-            this.CreatedByUserID = -1;  
+            this.CreatedByUserID = -1;
+            Mode = enMode.AddNew;
         }
         public static clsDriver Find(int DriverID)
         {
@@ -42,6 +44,18 @@ namespace DVLDBusinessLayer
             DateTime CreatedDate = DateTime.Now;
             if(DriversData.GetDriver(DriverID,ref PersonID,ref CreatedByUserID,ref CreatedDate))
                 return new clsDriver(DriverID,PersonID,CreatedByUserID,CreatedDate);
+            else
+                return null;
+
+        }
+        public static clsDriver FindByPersonID(int PersonID)
+        {
+
+            int DrivrerID = -1;
+            int CreatedByUserID = -1;
+            DateTime CreatedDate = DateTime.Now;
+            if (DriversData.GetDriverByPersonID(ref DrivrerID, PersonID, ref CreatedByUserID, ref CreatedDate))
+                return new clsDriver(DrivrerID, PersonID, CreatedByUserID, CreatedDate);
             else
                 return null;
 

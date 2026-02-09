@@ -64,6 +64,12 @@
     <Compile Include="ctrlTakeTest.Designer.cs">
       <DependentUpon>ctrlTakeTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="IssueLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IssueLicense.Designer.cs">
+      <DependentUpon>IssueLicense.cs</DependentUpon>
+    </Compile>
     <Compile Include="Local Driving License Application\AddLoacalDrivingLicensesApplicationfrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -218,6 +224,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ctrlTakeTest.resx">
       <DependentUpon>ctrlTakeTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IssueLicense.resx">
+      <DependentUpon>IssueLicense.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Local Driving License Application\AddLoacalDrivingLicensesApplicationfrm.resx">
       <DependentUpon>AddLoacalDrivingLicensesApplicationfrm.cs</DependentUpon>

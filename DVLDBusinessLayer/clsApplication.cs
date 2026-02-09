@@ -125,9 +125,9 @@ namespace DVLDBusinessLayer
             return ApplicationsData.UpdateStatus(ID, 2);
         }
 
-        public static bool SetCompleted(int ID)
+        public  bool SetCompleted()
         {
-            return ApplicationsData.UpdateStatus(ID, 3);
+            return ApplicationsData.UpdateStatus(this.ApplicationID, 3);
         }
         public static bool DeleteApplication(int ID)
         {

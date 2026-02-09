@@ -14,6 +14,7 @@ namespace DVLD
     public partial class ManageTestAppointmentsfrm: Form
     {
        static int LocalDrivingLicenseApplicationID;
+        clsLDLApplication LDLApplication = clsLDLApplication.FindLocalDrivingLicenseApplication(LocalDrivingLicenseApplicationID);
         public int TestTypeID { set; get; }
         static clsTestAppointment appointment = clsTestAppointment.FindByLDLApp(LocalDrivingLicenseApplicationID);
        
@@ -59,12 +60,12 @@ namespace DVLD
 
         private void btnAddNeAppointment_Click(object sender, EventArgs e)
         {
-           if( clsTestAppointment.IsApplicantHasAnActiveAppointmentForThisTest(LocalDrivingLicenseApplicationID, TestTypeID))
-            {
+           //if( clsTestAppointment.IsApplicantHasAnActiveAppointmentForThisTest(LocalDrivingLicenseApplicationID, TestTypeID))
+           // {
               
-                MessageBox.Show("this person already sat for this test");
-                return;
-            }
+           //     MessageBox.Show("this person already sat for this test");
+           //     return;
+           // }
            
             ScheduleTestfrm frm = new ScheduleTestfrm(TestTypeID, LocalDrivingLicenseApplicationID);
             frm.ShowDialog();
@@ -72,7 +73,7 @@ namespace DVLD
 
         private void takeTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(clsTestAppointment.IsApplicantAlreadySatForThisTestAndPass(LocalDrivingLicenseApplicationID, TestTypeID))
+            if(clsLDLApplication.DoesPassTestType(LocalDrivingLicenseApplicationID, TestTypeID))
             {
                 MessageBox.Show("this peroson already Pass this test Move to the Next Test");
                 return;

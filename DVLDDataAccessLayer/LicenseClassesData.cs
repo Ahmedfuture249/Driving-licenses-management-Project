@@ -49,7 +49,7 @@ namespace DVLDDataAccessLayer
             return dt;
 
         }
-        public static bool GetLicensClassByLicensClassName(ref int LicensClassID, string ClassName, ref string LicensClassDescription, ref int MinimumAllowedAGE, ref decimal LicensClassFees)
+        public static bool GetLicensClassByLicensClassName(ref int LicensClassID, string ClassName, ref string LicensClassDescription, ref int MinimumAllowedAGE, ref decimal LicensClassFees,ref int DefaultValdityLength)
         {
             bool isFound = false;
             SqlConnection connection = new SqlConnection(clsPeopleDataAccessSettings.ConnectionString);
@@ -69,7 +69,7 @@ namespace DVLDDataAccessLayer
 
                     LicensClassFees = (decimal)reader["ClassFees"];
 
-
+                    DefaultValdityLength = (int)reader["DefaultValidityLength"];
 
 
                 }
@@ -90,7 +90,7 @@ namespace DVLDDataAccessLayer
             return isFound;
 
         }
-        public static bool GetLicensClassByLicensClassID(int LicensClassID, ref string ClassName, ref string LicensClassDescription, ref int MinimumAllowedAGE, ref decimal LicensClassFees)
+        public static bool GetLicensClassByLicensClassID(int LicensClassID, ref string ClassName, ref string LicensClassDescription, ref int MinimumAllowedAGE, ref decimal LicensClassFees,ref int DefaultValdityLength)
         {
             bool isFound = false;
             SqlConnection connection = new SqlConnection(clsPeopleDataAccessSettings.ConnectionString);
@@ -109,6 +109,8 @@ namespace DVLDDataAccessLayer
                     MinimumAllowedAGE = (int)reader["MinimumAllowedAge"];
 
                     LicensClassFees = (decimal)reader["ClassFees"];
+                    DefaultValdityLength = (int)reader["DefaultValidityLength"];
+
 
 
 

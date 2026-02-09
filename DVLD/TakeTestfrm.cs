@@ -15,11 +15,12 @@ namespace DVLD
     {
         clsTest Test;
         static public int TestAppointmentID;
-        clsTestAppointment TestAppointment=clsTestAppointment.Find(TestAppointmentID);
+        clsTestAppointment TestAppointment;
         public TakeTestfrm(int TestAppointmentid)
         {
             InitializeComponent();
             TestAppointmentID = TestAppointmentid;
+            TestAppointment= clsTestAppointment.Find(TestAppointmentID);
             ctrlTakeTest1.LoadData(TestAppointmentID);
         }
 

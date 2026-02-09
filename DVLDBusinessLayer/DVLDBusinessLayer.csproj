@@ -58,6 +58,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{67a7d840-975e-49f0-a8b7-a297167a4834}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DVLDDataAccessLayer\DVLDDataAccessLayer.csproj">
       <Project>{c2553c60-ecfa-4bde-8884-f340003ec49b}</Project>
       <Name>DVLDDataAccessLayer</Name>

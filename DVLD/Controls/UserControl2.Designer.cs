@@ -30,14 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             this.userControl11 = new DVLD.UserControl1();
-            this.cbFilterBy = new System.Windows.Forms.ComboBox();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.gbFilterBY = new System.Windows.Forms.GroupBox();
-            this.btnAddPerson = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtFindBy = new System.Windows.Forms.TextBox();
-            this.btnFindPerson = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnAddPerson = new System.Windows.Forms.Button();
+            this.btnFindPerson = new System.Windows.Forms.Button();
+            this.cbFilterBy = new System.Windows.Forms.ComboBox();
             this.gbFilterBY.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -49,18 +49,6 @@
             this.userControl11.Size = new System.Drawing.Size(701, 334);
             this.userControl11.TabIndex = 1;
             this.userControl11.Load += new System.EventHandler(this.userControl11_Load);
-            // 
-            // cbFilterBy
-            // 
-            this.cbFilterBy.FormattingEnabled = true;
-            this.cbFilterBy.Items.AddRange(new object[] {
-            "Person ID",
-            "National No"});
-            this.cbFilterBy.Location = new System.Drawing.Point(121, 21);
-            this.cbFilterBy.Name = "cbFilterBy";
-            this.cbFilterBy.Size = new System.Drawing.Size(208, 24);
-            this.cbFilterBy.TabIndex = 2;
-            this.cbFilterBy.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // gbFilterBY
             // 
@@ -75,16 +63,6 @@
             this.gbFilterBY.TabIndex = 3;
             this.gbFilterBY.TabStop = false;
             this.gbFilterBY.Text = "Filter by";
-            // 
-            // btnAddPerson
-            // 
-            this.btnAddPerson.Image = global::DVLD.Properties.Resources.AddPerson_32;
-            this.btnAddPerson.Location = new System.Drawing.Point(627, 11);
-            this.btnAddPerson.Name = "btnAddPerson";
-            this.btnAddPerson.Size = new System.Drawing.Size(47, 34);
-            this.btnAddPerson.TabIndex = 6;
-            this.btnAddPerson.UseVisualStyleBackColor = true;
-            this.btnAddPerson.Click += new System.EventHandler(this.btnAddPerson_Click);
             // 
             // label1
             // 
@@ -105,6 +83,20 @@
             this.txtFindBy.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFindBy_KeyPress);
             this.txtFindBy.Validating += new System.ComponentModel.CancelEventHandler(this.txtFindBy_Validating);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // btnAddPerson
+            // 
+            this.btnAddPerson.Image = global::DVLD.Properties.Resources.AddPerson_32;
+            this.btnAddPerson.Location = new System.Drawing.Point(627, 11);
+            this.btnAddPerson.Name = "btnAddPerson";
+            this.btnAddPerson.Size = new System.Drawing.Size(47, 34);
+            this.btnAddPerson.TabIndex = 6;
+            this.btnAddPerson.UseVisualStyleBackColor = true;
+            this.btnAddPerson.Click += new System.EventHandler(this.btnAddPerson_Click);
+            // 
             // btnFindPerson
             // 
             this.btnFindPerson.Image = global::DVLD.Properties.Resources.SearchPerson;
@@ -115,9 +107,17 @@
             this.btnFindPerson.UseVisualStyleBackColor = true;
             this.btnFindPerson.Click += new System.EventHandler(this.btnFindPerson_Click);
             // 
-            // errorProvider1
+            // cbFilterBy
             // 
-            this.errorProvider1.ContainerControl = this;
+            this.cbFilterBy.FormattingEnabled = true;
+            this.cbFilterBy.Items.AddRange(new object[] {
+            "Person ID",
+            "National No"});
+            this.cbFilterBy.Location = new System.Drawing.Point(121, 21);
+            this.cbFilterBy.Name = "cbFilterBy";
+            this.cbFilterBy.Size = new System.Drawing.Size(208, 24);
+            this.cbFilterBy.TabIndex = 2;
+            this.cbFilterBy.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // UserControl2
             // 
@@ -138,12 +138,12 @@
 
         private System.Windows.Forms.Button btnFindPerson;
         private UserControl1 userControl11;
-        private System.Windows.Forms.ComboBox cbFilterBy;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.GroupBox gbFilterBY;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtFindBy;
         private System.Windows.Forms.Button btnAddPerson;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ComboBox cbFilterBy;
     }
 }

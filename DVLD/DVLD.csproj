@@ -58,6 +58,12 @@
     <Compile Include="ctrlScheduleTest.Designer.cs">
       <DependentUpon>ctrlScheduleTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="ctrlShowLicenseInfoWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlShowLicenseInfoWithFilter.Designer.cs">
+      <DependentUpon>ctrlShowLicenseInfoWithFilter.cs</DependentUpon>
+    </Compile>
     <Compile Include="ctrlTakeTest.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -233,6 +239,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ctrlScheduleTest.resx">
       <DependentUpon>ctrlScheduleTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctrlShowLicenseInfoWithFilter.resx">
+      <DependentUpon>ctrlShowLicenseInfoWithFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ctrlTakeTest.resx">
       <DependentUpon>ctrlTakeTest.cs</DependentUpon>
@@ -649,6 +658,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Calendar 324.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LicenseView 400.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\License View 321.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

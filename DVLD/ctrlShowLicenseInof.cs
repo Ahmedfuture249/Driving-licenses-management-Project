@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DVLDBusinessLayer;
+using DVLD.Properties;
 
 namespace DVLD
 {
@@ -17,11 +18,9 @@ namespace DVLD
         private static clsLDLApplication _LocalDrivingLicenseApplication;
          
         private static clsLicense License;
-        public ctrlShowLicenseInof(int LocalDrivingLicenseApplicationID)
+        public ctrlShowLicenseInof()
         {
-            _LocalDrivingLicenseApplicationID= LocalDrivingLicenseApplicationID;
-            _LocalDrivingLicenseApplication = clsLDLApplication.FindLocalDrivingLicenseApplication(_LocalDrivingLicenseApplicationID);
-            License = clsLicense.FindByApplicationID(_LocalDrivingLicenseApplication.ApplicationID);
+            
             InitializeComponent();
         }
 
@@ -29,19 +28,42 @@ namespace DVLD
         {
 
         }
-        public static void LoadData()
+        public void LoadData(int LocalDrivingLicenseApplicationID)
         {
-            if(_LocalDrivingLicenseApplication == null)
+            _LocalDrivingLicenseApplicationID = LocalDrivingLicenseApplicationID;
+            _LocalDrivingLicenseApplication = clsLDLApplication.FindLocalDrivingLicenseApplication(_LocalDrivingLicenseApplicationID);
+            License = clsLicense.FindByApplicationID(_LocalDrivingLicenseApplication.ApplicationID);
+            if (_LocalDrivingLicenseApplication == null)
             {
                 MessageBox.Show("Error: Application Was Not Founded ");
                 return;
             }
-            if(License == null)
+            if (License == null)
             {
                 MessageBox.Show("Error: License Was Not Founded ");
                 return;
             }
-           
+
+            lblclass.Text = License.LicenseClassInfo.ClassName;
+            lblname.Text = _LocalDrivingLicenseApplication.FullName;
+            lbllicenseid.Text = License.LicenseID.ToString();
+            lblnationalno.Text = _LocalDrivingLicenseApplication.personInfo.NationalNo;
+            lblgendor.Text = _LocalDrivingLicenseApplication.personInfo.Gendor == 0 ? "male" : "female";
+            //pictureBoxPerosnimage.Image = _LocalDrivingLicenseApplication.personInfo.ImagePath != null ? Image.FromStream(new System.IO.MemoryStream(_LocalDrivingLicenseApplication.personInfo.PersonImage)) : null;
+            lblissuedate.Text = License.IssueDate.ToShortDateString();
+            lblissuereason.Text = License.IssueReason.ToString();
+            lblnotes.Text = License.Notes;
+            lblexpirationdate.Text = License.ExpirationDate.ToShortDateString();
+            lblisactive.Text = License.IsActive ? "Active" : "Not Active";
+            lbldateofbirth.Text = _LocalDrivingLicenseApplication.personInfo.DateOfBirth.ToShortDateString();
+            lbldriverID.Text = License.DriverID.ToString();
+            if(_LocalDrivingLicenseApplication.personInfo.Gendor==0)
+            {
+                pictureBoxPerosnimage.Image= Resources.Male_512;
+            }
+            else
+                pictureBoxPerosnimage.Image = Resources.Female_512;
+            //lblisdetained.Text = _LocalDrivingLicenseApplication.IsDetained ? "Yes" : "No";
 
         }
         private void pictureBox13_Click(object sender, EventArgs e)

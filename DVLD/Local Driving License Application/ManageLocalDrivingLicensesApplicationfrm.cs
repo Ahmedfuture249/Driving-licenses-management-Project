@@ -71,7 +71,9 @@ namespace DVLD
 
         private void showLicenseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            ShowLicensInfofrm FRM
+                = new ShowLicensInfofrm((int)dgvGetAllApplications.CurrentRow.Cells[0].Value);
+            FRM.ShowDialog();
         }
 
         private void showApplicationDetailesToolStripMenuItem_Click(object sender, EventArgs e)

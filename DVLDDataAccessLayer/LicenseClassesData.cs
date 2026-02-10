@@ -106,10 +106,10 @@ namespace DVLDDataAccessLayer
                     isFound = true;
                     ClassName = (string)reader["ClassName"];
                     LicensClassDescription = (string)reader["ClassDescription"];
-                    MinimumAllowedAGE = (int)reader["MinimumAllowedAge"];
+                    MinimumAllowedAGE = Convert.ToInt32(reader["MinimumAllowedAge"]);
 
                     LicensClassFees = (decimal)reader["ClassFees"];
-                    DefaultValdityLength = (int)reader["DefaultValidityLength"];
+                    DefaultValdityLength = Convert.ToInt32( reader["DefaultValidityLength"]);
 
 
 

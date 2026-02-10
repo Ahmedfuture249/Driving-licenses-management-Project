@@ -162,13 +162,14 @@ namespace DVLDBusinessLayer
 			License.DriverID = DriverID;
 			License.LicenseClassID = this.LicenseClass;
 			License.IssueDate = DateTime.Now;
-			License.ExpirationDate = DateTime.Now.AddYears(this.LicenseClassInfo.DefaultValdityLength);
+            License.LicenseClassInfo = clsLicenseClasses.Find(License.LicenseClassID);
+			License.ExpirationDate = DateTime.Now.AddYears(LicenseClassInfo.DefaultValdityLength);
 			License.Notes = Notes;
 			License.PaidFees = this.LicenseClassInfo.ClassFees;
 			License.IsActive = true;
 			License.IssueReason = clsLicense.enIssueReason.FirstTime;
 			License.CreatedByUserID = CreatedByUserID;
-
+            
 			if (License.Save())
 			{
 				//now we should set the application status to complete.

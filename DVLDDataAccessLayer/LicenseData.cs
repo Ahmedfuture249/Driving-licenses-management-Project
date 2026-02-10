@@ -70,15 +70,21 @@ namespace DVLDDataAccessLayer
                         LicenseID = (int)reader["LicenseID"],
                         ApplicationID = (int)reader["ApplicationID"],
                         DriverID = (int)reader["DriverID"],
-                        LicenseClassID = (int)reader["LicenseClassID"],
+                        LicenseClassID = (int)reader["LicenseClass"],
                         IssueDate = (DateTime)reader["IssueDate"],
                         ExpirationDate = (DateTime)reader["ExpirationDate"],
-                        Notes = reader["Notes"].ToString(),
+                        Notes = reader["Notes"] == DBNull.Value ? "No Notes" : reader["Notes"].ToString(),
                         PaidFees = (decimal)reader["PaidFees"],
                         IsActive = (bool)reader["IsActive"],
-                        IssueReason = (int)reader["IssueReason"],
+                        IssueReason = Convert.ToInt32(reader["IssueReason"]),
                         CreatedByUserID = (int)reader["CreatedByUserID"]
-                    };
+                        
+                      
+
+
+
+                    }
+                ;
                 }
 
                 reader.Close();

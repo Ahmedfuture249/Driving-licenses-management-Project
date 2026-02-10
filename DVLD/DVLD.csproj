@@ -142,6 +142,12 @@
     <Compile Include="TakeTestfrm.Designer.cs">
       <DependentUpon>TakeTestfrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ctrlShowLicenseInof.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlShowLicenseInof.Designer.cs">
+      <DependentUpon>ctrlShowLicenseInof.cs</DependentUpon>
+    </Compile>
     <Compile Include="Users\ChangePasswordfrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -263,6 +269,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TakeTestfrm.resx">
       <DependentUpon>TakeTestfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctrlShowLicenseInof.resx">
+      <DependentUpon>ctrlShowLicenseInof.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users\ChangePasswordfrm.resx">
       <DependentUpon>ChangePasswordfrm.cs</DependentUpon>
@@ -616,6 +625,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\International 321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Woman 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar 323.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notes 321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Question 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar 324.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

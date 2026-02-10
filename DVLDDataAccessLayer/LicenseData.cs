@@ -50,8 +50,43 @@ namespace DVLDDataAccessLayer
 
                 return license;
             }
+        public static LicenseDTO GetLicenseByApplicationID(int ApplicationID)
+        {
+            LicenseDTO license = null;
 
-            public static DataTable GetAllLicenses()
+            using (SqlConnection connection = new SqlConnection(clsPeopleDataAccessSettings.ConnectionString))
+            {
+                string query = "SELECT * FROM Licenses WHERE ApplicationID = @ApplicationID";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@ApplicationID", ApplicationID);
+
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    license = new LicenseDTO
+                    {
+                        LicenseID = (int)reader["LicenseID"],
+                        ApplicationID = (int)reader["ApplicationID"],
+                        DriverID = (int)reader["DriverID"],
+                        LicenseClassID = (int)reader["LicenseClassID"],
+                        IssueDate = (DateTime)reader["IssueDate"],
+                        ExpirationDate = (DateTime)reader["ExpirationDate"],
+                        Notes = reader["Notes"].ToString(),
+                        PaidFees = (decimal)reader["PaidFees"],
+                        IsActive = (bool)reader["IsActive"],
+                        IssueReason = (int)reader["IssueReason"],
+                        CreatedByUserID = (int)reader["CreatedByUserID"]
+                    };
+                }
+
+                reader.Close();
+            }
+
+            return license;
+        }
+        public static DataTable GetAllLicenses()
             {
             DataTable dt = new DataTable();
 

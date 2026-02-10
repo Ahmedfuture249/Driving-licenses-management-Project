@@ -91,6 +91,12 @@ namespace DVLDBusinessLayer
             return new clsLicense(license);
 
         }
+        public static clsLicense FindByApplicationID(int ApplicationID)
+        {
+            LicenseDTO license = LicenseData.GetLicenseByApplicationID(ApplicationID);
+            return new clsLicense(license);
+
+        }
         public static DataTable ListLicenses()
         {
             return LicenseData.GetAllLicenses();

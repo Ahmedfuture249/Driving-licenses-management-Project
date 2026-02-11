@@ -31,5 +31,10 @@ namespace DVLD
         {
             DataBack?.Invoke(this, userControl21.personID);
         }
+
+        private void userControl21_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

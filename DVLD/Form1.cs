@@ -92,5 +92,12 @@ namespace DVLD
             AddLoacalDrivingLicensesApplicationfrm frm = new AddLoacalDrivingLicensesApplicationfrm();
             frm.ShowDialog();
         }
+
+        private void renewDrivingLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           RenewDrivingLicensefrm FRM = new RenewDrivingLicensefrm();
+            FRM.ShowDialog();
+
+        }
     }
 }

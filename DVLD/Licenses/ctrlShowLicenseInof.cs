@@ -14,10 +14,11 @@ namespace DVLD
 {
     public partial class ctrlShowLicenseInof: UserControl
     {
-           private static int _LocalDrivingLicenseApplicationID;
+        private static int _LocalDrivingLicenseApplicationID;
         private static clsLDLApplication _LocalDrivingLicenseApplication;
-         
-        private static clsLicense License;
+
+        public clsLicense License { set; get; }
+        public int LicenseID { get; private set; }
         public ctrlShowLicenseInof()
         {
             
@@ -32,7 +33,9 @@ namespace DVLD
         {
             _LocalDrivingLicenseApplicationID = LocalDrivingLicenseApplicationID;
             _LocalDrivingLicenseApplication = clsLDLApplication.FindLocalDrivingLicenseApplication(_LocalDrivingLicenseApplicationID);
+         
             License = clsLicense.FindByApplicationID(_LocalDrivingLicenseApplication.ApplicationID);
+            LicenseID=License.LicenseID;
             if (_LocalDrivingLicenseApplication == null)
             {
                 MessageBox.Show("Error: Application Was Not Founded ");
@@ -66,6 +69,40 @@ namespace DVLD
             //lblisdetained.Text = _LocalDrivingLicenseApplication.IsDetained ? "Yes" : "No";
 
         }
+        public void LoadDataByLicenseID(int LicenseID)
+        {
+            
+            License = clsLicense.Find(LicenseID);
+            this.LicenseID = LicenseID;
+            
+            if (License == null)
+            {
+                MessageBox.Show("Error: License Was Not Founded ");
+                return;
+            }
+
+            lblclass.Text = License.LicenseClassInfo.ClassName;
+            lblname.Text = License.LDLApplication.personInfo.FullName;
+            lbllicenseid.Text = License.LicenseID.ToString();
+            lblnationalno.Text = License.LDLApplication.personInfo.NationalNo;
+            lblgendor.Text = License.LDLApplication.personInfo.Gendor == 0 ? "male" : "female";
+            //pictureBoxPerosnimage.Image = _LocalDrivingLicenseApplication.personInfo.ImagePath != null ? Image.FromStream(new System.IO.MemoryStream(_LocalDrivingLicenseApplication.personInfo.PersonImage)) : null;
+            lblissuedate.Text = License.IssueDate.ToShortDateString();
+            lblissuereason.Text = License.IssueReason.ToString();
+            lblnotes.Text = License.Notes;
+            lblexpirationdate.Text = License.ExpirationDate.ToShortDateString();
+            lblisactive.Text = License.IsActive ? "Active" : "Not Active";
+            lbldateofbirth.Text = License.LDLApplication.personInfo.DateOfBirth.ToShortDateString();
+            lbldriverID.Text = License.DriverID.ToString();
+            if (License.LDLApplication.personInfo.Gendor == 0)
+            {
+                pictureBoxPerosnimage.Image = Resources.Male_512;
+            }
+            else
+                pictureBoxPerosnimage.Image = Resources.Female_512;
+            //lblisdetained.Text = _LocalDrivingLicenseApplication.IsDetained ? "Yes" : "No";
+
+        }
         private void pictureBox13_Click(object sender, EventArgs e)
         {
 
@@ -77,6 +114,11 @@ namespace DVLD
         }
 
         private void ctrlShowLicenseInof_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }

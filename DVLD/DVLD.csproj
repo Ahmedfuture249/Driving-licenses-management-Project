@@ -46,34 +46,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ctrlRetakeTest.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ctrlRetakeTest.Designer.cs">
-      <DependentUpon>ctrlRetakeTest.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ctrlScheduleTest.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ctrlScheduleTest.Designer.cs">
-      <DependentUpon>ctrlScheduleTest.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ctrlShowLicenseInfoWithFilter.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ctrlShowLicenseInfoWithFilter.Designer.cs">
-      <DependentUpon>ctrlShowLicenseInfoWithFilter.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ctrlTakeTest.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ctrlTakeTest.Designer.cs">
-      <DependentUpon>ctrlTakeTest.cs</DependentUpon>
-    </Compile>
-    <Compile Include="IssueLicense.cs">
+    <Compile Include="RenewDrivingLicensefrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IssueLicense.Designer.cs">
+    <Compile Include="RenewDrivingLicensefrm.Designer.cs">
+      <DependentUpon>RenewDrivingLicensefrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\ctrlRetakeTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tests\ctrlRetakeTest.Designer.cs">
+      <DependentUpon>ctrlRetakeTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\ctrlScheduleTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tests\ctrlScheduleTest.Designer.cs">
+      <DependentUpon>ctrlScheduleTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Licenses\ctrlShowLicenseInfoWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Licenses\ctrlShowLicenseInfoWithFilter.Designer.cs">
+      <DependentUpon>ctrlShowLicenseInfoWithFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\ctrlTakeTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tests\ctrlTakeTest.Designer.cs">
+      <DependentUpon>ctrlTakeTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Licenses\IssueLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Licenses\IssueLicense.Designer.cs">
       <DependentUpon>IssueLicense.cs</DependentUpon>
     </Compile>
     <Compile Include="Local Driving License Application\AddLoacalDrivingLicensesApplicationfrm.cs">
@@ -130,34 +136,34 @@
     <Compile Include="Local Driving License Application\ShowApplicationInfofrm.Designer.cs">
       <DependentUpon>ShowApplicationInfofrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageTestAppointmentsfrm.cs">
+    <Compile Include="Tests\ManageTestAppointmentsfrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageTestAppointmentsfrm.Designer.cs">
+    <Compile Include="Tests\ManageTestAppointmentsfrm.Designer.cs">
       <DependentUpon>ManageTestAppointmentsfrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ScheduleTestfrm.cs">
+    <Compile Include="Tests\ScheduleTestfrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ScheduleTestfrm.Designer.cs">
+    <Compile Include="Tests\ScheduleTestfrm.Designer.cs">
       <DependentUpon>ScheduleTestfrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ShowLicensInfofrm.cs">
+    <Compile Include="Licenses\ShowLicensInfofrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ShowLicensInfofrm.Designer.cs">
+    <Compile Include="Licenses\ShowLicensInfofrm.Designer.cs">
       <DependentUpon>ShowLicensInfofrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TakeTestfrm.cs">
+    <Compile Include="Tests\TakeTestfrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TakeTestfrm.Designer.cs">
+    <Compile Include="Tests\TakeTestfrm.Designer.cs">
       <DependentUpon>TakeTestfrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ctrlShowLicenseInof.cs">
+    <Compile Include="Licenses\ctrlShowLicenseInof.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ctrlShowLicenseInof.Designer.cs">
+    <Compile Include="Licenses\ctrlShowLicenseInof.Designer.cs">
       <DependentUpon>ctrlShowLicenseInof.cs</DependentUpon>
     </Compile>
     <Compile Include="Users\ChangePasswordfrm.cs">
@@ -234,19 +240,22 @@
     <Compile Include="Users\UserDetailsfrm.Designer.cs">
       <DependentUpon>UserDetailsfrm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ctrlRetakeTest.resx">
+    <EmbeddedResource Include="RenewDrivingLicensefrm.resx">
+      <DependentUpon>RenewDrivingLicensefrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tests\ctrlRetakeTest.resx">
       <DependentUpon>ctrlRetakeTest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ctrlScheduleTest.resx">
+    <EmbeddedResource Include="Tests\ctrlScheduleTest.resx">
       <DependentUpon>ctrlScheduleTest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ctrlShowLicenseInfoWithFilter.resx">
+    <EmbeddedResource Include="Licenses\ctrlShowLicenseInfoWithFilter.resx">
       <DependentUpon>ctrlShowLicenseInfoWithFilter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ctrlTakeTest.resx">
+    <EmbeddedResource Include="Tests\ctrlTakeTest.resx">
       <DependentUpon>ctrlTakeTest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IssueLicense.resx">
+    <EmbeddedResource Include="Licenses\IssueLicense.resx">
       <DependentUpon>IssueLicense.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Local Driving License Application\AddLoacalDrivingLicensesApplicationfrm.resx">
@@ -276,19 +285,19 @@
     <EmbeddedResource Include="Local Driving License Application\ShowApplicationInfofrm.resx">
       <DependentUpon>ShowApplicationInfofrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageTestAppointmentsfrm.resx">
+    <EmbeddedResource Include="Tests\ManageTestAppointmentsfrm.resx">
       <DependentUpon>ManageTestAppointmentsfrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ScheduleTestfrm.resx">
+    <EmbeddedResource Include="Tests\ScheduleTestfrm.resx">
       <DependentUpon>ScheduleTestfrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ShowLicensInfofrm.resx">
+    <EmbeddedResource Include="Licenses\ShowLicensInfofrm.resx">
       <DependentUpon>ShowLicensInfofrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TakeTestfrm.resx">
+    <EmbeddedResource Include="Tests\TakeTestfrm.resx">
       <DependentUpon>TakeTestfrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ctrlShowLicenseInof.resx">
+    <EmbeddedResource Include="Licenses\ctrlShowLicenseInof.resx">
       <DependentUpon>ctrlShowLicenseInof.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users\ChangePasswordfrm.resx">

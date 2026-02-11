@@ -19,7 +19,8 @@ namespace DVLDBusinessLayer
         public enum enIssueReason { FirstTime=1, Renew=2, ReplacementforDamaged=3,  ReplacementforLost=4 };
         public int LicenseID {  get; set; }
         public int ApplicationID { get; set; }
-        public clsLDLApplication LDLApplication { get; set; }
+        public clsApplication LDLApplication { get; set; }
+
         public int DriverID { get; set; }
         public int LicenseClassID { get; set; }
         public clsLicenseClasses LicenseClassInfo { get; set; }
@@ -54,7 +55,7 @@ namespace DVLDBusinessLayer
         {
             LicenseID = license.LicenseID;
             ApplicationID = license.ApplicationID;
-            LDLApplication = clsLDLApplication.FindLocalDrivingLicenseApplication(ApplicationID);
+            LDLApplication = clsApplication.FindBaseApplication(ApplicationID);
             DriverID = license.DriverID;
             LicenseClassID = license.LicenseClassID;
             LicenseClassInfo = clsLicenseClasses.Find(LicenseClassID);

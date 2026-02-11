@@ -64,6 +64,7 @@
             this.userControl21.showAddPerson = false;
             this.userControl21.Size = new System.Drawing.Size(721, 371);
             this.userControl21.TabIndex = 0;
+            this.userControl21.Load += new System.EventHandler(this.userControl21_Load);
             // 
             // FindPersonfrm
             // 

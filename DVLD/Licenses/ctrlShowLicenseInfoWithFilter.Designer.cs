@@ -28,20 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ctrlShowLicenseInof1 = new DVLD.ctrlShowLicenseInof();
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.txtFindBy = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.groupBoxFilter = new System.Windows.Forms.GroupBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ctrlShowLicenseInof2 = new DVLD.ctrlShowLicenseInof();
             this.groupBoxFilter.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ctrlShowLicenseInof1
-            // 
-            this.ctrlShowLicenseInof1.Location = new System.Drawing.Point(3, 56);
-            this.ctrlShowLicenseInof1.Name = "ctrlShowLicenseInof1";
-            this.ctrlShowLicenseInof1.Size = new System.Drawing.Size(891, 330);
-            this.ctrlShowLicenseInof1.TabIndex = 0;
             // 
             // label1
             // 
@@ -59,6 +55,7 @@
             this.txtFindBy.Name = "txtFindBy";
             this.txtFindBy.Size = new System.Drawing.Size(208, 22);
             this.txtFindBy.TabIndex = 7;
+            this.txtFindBy.Validating += new System.ComponentModel.CancelEventHandler(this.txtFindBy_Validating);
             // 
             // btnSearch
             // 
@@ -68,6 +65,7 @@
             this.btnSearch.Size = new System.Drawing.Size(47, 34);
             this.btnSearch.TabIndex = 6;
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // groupBoxFilter
             // 
@@ -81,16 +79,29 @@
             this.groupBoxFilter.TabStop = false;
             this.groupBoxFilter.Text = "Filter";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // ctrlShowLicenseInof2
+            // 
+            this.ctrlShowLicenseInof2.License = null;
+            this.ctrlShowLicenseInof2.Location = new System.Drawing.Point(3, 70);
+            this.ctrlShowLicenseInof2.Name = "ctrlShowLicenseInof2";
+            this.ctrlShowLicenseInof2.Size = new System.Drawing.Size(885, 336);
+            this.ctrlShowLicenseInof2.TabIndex = 10;
+            // 
             // ctrlShowLicenseInfoWithFilter
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.Controls.Add(this.ctrlShowLicenseInof2);
             this.Controls.Add(this.groupBoxFilter);
-            this.Controls.Add(this.ctrlShowLicenseInof1);
             this.Name = "ctrlShowLicenseInfoWithFilter";
-            this.Size = new System.Drawing.Size(891, 389);
+            this.Size = new System.Drawing.Size(891, 406);
             this.Load += new System.EventHandler(this.ctrlShowLicenseInfoWithFilter_Load);
             this.groupBoxFilter.ResumeLayout(false);
             this.groupBoxFilter.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -102,5 +113,7 @@
         private System.Windows.Forms.TextBox txtFindBy;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.GroupBox groupBoxFilter;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private ctrlShowLicenseInof ctrlShowLicenseInof2;
     }
 }

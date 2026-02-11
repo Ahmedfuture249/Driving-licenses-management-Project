@@ -26,6 +26,7 @@ namespace DVLD
         public ctrlShowLicenseInfoWithFilter()
         {
             InitializeComponent();
+
         }
         private bool _FilterEnabled=false;
         public bool FilterEnabled

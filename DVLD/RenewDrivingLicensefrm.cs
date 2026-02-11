@@ -22,7 +22,8 @@ namespace DVLD
         {
             InitializeComponent();
             ctrlShowLicenseInfoWithFilter1.FilterEnabled = true;
-            
+            ctrlShowLicenseInfoWithFilter1.OnLicenseSelected += ctrlShowLicenseInfoWithFilter1_OnLicenseSelected;
+
         }
         private void ctrlShowLicenseInfoWithFilter1_OnLicenseSelected(int obj)
         {

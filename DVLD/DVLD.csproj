@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ListDriversfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListDriversfrm.Designer.cs">
+      <DependentUpon>ListDriversfrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="RenewDrivingLicensefrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -246,6 +252,9 @@
     <Compile Include="Users\UserDetailsfrm.Designer.cs">
       <DependentUpon>UserDetailsfrm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ListDriversfrm.resx">
+      <DependentUpon>ListDriversfrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RenewDrivingLicensefrm.resx">
       <DependentUpon>RenewDrivingLicensefrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -682,6 +691,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\License View 321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Driver Main.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

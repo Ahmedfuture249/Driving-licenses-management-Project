@@ -97,7 +97,15 @@ namespace DVLDDataAccessLayer
             DataTable dt = new DataTable();
 
             SqlConnection connection = new SqlConnection(clsPeopleDataAccessSettings.ConnectionString);
-            string query = @"SELECT DriverID, PersonID, CreatedByUserID, CreatedDate FROM Drivers";
+            string query = @"SELECT 
+    Drivers.DriverID,
+    Drivers.PersonID,
+    Drivers.CreatedByUserID,
+    (People.FirstName + ' ' + People.SecondName + ' ' + People.ThirdName + ' ' + People.LastName) AS FullName
+FROM Drivers
+INNER JOIN People
+ON Drivers.PersonID = People.PersonID;
+";
 
             SqlCommand command = new SqlCommand(query, connection);
 

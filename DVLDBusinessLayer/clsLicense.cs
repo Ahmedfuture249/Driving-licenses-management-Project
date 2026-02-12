@@ -163,25 +163,88 @@ namespace DVLDBusinessLayer
                 return -1;
             }
 
-            clsLicense License = new clsLicense();
-            License.ApplicationID = Application.ApplicationID;
-            License.DriverID = this.DriverID;
-            License.LicenseClassID = this.LicenseClassID;
-            License.IssueDate = DateTime.Now;
-            License.LicenseClassInfo = clsLicenseClasses.Find(License.LicenseClassID);
-            License.ExpirationDate = DateTime.Now.AddYears(LicenseClassInfo.DefaultValdityLength);
-            License.Notes = Notes;
-            License.PaidFees = this.LicenseClassInfo.ClassFees;
-            License.IsActive = false;
-            License.IssueReason = clsLicense.enIssueReason.Renew;
-            License.CreatedByUserID = CreatedByUserID;
+            clsLicense NewLicense = new clsLicense();
+            NewLicense.ApplicationID = Application.ApplicationID;
+            NewLicense.DriverID = this.DriverID;
+            NewLicense.LicenseClassID = this.LicenseClassID;
+            NewLicense.IssueDate = DateTime.Now;
+            NewLicense.LicenseClassInfo = clsLicenseClasses.Find(NewLicense.LicenseClassID);
+            NewLicense.ExpirationDate = DateTime.Now.AddYears(LicenseClassInfo.DefaultValdityLength);
+            NewLicense.Notes = Notes;
+            NewLicense.PaidFees = this.LicenseClassInfo.ClassFees;
+            NewLicense.IsActive = true;
+            NewLicense.IssueReason = clsLicense.enIssueReason.Renew;
+            NewLicense.CreatedByUserID = CreatedByUserID;
 
-            if (License.Save())
+            if (NewLicense.Save())
             {
                 //now we should set the application status to complete.
                 Application.SetCompleted();
 
-                return License.LicenseID;
+                return NewLicense.LicenseID;
+            }
+
+            else
+                return -1;
+        }
+        public int ReplaceForDamgedOrLost(clsApplication.enApplicationType enApplicationType)
+        {
+
+            clsApplication Application = new clsApplication();
+            Application.ApplicationStatus = clsApplication.enApplicationStatus.New;
+
+            if (enApplicationType == clsApplication.enApplicationType.ReplaceDamgedDrivingLicense)
+
+            {
+                Application.ApplicationTypeID = (int)clsApplication.enApplicationType.ReplaceDamgedDrivingLicense;
+                Application.PaidFees = clsManageApplications.Find((int)clsApplication.enApplicationType.ReplaceDamgedDrivingLicense).Fees;
+            }
+            if (enApplicationType == clsApplication.enApplicationType.ReplacedLostDrivingLicense)
+
+            {
+                Application.ApplicationTypeID = (int)clsApplication.enApplicationType.ReplacedLostDrivingLicense;
+                Application.PaidFees = clsManageApplications.Find((int)clsApplication.enApplicationType.ReplacedLostDrivingLicense).Fees;
+            }
+
+
+            Application.ApplicantPersonlID = this.LDLApplication.ApplicantPersonlID;
+            Application.ApplicationDate = DateTime.Now;
+          
+            Application.CreatedByUserID = CreatedByUserID;
+            Application.ApplicationLastStatusDate = DateTime.Now;
+            if (!Application.Save())
+            {
+                return -1;
+            }
+
+            clsLicense ReplacementLicense = new clsLicense();
+            ReplacementLicense.ApplicationID = Application.ApplicationID;
+            ReplacementLicense.DriverID = this.DriverID;
+            ReplacementLicense.LicenseClassID = this.LicenseClassID;
+            ReplacementLicense.IssueDate = DateTime.Now;
+            ReplacementLicense.LicenseClassInfo = clsLicenseClasses.Find(ReplacementLicense.LicenseClassID);
+            ReplacementLicense.ExpirationDate = DateTime.Now.AddYears(LicenseClassInfo.DefaultValdityLength);
+            ReplacementLicense.Notes = Notes;
+            ReplacementLicense.PaidFees = this.LicenseClassInfo.ClassFees;
+            ReplacementLicense.IsActive = true;
+            if (enApplicationType == clsApplication.enApplicationType.ReplacedLostDrivingLicense)
+
+            {
+                ReplacementLicense.IssueReason = clsLicense.enIssueReason.ReplacementforLost;
+            }
+            if (enApplicationType == clsApplication.enApplicationType.ReplaceDamgedDrivingLicense)
+
+            {
+                ReplacementLicense.IssueReason = clsLicense.enIssueReason.ReplacementforDamaged;
+            }
+            ReplacementLicense.CreatedByUserID =ClsGloabalSettings.CurrentUser.UserID;
+
+            if (ReplacementLicense.Save())
+            {
+                //now we should set the application status to complete.
+                Application.SetCompleted();
+
+                return ReplacementLicense.LicenseID;
             }
 
             else

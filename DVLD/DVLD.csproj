@@ -52,6 +52,12 @@
     <Compile Include="RenewDrivingLicensefrm.Designer.cs">
       <DependentUpon>RenewDrivingLicensefrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReplaceForLostOrDamgedfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReplaceForLostOrDamgedfrm.Designer.cs">
+      <DependentUpon>ReplaceForLostOrDamgedfrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tests\ctrlRetakeTest.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -242,6 +248,9 @@
     </Compile>
     <EmbeddedResource Include="RenewDrivingLicensefrm.resx">
       <DependentUpon>RenewDrivingLicensefrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReplaceForLostOrDamgedfrm.resx">
+      <DependentUpon>ReplaceForLostOrDamgedfrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tests\ctrlRetakeTest.resx">
       <DependentUpon>ctrlRetakeTest.cs</DependentUpon>

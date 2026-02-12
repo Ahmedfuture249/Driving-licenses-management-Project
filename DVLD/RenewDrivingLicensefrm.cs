@@ -86,7 +86,9 @@ namespace DVLD
         {
             clsLicense NewLicense=new clsLicense();
             License = clsLicense.Find(LicenseID);
-         NewLicense.LicenseID= License.RenewLicense(txtNotes.Text,ClsGloabalSettings.CurrentUser.UserID);
+            License.IsActive = false;
+            License.Save();
+            NewLicense.LicenseID= License.RenewLicense(txtNotes.Text,ClsGloabalSettings.CurrentUser.UserID);
             if (NewLicense.LicenseID == -1)
             {
                 MessageBox.Show("the process was not completed succsufully !!!");

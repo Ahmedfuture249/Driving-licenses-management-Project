@@ -43,13 +43,13 @@ namespace DVLD
             txtNotes.Text = ctrlShowLicenseInfoWithFilter1.SelectedLicenseInfo.Notes;
             lblOldLicenseID.Text = ctrlShowLicenseInfoWithFilter1.SelectedLicenseInfo.LicenseID.ToString();
 
-            //if (!ctrlShowLicenseInfoWithFilter1.SelectedLicenseInfo.IsLicenseExpired())
-            //{
-            //    MessageBox.Show("Selected License is not yet expiared, it will expire on: " + (ctrlShowLicenseInfoWithFilter1.SelectedLicenseInfo.ExpirationDate).ToShortDateString()
-            //        , "Not allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    btnRenewLicense.Enabled = false;
-            //    return;
-            //}
+            if (!ctrlShowLicenseInfoWithFilter1.SelectedLicenseInfo.IsLicenseExpired())
+            {
+                MessageBox.Show("Selected License is not yet expiared, it will expire on: " + (ctrlShowLicenseInfoWithFilter1.SelectedLicenseInfo.ExpirationDate).ToShortDateString()
+                    , "Not allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                btnRenewLicense.Enabled = false;
+                return;
+            }
 
             //check the license is not Expired.
             if (!ctrlShowLicenseInfoWithFilter1.SelectedLicenseInfo.IsActive)

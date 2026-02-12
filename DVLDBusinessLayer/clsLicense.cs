@@ -60,7 +60,7 @@ namespace DVLDBusinessLayer
             LicenseClassID = license.LicenseClassID;
             LicenseClassInfo = clsLicenseClasses.Find(LicenseClassID);
             IssueDate = license.IssueDate;
-            ExpirationDate = license.IssueDate;
+            ExpirationDate = license.ExpirationDate;
             Notes = license.Notes;
             PaidFees = license.PaidFees;
             IsActive = license.IsActive;
@@ -186,6 +186,10 @@ namespace DVLDBusinessLayer
 
             else
                 return -1;
+        }
+        public bool IsLicenseExpired()
+        {
+            return LicenseData.IsLicenseExpired(this.LicenseID);
         }
         public bool Save()
         {

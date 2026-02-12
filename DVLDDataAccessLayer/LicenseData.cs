@@ -92,6 +92,36 @@ namespace DVLDDataAccessLayer
 
             return license;
         }
+        public static bool IsLicenseExpired(int licenseID)
+        {
+            bool isExpired = false;
+
+
+            SqlConnection connection = new SqlConnection(clsPeopleDataAccessSettings.ConnectionString);
+
+            string query = "SELECT * FROM Licenses WHERE LicenseID = @LicenseID AND ExpirationDate < GETDATE();";
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@LicenseID", licenseID);
+
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    isExpired = true;
+                }
+                reader.Close();
+            }
+            catch (Exception ex) { }
+            finally
+            {
+                connection.Close();
+            }
+            return isExpired;
+
+        }
         public static DataTable GetAllLicenses()
             {
             DataTable dt = new DataTable();

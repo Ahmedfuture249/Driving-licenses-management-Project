@@ -44,7 +44,7 @@ namespace DVLD
         private int _LicenseID = -1;
         public int LicenseID { get { return ctrlShowLicenseInof1.LicenseID; } }
 
-        public clsLicense SelectedLicenseInfo { get { return ctrlShowLicenseInof1.License; } }
+        public clsLicense SelectedLicenseInfo { get { return ctrlShowLicenseInof2.License; } }
 
         public void LoadLicensInfo(int LicenseID)
         {

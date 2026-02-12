@@ -84,7 +84,23 @@ namespace DVLD
 
         private void btnRenewLicense_Click(object sender, EventArgs e)
         {
+            clsLicense NewLicense=new clsLicense();
+            License = clsLicense.Find(LicenseID);
+         NewLicense.LicenseID= License.RenewLicense(txtNotes.Text,ClsGloabalSettings.CurrentUser.UserID);
+            if (NewLicense.LicenseID == -1)
+            {
+                MessageBox.Show("the process was not completed succsufully !!!");
+                return;
+            }
+
+            NewLicense=clsLicense.Find(NewLicense.LicenseID);
+
+            MessageBox.Show("License With ID = " + License.LicenseID +"Renewed Succesfully the new licnense ID Is = " + NewLicense.LicenseID);
+            lblExpirationDate.Text= NewLicense.ExpirationDate.ToString();
+            lblIssueDate.Text=NewLicense.IssueDate.ToString();
+            lblRenewedLicenseID.Text = NewLicense.LicenseID.ToString();
             
+
         }
 
         private void RenewDrivingLicensefrm_Load(object sender, EventArgs e)

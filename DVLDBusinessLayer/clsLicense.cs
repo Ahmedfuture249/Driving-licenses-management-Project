@@ -147,6 +147,46 @@ namespace DVLDBusinessLayer
             };
             return LicenseData.UpdateLicense(license);
         }
+        public int RenewLicense(string Notes, int CreatedByUserID)
+        {
+            
+           clsApplication Application= new clsApplication();
+           Application.ApplicationStatus = clsApplication.enApplicationStatus.New;
+            Application.ApplicationTypeID = (int)clsApplication.enApplicationType.RenewDrivingLicense;
+            Application.ApplicantPersonlID = this.LDLApplication.ApplicantPersonlID;
+            Application.ApplicationDate = DateTime.Now;
+            Application.PaidFees = clsManageApplications.Find((int)clsApplication.enApplicationType.RenewDrivingLicense).Fees;
+            Application.CreatedByUserID = CreatedByUserID;
+            Application.ApplicationLastStatusDate = DateTime.Now;   
+            if(!Application.Save())
+            {
+                return -1;
+            }
+
+            clsLicense License = new clsLicense();
+            License.ApplicationID = Application.ApplicationID;
+            License.DriverID = this.DriverID;
+            License.LicenseClassID = this.LicenseClassID;
+            License.IssueDate = DateTime.Now;
+            License.LicenseClassInfo = clsLicenseClasses.Find(License.LicenseClassID);
+            License.ExpirationDate = DateTime.Now.AddYears(LicenseClassInfo.DefaultValdityLength);
+            License.Notes = Notes;
+            License.PaidFees = this.LicenseClassInfo.ClassFees;
+            License.IsActive = false;
+            License.IssueReason = clsLicense.enIssueReason.Renew;
+            License.CreatedByUserID = CreatedByUserID;
+
+            if (License.Save())
+            {
+                //now we should set the application status to complete.
+                Application.SetCompleted();
+
+                return License.LicenseID;
+            }
+
+            else
+                return -1;
+        }
         public bool Save()
         {
 

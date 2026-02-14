@@ -69,7 +69,13 @@ namespace DVLD
 
         private void showLicenesHistoreyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           LicensHistoreyfrm licensHistoreyfrm = new LicensHistoreyfrm((int)dgvGetAllPeople.CurrentRow.Cells[0].Value);
+           LicensHistoreyfrm licensHistoreyfrm = new LicensHistoreyfrm((int)dgvGetAllPeople.CurrentRow.Cells[0].Value, (int)dgvGetAllPeople.CurrentRow.Cells[1].Value);
+            licensHistoreyfrm.ShowDialog();
+        }
+
+        private void showPerosnInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LicensHistoreyfrm licensHistoreyfrm = new LicensHistoreyfrm();
             licensHistoreyfrm.ShowDialog();
         }
     }

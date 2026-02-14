@@ -32,7 +32,7 @@ namespace DVLD
         public bool FilterByEnabled
         {
             get { return _FilterByEnabled; }
-            set { _FilterByEnabled = value; cbFilterBy.Visible = _FilterByEnabled; }
+            set { _FilterByEnabled = value; gbFilterBY.Enabled = _FilterByEnabled; }
         }
         clsPeople _person;
         int _PersonID = -1;

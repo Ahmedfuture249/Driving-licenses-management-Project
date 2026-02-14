@@ -90,5 +90,10 @@ namespace DVLD
                 errorProvider1.SetError(txtFindBy, null);
             }
         }
+
+        private void ctrlShowLicenseInof2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

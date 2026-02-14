@@ -90,6 +90,7 @@
             this.ctrlShowLicenseInof2.Name = "ctrlShowLicenseInof2";
             this.ctrlShowLicenseInof2.Size = new System.Drawing.Size(885, 336);
             this.ctrlShowLicenseInof2.TabIndex = 10;
+            this.ctrlShowLicenseInof2.Load += new System.EventHandler(this.ctrlShowLicenseInof2_Load);
             // 
             // ctrlShowLicenseInfoWithFilter
             // 

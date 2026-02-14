@@ -37,10 +37,10 @@
             this.cbFilterBy = new System.Windows.Forms.ComboBox();
             this.dgvGetAllPeople = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnClose = new System.Windows.Forms.Button();
             this.showPerosnInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showLicenesHistoreyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGetAllPeople)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -130,7 +130,23 @@
             this.showPerosnInfoToolStripMenuItem,
             this.showLicenesHistoreyToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(230, 56);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(230, 84);
+            // 
+            // showPerosnInfoToolStripMenuItem
+            // 
+            this.showPerosnInfoToolStripMenuItem.Image = global::DVLD.Properties.Resources.PersonDetails_323;
+            this.showPerosnInfoToolStripMenuItem.Name = "showPerosnInfoToolStripMenuItem";
+            this.showPerosnInfoToolStripMenuItem.Size = new System.Drawing.Size(229, 26);
+            this.showPerosnInfoToolStripMenuItem.Text = "Show Perosn Info";
+            this.showPerosnInfoToolStripMenuItem.Click += new System.EventHandler(this.showPerosnInfoToolStripMenuItem_Click);
+            // 
+            // showLicenesHistoreyToolStripMenuItem
+            // 
+            this.showLicenesHistoreyToolStripMenuItem.Image = global::DVLD.Properties.Resources.PersonLicenseHistory_321;
+            this.showLicenesHistoreyToolStripMenuItem.Name = "showLicenesHistoreyToolStripMenuItem";
+            this.showLicenesHistoreyToolStripMenuItem.Size = new System.Drawing.Size(229, 26);
+            this.showLicenesHistoreyToolStripMenuItem.Text = "Show Licenes Historey";
+            this.showLicenesHistoreyToolStripMenuItem.Click += new System.EventHandler(this.showLicenesHistoreyToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
@@ -152,21 +168,6 @@
             this.btnClose.TabIndex = 11;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
-            // 
-            // showPerosnInfoToolStripMenuItem
-            // 
-            this.showPerosnInfoToolStripMenuItem.Image = global::DVLD.Properties.Resources.PersonDetails_323;
-            this.showPerosnInfoToolStripMenuItem.Name = "showPerosnInfoToolStripMenuItem";
-            this.showPerosnInfoToolStripMenuItem.Size = new System.Drawing.Size(229, 26);
-            this.showPerosnInfoToolStripMenuItem.Text = "Show Perosn Info";
-            // 
-            // showLicenesHistoreyToolStripMenuItem
-            // 
-            this.showLicenesHistoreyToolStripMenuItem.Image = global::DVLD.Properties.Resources.PersonLicenseHistory_321;
-            this.showLicenesHistoreyToolStripMenuItem.Name = "showLicenesHistoreyToolStripMenuItem";
-            this.showLicenesHistoreyToolStripMenuItem.Size = new System.Drawing.Size(229, 26);
-            this.showLicenesHistoreyToolStripMenuItem.Text = "Show Licenes Historey";
-            this.showLicenesHistoreyToolStripMenuItem.Click += new System.EventHandler(this.showLicenesHistoreyToolStripMenuItem_Click);
             // 
             // ListDriversfrm
             // 

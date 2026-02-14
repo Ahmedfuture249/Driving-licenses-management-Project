@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DVLDBusinessLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,15 +14,48 @@ namespace DVLD
     public partial class LicensHistoreyfrm: Form
     {
         private int _DriverID;
-        public LicensHistoreyfrm(int DriverID)
+        private int _PersonID;
+        clsDriver Driver;
+        public LicensHistoreyfrm(int DriverID,int PersonID)
         {
             _DriverID = DriverID;
+            _PersonID=PersonID;
+           
             InitializeComponent();
+            userControl21.FilterByEnabled = false;
+
+        }
+        public LicensHistoreyfrm()
+        {
+
+            InitializeComponent();
+            userControl21.FilterByEnabled = true;
+
+        }
+
+        private void UserControl21_OnPersonSelected(int obj)
+        {
+            _PersonID= obj;
+           Driver= clsDriver.FindByPersonID(_PersonID);
+            if(Driver==null)
+            {
+                MessageBox.Show("There Is No Driver With This PersonID !!");
+                return;
+            }
+            ctrlDriverLicenseHistorey1.LoadDriverLicenseHistorey(Driver.DriverID);
+            //userControl21.LoadPersonInfo(_PersonID);
+            userControl21.FilterByEnabled = true ;
+
+
         }
 
         private void LicensHistoreyfrm_Load(object sender, EventArgs e)
         {
-            ctrlDriverLicenseHistorey1.LoadDriverLicenseHistorey(_DriverID);    
+            userControl21.OnPersonSelected += UserControl21_OnPersonSelected;
+            ctrlDriverLicenseHistorey1.LoadDriverLicenseHistorey(_DriverID);   
+            userControl21.LoadPersonInfo(_PersonID);
+            
+            
         }
         
 

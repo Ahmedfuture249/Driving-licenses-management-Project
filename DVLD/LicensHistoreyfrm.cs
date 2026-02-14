@@ -13,8 +13,8 @@ namespace DVLD
 {
     public partial class LicensHistoreyfrm: Form
     {
-        private int _DriverID;
-        private int _PersonID;
+        private int _DriverID=-1;
+        private int _PersonID=-1;
         clsDriver Driver;
         public LicensHistoreyfrm(int DriverID,int PersonID)
         {
@@ -35,16 +35,24 @@ namespace DVLD
 
         private void UserControl21_OnPersonSelected(int obj)
         {
+            
             _PersonID= obj;
-           Driver= clsDriver.FindByPersonID(_PersonID);
-            if(Driver==null)
+            if (_PersonID != -1)
             {
-                MessageBox.Show("There Is No Driver With This PersonID !!");
-                return;
+                Driver = clsDriver.FindByPersonID(_PersonID);
+                if (Driver == null)
+                {
+                    MessageBox.Show("There Is No Driver With This PersonID !!");
+                    return;
+                }
+                ctrlDriverLicenseHistorey1.LoadDriverLicenseHistorey(Driver.DriverID);
             }
-            ctrlDriverLicenseHistorey1.LoadDriverLicenseHistorey(Driver.DriverID);
-            //userControl21.LoadPersonInfo(_PersonID);
-            userControl21.FilterByEnabled = true ;
+            else
+            {
+             
+
+                userControl21.FilterByEnabled = true;
+            }
 
 
         }
@@ -52,7 +60,7 @@ namespace DVLD
         private void LicensHistoreyfrm_Load(object sender, EventArgs e)
         {
             userControl21.OnPersonSelected += UserControl21_OnPersonSelected;
-            ctrlDriverLicenseHistorey1.LoadDriverLicenseHistorey(_DriverID);   
+           ctrlDriverLicenseHistorey1.LoadDriverLicenseHistorey(_DriverID);   
             userControl21.LoadPersonInfo(_PersonID);
             
             

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblRecordsCount = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtFilterByValue = new System.Windows.Forms.TextBox();
@@ -35,9 +36,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cbFilterBy = new System.Windows.Forms.ComboBox();
             this.dgvGetAllPeople = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.Button();
+            this.showPerosnInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showLicenesHistoreyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGetAllPeople)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,6 +123,15 @@
             this.dgvGetAllPeople.Size = new System.Drawing.Size(890, 400);
             this.dgvGetAllPeople.TabIndex = 10;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showPerosnInfoToolStripMenuItem,
+            this.showLicenesHistoreyToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(230, 56);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DVLD.Properties.Resources.Driver_Main;
@@ -139,11 +153,27 @@
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
             // 
+            // showPerosnInfoToolStripMenuItem
+            // 
+            this.showPerosnInfoToolStripMenuItem.Image = global::DVLD.Properties.Resources.PersonDetails_323;
+            this.showPerosnInfoToolStripMenuItem.Name = "showPerosnInfoToolStripMenuItem";
+            this.showPerosnInfoToolStripMenuItem.Size = new System.Drawing.Size(229, 26);
+            this.showPerosnInfoToolStripMenuItem.Text = "Show Perosn Info";
+            // 
+            // showLicenesHistoreyToolStripMenuItem
+            // 
+            this.showLicenesHistoreyToolStripMenuItem.Image = global::DVLD.Properties.Resources.PersonLicenseHistory_321;
+            this.showLicenesHistoreyToolStripMenuItem.Name = "showLicenesHistoreyToolStripMenuItem";
+            this.showLicenesHistoreyToolStripMenuItem.Size = new System.Drawing.Size(229, 26);
+            this.showLicenesHistoreyToolStripMenuItem.Text = "Show Licenes Historey";
+            this.showLicenesHistoreyToolStripMenuItem.Click += new System.EventHandler(this.showLicenesHistoreyToolStripMenuItem_Click);
+            // 
             // ListDriversfrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(924, 686);
+            this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.lblRecordsCount);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtFilterByValue);
@@ -157,6 +187,7 @@
             this.Text = "ListDriversfrm";
             this.Load += new System.EventHandler(this.ListDriversfrm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGetAllPeople)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -174,5 +205,8 @@
         private System.Windows.Forms.ComboBox cbFilterBy;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.DataGridView dgvGetAllPeople;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem showPerosnInfoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem showLicenesHistoreyToolStripMenuItem;
     }
 }

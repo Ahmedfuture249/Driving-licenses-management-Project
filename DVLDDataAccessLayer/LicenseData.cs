@@ -122,6 +122,41 @@ namespace DVLDDataAccessLayer
             return isExpired;
 
         }
+        public static DataTable GetLocalLicensesForDriver(int DriverID)
+        {
+            DataTable dt = new DataTable();
+
+            SqlConnection connection = new SqlConnection(clsPeopleDataAccessSettings.ConnectionString);
+
+
+            string query = "select LicenseID, ApplicationID,LicenseClass ,IssueDate,ExpirationDate,IsActive from Licenses where  DriverID=@DriverID";
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@DriverID", DriverID);
+            try
+            {
+                connection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    dt.Load(reader);
+                }
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return dt;
+        }
+
         public static DataTable GetAllLicenses()
             {
             DataTable dt = new DataTable();

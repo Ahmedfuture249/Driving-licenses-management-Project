@@ -64,8 +64,13 @@ namespace DVLD
         private void ListDriversfrm_Load(object sender, EventArgs e)
         {
             dgvGetAllPeople.DataSource = _dtDrivers;
-            dgvGetAllPeople.Columns[4].HeaderText = "FullName";
-            dgvGetAllPeople.Columns[4].Width = 320;
+        
+        }
+
+        private void showLicenesHistoreyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           LicensHistoreyfrm licensHistoreyfrm = new LicensHistoreyfrm((int)dgvGetAllPeople.CurrentRow.Cells[0].Value);
+            licensHistoreyfrm.ShowDialog();
         }
     }
 }

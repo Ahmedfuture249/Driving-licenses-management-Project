@@ -102,6 +102,10 @@ namespace DVLDBusinessLayer
         {
             return LicenseData.GetAllLicenses();
         }
+        public static DataTable GetLocalLicensesForDriver(int DriverID)
+        {
+            return LicenseData.GetLocalLicensesForDriver( DriverID);
+        }
         private bool _AddNewLicense()
         {
           

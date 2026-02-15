@@ -111,5 +111,11 @@ namespace DVLD
             ListDriversfrm listDriversfrm = new ListDriversfrm();   
             listDriversfrm.ShowDialog();
         }
+
+        private void detainLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DetainLicenseFrm frm = new DetainLicenseFrm(-1);
+            frm.ShowDialog();
+        }
     }
 }

@@ -129,9 +129,7 @@ namespace DVLDDataAccessLayer
             SqlConnection connection = new SqlConnection(clsPeopleDataAccessSettings.ConnectionString);
 
 
-            string query = "SELECT   Licenses.LicenseID, ApplicationID, LicenseClasses.ClassName, Licenses.IssueDate," +
-                "     Licenses.ExpirationDate, Licenses.IsActive FROM Licenses INNER JOIN" +
-                "  LicenseClasses ON Licenses.LicenseClass = LicenseClasses.LicenseClassID        where DriverID=@DriverID   Order By IsActive Desc, ExpirationDate Desc";
+            string query = "select LicenseID, ApplicationID,LicenseClass ,IssueDate,ExpirationDate,IsActive from Licenses where  DriverID=@DriverID";
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@DriverID", DriverID);
             try

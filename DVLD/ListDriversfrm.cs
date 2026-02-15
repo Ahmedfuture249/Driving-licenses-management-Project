@@ -75,8 +75,8 @@ namespace DVLD
 
         private void showPerosnInfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            LicensHistoreyfrm licensHistoreyfrm = new LicensHistoreyfrm();
-            licensHistoreyfrm.ShowDialog();
+            frmPersonDetails frm = new frmPersonDetails((int)dgvGetAllPeople.CurrentRow.Cells[1].Value);
+            frm.ShowDialog();
         }
     }
 }

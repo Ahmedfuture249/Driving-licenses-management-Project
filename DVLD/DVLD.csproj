@@ -52,6 +52,12 @@
     <Compile Include="ctrlDriverLicenseHistorey.Designer.cs">
       <DependentUpon>ctrlDriverLicenseHistorey.cs</DependentUpon>
     </Compile>
+    <Compile Include="DetainLicenseFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetainLicenseFrm.Designer.cs">
+      <DependentUpon>DetainLicenseFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LicensHistoreyfrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,16 +82,16 @@
     <Compile Include="ReplaceForLostOrDamgedfrm.Designer.cs">
       <DependentUpon>ReplaceForLostOrDamgedfrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tests\ctrlRetakeTest.cs">
+    <Compile Include="Resources\Tests\ctrlRetakeTest.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Tests\ctrlRetakeTest.Designer.cs">
+    <Compile Include="Resources\Tests\ctrlRetakeTest.Designer.cs">
       <DependentUpon>ctrlRetakeTest.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tests\ctrlScheduleTest.cs">
+    <Compile Include="Resources\Tests\ctrlScheduleTest.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Tests\ctrlScheduleTest.Designer.cs">
+    <Compile Include="Resources\Tests\ctrlScheduleTest.Designer.cs">
       <DependentUpon>ctrlScheduleTest.cs</DependentUpon>
     </Compile>
     <Compile Include="Licenses\ctrlShowLicenseInfoWithFilter.cs">
@@ -94,10 +100,10 @@
     <Compile Include="Licenses\ctrlShowLicenseInfoWithFilter.Designer.cs">
       <DependentUpon>ctrlShowLicenseInfoWithFilter.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tests\ctrlTakeTest.cs">
+    <Compile Include="Resources\Tests\ctrlTakeTest.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Tests\ctrlTakeTest.Designer.cs">
+    <Compile Include="Resources\Tests\ctrlTakeTest.Designer.cs">
       <DependentUpon>ctrlTakeTest.cs</DependentUpon>
     </Compile>
     <Compile Include="Licenses\IssueLicense.cs">
@@ -160,16 +166,16 @@
     <Compile Include="Local Driving License Application\ShowApplicationInfofrm.Designer.cs">
       <DependentUpon>ShowApplicationInfofrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tests\ManageTestAppointmentsfrm.cs">
+    <Compile Include="Resources\Tests\ManageTestAppointmentsfrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tests\ManageTestAppointmentsfrm.Designer.cs">
+    <Compile Include="Resources\Tests\ManageTestAppointmentsfrm.Designer.cs">
       <DependentUpon>ManageTestAppointmentsfrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tests\ScheduleTestfrm.cs">
+    <Compile Include="Resources\Tests\ScheduleTestfrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tests\ScheduleTestfrm.Designer.cs">
+    <Compile Include="Resources\Tests\ScheduleTestfrm.Designer.cs">
       <DependentUpon>ScheduleTestfrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Licenses\ShowLicensInfofrm.cs">
@@ -178,10 +184,10 @@
     <Compile Include="Licenses\ShowLicensInfofrm.Designer.cs">
       <DependentUpon>ShowLicensInfofrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tests\TakeTestfrm.cs">
+    <Compile Include="Resources\Tests\TakeTestfrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tests\TakeTestfrm.Designer.cs">
+    <Compile Include="Resources\Tests\TakeTestfrm.Designer.cs">
       <DependentUpon>TakeTestfrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Licenses\ctrlShowLicenseInof.cs">
@@ -267,6 +273,9 @@
     <EmbeddedResource Include="ctrlDriverLicenseHistorey.resx">
       <DependentUpon>ctrlDriverLicenseHistorey.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DetainLicenseFrm.resx">
+      <DependentUpon>DetainLicenseFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LicensHistoreyfrm.resx">
       <DependentUpon>LicensHistoreyfrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -279,16 +288,16 @@
     <EmbeddedResource Include="ReplaceForLostOrDamgedfrm.resx">
       <DependentUpon>ReplaceForLostOrDamgedfrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tests\ctrlRetakeTest.resx">
+    <EmbeddedResource Include="Resources\Tests\ctrlRetakeTest.resx">
       <DependentUpon>ctrlRetakeTest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tests\ctrlScheduleTest.resx">
+    <EmbeddedResource Include="Resources\Tests\ctrlScheduleTest.resx">
       <DependentUpon>ctrlScheduleTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Licenses\ctrlShowLicenseInfoWithFilter.resx">
       <DependentUpon>ctrlShowLicenseInfoWithFilter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tests\ctrlTakeTest.resx">
+    <EmbeddedResource Include="Resources\Tests\ctrlTakeTest.resx">
       <DependentUpon>ctrlTakeTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Licenses\IssueLicense.resx">
@@ -321,16 +330,16 @@
     <EmbeddedResource Include="Local Driving License Application\ShowApplicationInfofrm.resx">
       <DependentUpon>ShowApplicationInfofrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tests\ManageTestAppointmentsfrm.resx">
+    <EmbeddedResource Include="Resources\Tests\ManageTestAppointmentsfrm.resx">
       <DependentUpon>ManageTestAppointmentsfrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tests\ScheduleTestfrm.resx">
+    <EmbeddedResource Include="Resources\Tests\ScheduleTestfrm.resx">
       <DependentUpon>ScheduleTestfrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Licenses\ShowLicensInfofrm.resx">
       <DependentUpon>ShowLicensInfofrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tests\TakeTestfrm.resx">
+    <EmbeddedResource Include="Resources\Tests\TakeTestfrm.resx">
       <DependentUpon>TakeTestfrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Licenses\ctrlShowLicenseInof.resx">
@@ -724,6 +733,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\PersonLicenseHistory 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Detain 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Detain 321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Detain 322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Release Detained License 32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

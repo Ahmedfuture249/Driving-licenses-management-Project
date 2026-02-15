@@ -80,6 +80,7 @@ namespace DVLD
             }
             lblDetainDate.Text=detainedLicenses.DetainDate.ToShortDateString();
             lblDetainID.Text=detainedLicenses.DetainID.ToString();
+            MessageBox.Show("Licese with ID " + _LicenseID + "Detained Succesfully The Detain ID " + detainedLicenses.DetainID);
             
                 
         }

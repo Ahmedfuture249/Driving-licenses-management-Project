@@ -235,6 +235,7 @@
             this.releaseLicenseToolStripMenuItem.Name = "releaseLicenseToolStripMenuItem";
             this.releaseLicenseToolStripMenuItem.Size = new System.Drawing.Size(273, 38);
             this.releaseLicenseToolStripMenuItem.Text = "Release License";
+            this.releaseLicenseToolStripMenuItem.Click += new System.EventHandler(this.releaseLicenseToolStripMenuItem_Click);
             // 
             // manageApplicationsTaypesToolStripMenuItem
             // 

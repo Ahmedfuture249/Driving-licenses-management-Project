@@ -16,6 +16,7 @@ namespace DVLD
     {
         private static int _LocalDrivingLicenseApplicationID;
         private static clsLDLApplication _LocalDrivingLicenseApplication;
+        clsDetainedLicenses DetainedLicense;
 
         public clsLicense License { set; get; }
         public int LicenseID { get; private set; }
@@ -100,7 +101,12 @@ namespace DVLD
             }
             else
                 pictureBoxPerosnimage.Image = Resources.Female_512;
-            //lblisdetained.Text = _LocalDrivingLicenseApplication.IsDetained ? "Yes" : "No";
+
+
+            DetainedLicense = clsDetainedLicenses.Find(LicenseID);
+           
+           
+            lblisdetained.Text = DetainedLicense.IsReleased == false ? "yes" : "NO";
 
         }
         private void pictureBox13_Click(object sender, EventArgs e)

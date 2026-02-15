@@ -70,6 +70,12 @@
     <Compile Include="ListDriversfrm.Designer.cs">
       <DependentUpon>ListDriversfrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReleaseDetainedLicensefrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReleaseDetainedLicensefrm.Designer.cs">
+      <DependentUpon>ReleaseDetainedLicensefrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="RenewDrivingLicensefrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -281,6 +287,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ListDriversfrm.resx">
       <DependentUpon>ListDriversfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReleaseDetainedLicensefrm.resx">
+      <DependentUpon>ReleaseDetainedLicensefrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RenewDrivingLicensefrm.resx">
       <DependentUpon>RenewDrivingLicensefrm.cs</DependentUpon>

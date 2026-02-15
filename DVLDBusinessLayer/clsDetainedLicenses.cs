@@ -91,7 +91,31 @@ namespace DVLDBusinessLayer
             this.DetainID= DetainLicensesData.AddNewDetain(DetainedLicense);
             return (this.DetainID != -1);
         }
-       
+
+        public bool ReleaseLicense()
+        {
+            clsApplication Application = new clsApplication();
+            Application.ApplicationStatus = clsApplication.enApplicationStatus.New;
+            Application.ApplicationTypeID = (int)clsApplication.enApplicationType.ReleaseDetainedDrivingLicens;
+            Application.ApplicantPersonlID = this.License.LDLApplication.ApplicantPersonlID;
+            Application.ApplicationDate = DateTime.Now;
+            Application.PaidFees = clsManageApplications.Find((int)clsApplication.enApplicationType.ReleaseDetainedDrivingLicens).Fees;
+            Application.CreatedByUserID = CreatedByUserID;
+            Application.ApplicationLastStatusDate = DateTime.Now;
+            if (!Application.Save())
+            {
+                return false;
+            }
+            this.ReleaseApplicationID = Application.ApplicationID;
+            this.ReleaseDate = DateTime.Now;
+            this.ReleasedByUserID = CreatedByUserID;
+            this.IsReleased = true;
+           
+            return DetainLicensesData.ReleaseDetainedLicense(this.LicenseID,this.ReleaseDate,
+                this.ReleasedByUserID,this.ReleaseApplicationID);
+
+        }
+
 
     }
 }

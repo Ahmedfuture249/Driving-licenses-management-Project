@@ -80,7 +80,7 @@ namespace DVLDDataAccessLayer
 
             SqlConnection connection = new SqlConnection(clsPeopleDataAccessSettings.ConnectionString);
 
-            string query = "SELECT * FROM DetainedLicenses";
+            string query = "SELECT * FROM DetainedLicenses_View";
             SqlCommand command = new SqlCommand(query, connection);
 
             try

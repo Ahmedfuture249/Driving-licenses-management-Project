@@ -2,6 +2,7 @@
 using DVLDDataAccessLayer;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,7 +41,7 @@ namespace DVLDBusinessLayer
             
 
         }
-        public clsDetainedLicenses(DTO.DetainLicenseDTO DetainedLicenese)
+        public clsDetainedLicenses(DetainLicenseDTO DetainedLicenese)
         {
             DetainID = DetainedLicenese.DetainID;
             LicenseID =DetainedLicenese.LicenseID;
@@ -58,9 +59,17 @@ namespace DVLDBusinessLayer
         public static clsDetainedLicenses Find(int LicenseID)
         {
             DetainLicenseDTO DetainedLicense=DetainLicensesData.GetDetainByLicenseID(LicenseID);
-           
+           if(DetainedLicense==null)
+            {
+                return null;
+                
+            }
                 return new clsDetainedLicenses(DetainedLicense);
             
+        }
+        public static DataTable ListDetainedLicenses()
+        {
+            return DetainLicensesData.GetAllDetainedLicenses();
         }
         public bool IsLicenseDetained()
         {

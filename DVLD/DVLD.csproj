@@ -64,6 +64,12 @@
     <Compile Include="LicensHistoreyfrm.Designer.cs">
       <DependentUpon>LicensHistoreyfrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListDetainedLicensesfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListDetainedLicensesfrm.Designer.cs">
+      <DependentUpon>ListDetainedLicensesfrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListDriversfrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -284,6 +290,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LicensHistoreyfrm.resx">
       <DependentUpon>LicensHistoreyfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListDetainedLicensesfrm.resx">
+      <DependentUpon>ListDetainedLicensesfrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListDriversfrm.resx">
       <DependentUpon>ListDriversfrm.cs</DependentUpon>
@@ -754,6 +763,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Release Detained License 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Detain 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Detain 5121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Detain 5122.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -44,6 +44,7 @@ namespace DVLDDataAccessLayer
 
             return license;
         }
+
         public static DataTable GetAllInternationalLicenses()
         {
             DataTable dt = new DataTable();

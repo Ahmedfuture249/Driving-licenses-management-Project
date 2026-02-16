@@ -129,5 +129,11 @@ namespace DVLD
             ListDetainedLicensesfrm frm = new ListDetainedLicensesfrm();
                 frm.ShowDialog();
         }
+
+        private void internationalLicenseApplicationsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddInternationalLicensefrm frm=new AddInternationalLicensefrm();
+            frm.ShowDialog();
+        }
     }
 }

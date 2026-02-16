@@ -104,11 +104,15 @@ namespace DVLD
 
 
             DetainedLicense = clsDetainedLicenses.Find(LicenseID);
-           
-           if(DetainedLicense.IsReleased == false ||DetainedLicense==null)
+
+            if (DetainedLicense == null)
                 lblisdetained.Text = "NO";
-          else
-                lblisdetained.Text = "yes";
+            else {
+                if (DetainedLicense.IsReleased == false)
+                    lblisdetained.Text = "NO";
+                else
+                            lblisdetained.Text = "yes";
+            }
 
         }
         private void pictureBox13_Click(object sender, EventArgs e)

@@ -89,7 +89,10 @@ namespace DVLDBusinessLayer
         public static clsLicense Find(int LicenseID)
         {
             LicenseDTO license= LicenseData.GetLicenseByID(LicenseID);
-            return new clsLicense(license);
+            if (license == null)
+                return null;
+            else
+                return new clsLicense(license);
 
         }
         public static clsLicense FindByApplicationID(int ApplicationID)

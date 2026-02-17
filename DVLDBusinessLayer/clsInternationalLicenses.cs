@@ -60,7 +60,7 @@ namespace DVLDBusinessLayer
             }
             return new clsInternationalLicenses(internationalLicenses);
         }
-        public static DataTable List()
+        public static DataTable ListAllInternationalLicenses()
         {
             return InternationalLicensesData.GetAllInternationalLicenses();
         }

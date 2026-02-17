@@ -132,7 +132,13 @@ namespace DVLD
 
         private void internationalLicenseApplicationsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AddInternationalLicensefrm frm=new AddInternationalLicensefrm();
+            ListInternationalLicensesfrm frm =new ListInternationalLicensesfrm();
+            frm.ShowDialog();
+        }
+
+        private void internationalDrivingLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddInternationalLicensefrm frm = new AddInternationalLicensefrm();  
             frm.ShowDialog();
         }
     }
